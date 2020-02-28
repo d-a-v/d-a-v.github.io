@@ -1,9 +1,9 @@
-ad99580d Merge branch 'PR-7080'
-e1dcafc8 Merge branch 'PR-7048'
-8c17f85d Merge branch 'PR-6889'
-4d7c9768 Merge branch 'PR-6768'
-613e0c52 Merge branch 'PR-6725'
-76874c1d Merge branch 'PR-6690'
+bd9483e9 Merge branch 'PR-7080'
+d90b83ad Merge branch 'PR-7048'
+6f04a91f Merge branch 'PR-6889'
+65f9461e Merge branch 'PR-6768'
+5d06667b Merge branch 'PR-6725'
+4e06ba81 Merge branch 'PR-6690'
 89cacef2 Update to latest SoftwareSerial for Delegate fix
 9074bb98 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427dfdc1567bd52ca6d966d5640d6bb9#commitcomment-37529995 (#7121)
