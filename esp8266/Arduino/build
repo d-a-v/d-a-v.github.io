@@ -1,0 +1,117 @@
+#!/bin/bash
+
+set -xe
+dir=$(cd ${0%/*}; pwd)
+
+url=https://github.com/esp8266/Arduino.git
+branch=master
+
+rm -f package_esp8266com_index.json.new message.txt
+
+for v in 0.0.?; do
+(
+    cd gh || { git clone -b ${branch} ${url} gh; cd gh; }
+
+    # fetch everything
+    git fetch ${url}
+    git fetch --tags ${url}
+
+    # reset branch
+    git checkout origin/${branch}
+    git branch -D ${branch}
+    git checkout -b ${branch}
+    git pull origin ${branch}
+    git reset --hard
+
+    # reset submodules
+    git clean -xfd
+    git submodule foreach git clean -xfd
+    git reset --hard
+    git submodule foreach git reset --hard
+    git submodule update --init
+
+    # apply PRs if any
+    prok=""
+    for pr in $(cat ${dir}/${v}); do
+        git branch -D PR-${pr} || true
+        git fetch origin pull/${pr}/head:PR-${pr}
+        git checkout ${branch}
+        git merge --no-edit PR-${pr} || { git merge --abort; continue; }
+        prok+=" ${pr}"
+    done
+
+    export REMOTE_URL=http://d-a-v.github.io/esp8266/Arduino/releases/download
+    git tag -d ${v} || true
+    ver=$(git describe --tag)
+    git tag ${v}
+    cd package
+    rm -rf versions
+    export MOREJSONPACKAGES=$dir/package_esp8266com_index.json.new
+    ./build_boards_manager_package.sh
+    cd ..
+
+    cp package/versions/${v}/esp8266-${v}.zip $dir/
+    cp package/versions/${v}/package_esp8266com_index.json $dir/package_esp8266com_index.json.new
+
+    lasttag=$(git describe --tag|cut -d- -f1)
+    git log --oneline ${lasttag}.. > $dir/../../newlog.txt
+
+    cd $dir/../..
+
+    git filter-branch --tree-filter "rm -rf esp8266/Arduino/releases/download/versions/${v}/esp8266-${v}.zip" --prune-empty HEAD
+
+    set +e
+    git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+    git commit -m 'Removing previous v${v} from git history'
+    set -e
+
+    git gc
+
+    cd $dir
+
+    mkdir -p releases/download/versions/${v}/
+    mv esp8266-${v}.zip releases/download/versions/${v}/
+    # copy no delete json.new package file, it is used at next loop by MOREJSONPACKAGES
+    cp package_esp8266com_index.json.new package_esp8266com_index.json
+
+    PR=""
+    SPR=""
+    for pr in ${prok}; do
+        PR+=" <a href=\"https://github.com/esp8266/Arduino/pull/$pr\">#${pr}</a>"
+        SPR+="-#${pr}"
+    done
+    echo "${v}:-git-version--${ver},-list-of-included-PRs-:${SPR:-"-none"}" >> $dir/message.txt
+
+    sed -ibak "s,^version ${v}.*,version ${v}: git:'$ver' ($(date -u)) (${PR} ),g" ../../index.html
+
+    mv ../../newlog.txt ../../log-${v}.txt
+    git add package_esp8266com_index.json releases/download/versions/${v}/esp8266-${v}.zip ../../index.html ../../log-${v}.txt
+
+    ./rss.make ${v}
+    git add rss.items.xml ../../rss.xml
+
+    git commit -m "snapshot '$ver' $(date -u)"
+)
+done
+
+date -u >> $dir/message.txt
+
+# replace boards names by free text visible in arduino IDE board manager
+# https://unix.stackexchange.com/a/476548
+jq "
+  # Apply f to composite entities recursively, and to atoms
+  def walk(f):
+    . as \$in
+    | if type == \"object\" then
+       reduce keys[] as \$key
+         ( {}; . + { (\$key):  (\$in[\$key] | walk(f)) } ) | f
+    elif type == \"array\" then map( walk(f) ) | f
+    else f
+    end;
+  walk(.boards?=[{\"name\":\"$(cat $dir/message.txt)\"}])
+" package_esp8266com_index.json.new > package_esp8266com_index.json
+
+git add package_esp8266com_index.json
+git commit -m "comments"
+
+echo "now execute: 'git push --force'"

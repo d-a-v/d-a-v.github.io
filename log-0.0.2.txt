@@ -1,0 +1,213 @@
+ad99580d Merge branch 'PR-7080'
+e1dcafc8 Merge branch 'PR-7048'
+8c17f85d Merge branch 'PR-6889'
+4d7c9768 Merge branch 'PR-6768'
+613e0c52 Merge branch 'PR-6725'
+76874c1d Merge branch 'PR-6690'
+89cacef2 Update to latest SoftwareSerial for Delegate fix
+9074bb98 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427dfdc1567bd52ca6d966d5640d6bb9#commitcomment-37529995 (#7121)
+5d2f09de Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+2c435b1f lwip2 update: stop dhcp when interface goes down (#7114)
+0554d39c Add  support for my new board eduino wifi (#6554)
+9b0164af Merge branch 'master' into nosizeconf
+abdd2bdb simple TZ api: bypass sprintf/sscanf: + 7KB (#7109)
+91d21b66 Rebuild eboot.elf with GCC 9
+a00e6b91 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+4b2bf459 Additions to UdpContext needed for LEAmDNS2 (#7048)
+59d1c1a8 Merge branch 'master' into LEA_UdpContext2
+e35dd39b no index: use NETIF_NO_INDEX (=0) instead of 0
+2d58be74 TCP: fixes backlog limit handling, and allows ephemeral TCP connections (#7096)
+27c759e7 Merge branch 'master' into noplaincount
+2b640c01 Add flash helper constructor to Uri (#7105)
+d990ff95 Improve LittleFS support (#7071)
+16319da6 Resolved issue #3359 (#6969)
+bea64dfa Add fileCreation/getCreation create-time accessors (#7000)
+4eca62cb Add Uri with support for regexUri and globUri (#6696)
+a40663b6 Update to latest BearSSL (#7098)
+f69e404c SNTP: backport espressif sntp api for lwip2 (#7097)
+e6decacd Fix/enable UDP packet reassembly (#7036)
+cd56dc09 restore dtostrf when floats are disabled in printf/scanf + round fix (#7093)
+40f2c552 Merge branch 'master' into LEA_UdpContext2
+0a58172c Merge pull request #6804 from dok-net/optimistic_yield_recurrency
+5100beec Merge branch 'master' into optimistic_yield_recurrency
+afe40211 Corrections after review remarks; thanks @earlephilhower
+f066ed24 configTime(tzsec,dstsec,): fix UTC/local management (#6993)
+e752e96e lwip2 updates: no more git sub-sub-module deps, faster checksum, backlog limitation and other fixes (#6887)
+bc4f000c package builder: updates for alpha releases (#7088)
+321d256c Merge pull request #7085 from mhightower83/pr-bear-stack-dump
+c07a1fd1 Corrected stack start and end in stack_thunk_dump_stack().
+044279e6 Made ESP8266WebServer::client() return a reference (fixes #7075)
+5efdc776 Allow using custom linker scripts (#7078)
+11ae243e Merge pull request #7068 from earlephilhower/dtostrf_to_printf
+0c1b6f9f Merge branch 'master' into dtostrf_to_printf
+dbd7b821 Fix serach order for index.htm(l)(.gz) files (#7069)
+f7627216 Use sprintf to output floats in Print/dtostrf
+56b90a2a Merge pull request #7027 from dok-net/wmath_map
+cd5cbae1 Merge branch 'master' into wmath_map
+50a491b7 Merge pull request #7066 from mhightower83/pr-postmortem-offset-update
+f45da1cf Updated stack offsets for postmortem stack dump. Changed ets_putc to ets_uart_putc1 to better newline handling.
+50fab516 No need for preprocessor undefinition of optimistic_yield, after all.
+8d2eca56 Remove long-since disused define.
+55443578 Due to 3rd party use of symbol optimistic_yield without #include <Arduino>, have to resort to preprocessor definition for inlining.
+3767791f Allow constexpr evalution to occur. optimistic_yield is always called with a literal parameter value.
+3d7423bd Move yield start time set to esp_yield_within_cont
+598361f3 Substitute micros() by CPU cycles - faster, but large values for interval_us can overflow - 26s at 160MHz CPU clock.
+d6e603f3 Fix optimistic_yield to not yield on every call after a loop runs for x us, but yield only every x us between optimistic_yield calls.
+a8515a7d use STA as default interface in mDNS (#7042)
+58829022 Fix "improved_map" from Servo.cpp and use this is in core implementation.
+14f62721 update to new prebuilt win sed version (#7062)
+6be56161 Added dependencies for eboot.ld and Makefile to Makefile. (#7047)
+d0316a13 Merge branch 'master' into pr-eboot-cs-fix
+63b73bf1 add Low-Power demo (#6989)
+378c1f14 Update ESP8266HTTPClient.cpp (#7051)
+186baefc xMerge branch 'LEA_UdpContext2' of https://github.com/LaborEtArs/Arduino into LEA_UdpContext2
+9c1dd796 Addition to UdpContext needed for LEAmDNS2
+4fe12809 Merge branch 'master' into LEA_UdpContext2
+f219b06c Addition to UdpContext needed for LEAmDNS2
+aee9821f Addition to UdpContext needed for LEAmDNS2
+a2141803 Code size optimisation of ESP.getResetReason() (#7029)
+fe7faf70 Added dependencies for eboot.ld and Makefile to Makefile. Updated eboot.ld to not fill with zeros through the CS field on its way to the CRC. Added size test to elf2bin.py
+9e9515b4 clear _canReuse in setUrl if its not a local redirect (#7039)
+bb696dd2 host build: optimistic_yield() wrongly delays() instead of avoiding excessive yields (#6802)
+7b0fa355 Update LEAmDNS.cpp (fix issue #6982) (#7025)
+0c6be9e1 Made changes to include "ESP8266_" with ITEAD board names, `{build.board}`, (#7024)
+09899326 allow ".bin.gz" filter in updater file selector (#7026)
+baf223c6 Release 6.7.1 (#7034)
+6e37ee36 fix CI: switch to python3 for pio (#7035)
+158039e4 Reduce mem footprint of ESP.getResetInfo() (#7030)
+00440cd8 Remove memory leak on multiple calls to initCertStore (#7021)
+b930c4c3 boards.txt.py: Fix packagegen to use newfilestr instead of filestr when writing file. (#7018)
+bb6243a1 Use a python3 script to call python3 (#6960)
+0d38ea73 Add back mklittlefs for linux32 target (#7011)
+677007f4 Define MAX_SERVOS to 12, like original Servo.h (#6999)
+5bc30792 Fix Updater potential overflow, add host tests (#6954)
+5e537e57 Updating _port to really used port and made _port accessible (#7003)
+b4d2ab10 Fix boolean/logical & mixup in LittleFS open (#6996)
+8242d722 Add LittleFS support to ESP8266WebServer.serveStatic() (#6987)
+d4d89244 Add SDFS::Dir::fileTime callback (#6985)
+753b5a58 Update LittleFS to latest upstream head (#6986)
+b62d8c76 Update BearSSL, increase SSL stack (#6980)
+de307623 Move a couple larger strings from rodata to flash (#6976)
+fa5040d5 Only update LittleFS timestamp when opened write (#6956)
+24920436 Skip . and .. on LittleFS::dir::rewind() (#6959)
+5d5200af Reduce temporary string creation in HTTPClient::sendHeader (#6937)
+3197d2ac Issue2524 allow clocks below 100KHz (#6934)
+809e5c96 EspSoftwareSerial, release 6.6.1 (#6943)
+bea9cfc3 PROGMEM footprint cleanup for responseCodeToString (#6950)
+698ffc34 Various String handling cleanups (#6945)
+6c2ab250 Code size optimisations for ESP.getFullVersion() (#6936)
+99aeeadb EspSoftwareSerial 6.5.4 (#6932)
+da39eb99 Merge branch 'master' into xmc_flash
+30bfdad4 Added missing "if (umm_heap == NULL) {..." to umm_free_heap_size_lw (#6929)
+52d84b1e Add a CRC32 over progmem and ESP.checkFlashCRC (#6566)
+9985a329 Add documentation for compressed OTA, fix bug (#6924)
+622baa16 Bug-fix release EspSoftwareSerial 6.5.3 (#6922)
+ba22113f Fix Windows CI build (#6927)
+1d0bc5ef Allow GZIP compressed flash updates (#6820)
+d40dbb45 device tests: some of them can be run on host (#6912)
+d1237fd0 back to 2.7.0-dev (#6917)
+b4345f6d Merge branch 'master' into gratuitous
+7090f686 Fix SPISlave interrupt attach's 2nd parameter
+87a9a500 Actually rebuild the libc.a using GCC 9.2
+6686826d Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+39dd0b9c Fix ets_irq_arratch redefinition and core IRQ handlers
+d79cd6ce Move the gdbstub example to a subdir
+54013d7b Add 2nd arg (exception handler) to ets_isr_t
+f5f76738 Remove using std::abs which conflicted with C lib headers
+e1a5cc9a Merge branch 'master' into gratuitous
+338c3df9 unsigned interval
+b34c9068 Merge branch 'master' into gratuitous
+98aa5f01 Merge branch 'master' into gcc9.1
+0f2e6ab9 Use std::abs/round to replace the macro definitions
+d54ac04a Merge branch 'gratuitous' of github.com:d-a-v/Arduino into gratuitous
+2885ac46 mock lwIP's etharp_request()
+98200aa0 Merge branch 'master' into gratuitous
+716baecf remove debug lines
+8d433ca6 update API
+4e292d7a Move to std=c++17/c17 in platform, remove abs/round
+b33206d6 Move add'l softFP from IRAM to flash
+e9a315c3 Move to gnu5 build with add'l softFP from ROM
+cbd217fa update API to allow changing interval on the fly
+541c92ed Upgrade to -gnu4 toolchain
+fe8b4da6 Merge branch 'master' into gcc9.1
+075d9c11 Update with fixes from Sming repo for PSTR and ASM
+93bc15e3 update comment
+c087e08c fix with lwip1
+60250965 wifi: ARP gratuitous API for wifi station mode
+855dd342 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+b8e48154 merge https://github.com/esp8266/Arduino/pull/6813
+94bb1560 Merge branch 'master' into nosizeconf
+814bb0d7 Merge branch 'xmc_flash' of https://github.com/ChocolateFrogsNuts/Arduino into xmc_flash
+3229f3d1 Merge branch 'master' into xmc_flash
+61c0a330 Slow down flash access during eboot firmware copy on XMC chips
+7491779b Merge branch 'master' into xmc_flash
+cb3ab4a5 Merge branch 'master' into xmc_flash
+4dc15eaf Slow down flash access during eboot firmware copy
+e684db13 Merge branch 'master' into gcc9.1
+b4e5e78d Merge branch 'master' into xmc_flash
+9d6f0f14 Reapply Ticker.h casting warning fixes for gcc9
+8115e1f5 One more merge diff fix
+293ba4d3 Merge branch 'master' into gcc9.1
+89c3add7 Fix json merge conflict
+e4c2c697 Fix Ticker merge conflict
+c63da343 Merge branch 'master' into xmc_flash
+f6e25592 Merge branch 'master' into xmc_flash
+781cf96e Merge branch 'master' into noplaincount
+cadc5265 fix
+e45712de webserver: do not count "plain" in argument list it is still available though
+fc5013f9 namespace experimental for initFlashQuirks()
+55c23cf7 Merge branch 'master' into xmc_flash
+d49a4ec8 Add initFlashQuirks() for any chip specific flash initialization.
+46578fed Fix ifdef issue with spi_vendors.h
+6634415b Move the spi vendor list from Esp.h to its own header in eboot.
+70634251 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+4e05cc84 fix emulation on host when 32bit compiler is not available
+c2747a49 Merge branch 'master' into nosizeconf
+dfb6a005 fix emulation on host
+719f65a0 fix
+da308ad4 fixes
+6104b9de fixes
+28e7d089 16MB no fs was missing
+08e3b519 ESP.getFlashChipSize() returns ESP.getFlashChipRealSize()
+0decdf4e fixes
+41bc6bc2 Merge branch 'master' into nosizeconf
+8834211a flash: mapping definition by sketch at runtime depending on flash chip size and user configuration
+910fe3af Merge branch 'master' into gcc9.1
+d17bac3d Move to --std=gnu++14 (C++14 + GNU extensions)
+22ecb65f Upgrade to GCC 9.2, released in August 2019
+230891d7 Full rebuild of toolchain and libs
+1c3d12b9 Update libc.a to latest rev
+58e909ee Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+7f2ad70f Fix "reinterpret_case is not a constexpr" error
+b7cdc030 Fix umm_perf reference to ROM function
+cf045699 Merge branch 'master' into gcc9.1
+6944b6f1 Update BearSSL to latest release
+bb3bde98 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+0151092c Update to latest libs, save iram
+357e2eb7 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+82406185 Rebuild with new LWIP locking
+3c695a55 Merge branch 'master' into gcc9.1
+b279f33d Rebuild moving exception.what to unique names
+c5fceddd Workaround g++ template section problem for exception strings
+9f6c8f53 Automate building of BearSSL and LWIP w/new toolchain
+86812e6f Merge branch 'master' into gcc9.1
+e5ee2859 Rebuild Bearssl using latest GCC push
+1cb9282e Make exceptions work again, get std::regex up
+1168360c Merge branch 'master' into gcc9.1
+f4cc2d12 Remove GCC support fcn that's in ROM
+71f48ac4 Fix ticker function cast warnings in GCC 9
+bb3df454 Update SDFat to remove FatFile warnings
+b0a5fe6d Trivial tab to space fix
+a68d8ce9 Make heap an undefined extend array
+3065a3f9 Dummy size for heap to avoid GCC 8/9 warnings
+a15ab565 Fix WiFiClientSecure implicit default copy ctor
+ef74b7c3 Fix AxTLS alias function defs to match real code
+3afe9e3f Fix deprecated implicit copy ctors in IP code
+726f0e9d Merge branch 'master' into gcc9.1
+33fee67c Remove gdb stub warnings w/a pragma
+83f308e2 Fix digitalRead alias warning
+99a0c6f2 Fix GDBstub linkage options
+354cfcd7 Rebuild bearssl using new toolchain
+86422045 Rebuilt using pure GNU binutils and GCC
+59023e98 Upgrade to GCC 9.1 toolchain

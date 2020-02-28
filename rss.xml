@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>esp8266/Aduino unofficial snapshots</title>
+    <description>unofficial boards manager</description>
+    <pubDate>Fri Feb 28 17:46:17 UTC 2020</pubDate>
+    <generator>https://d-a-v.github.io</generator>
+    <link>https://d-a-v.github.io</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://d-a-v.github.io/updates.rss"/>
+<item>
+    <title>esp8266/Arduino core snapshot: 0.0.2 (PR: 6294
+6690
+6725
+6768
+6889
+7048
+7080) Fri Feb 28 17:46:17 UTC 2020</title>
+    <description>snapshot esp8266/Arduino board installer</description>
+    <pubDate>Fri Feb 28 18:46:17 CET 2020</pubDate>
+    <link>https://d-a-v.github.io</link>
+</item>
+<item>
+    <title>esp8266/Arduino core snapshot: 0.0.1 (PR: ) Fri Feb 28 17:45:31 UTC 2020</title>
+    <description>snapshot esp8266/Arduino board installer</description>
+    <pubDate>Fri Feb 28 18:45:31 CET 2020</pubDate>
+    <link>https://d-a-v.github.io</link>
+</item>
+<item>
+    <title>esp8266/Arduino core snapshot: 0.0.2 (PR: 6294
+6690
+6725
+6768
+6889
+7048
+7080) Thu Feb 27 22:31:38 UTC 2020</title>
+    <description>snapshot esp8266/Arduino board installer</description>
+    <pubDate>Thu Feb 27 23:31:38 CET 2020</pubDate>
+    <link>https://d-a-v.github.io</link>
+</item>
+<item>
+    <title>esp8266/Arduino core snapshot: 0.0.1 (PR: ) Thu Feb 27 22:30:51 UTC 2020</title>
+    <description>snapshot esp8266/Arduino board installer</description>
+    <pubDate>Thu Feb 27 23:30:51 CET 2020</pubDate>
+    <link>https://d-a-v.github.io</link>
+</item>
+  </channel>
+</rss>
