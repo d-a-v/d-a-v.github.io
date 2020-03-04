@@ -1,3 +1,5 @@
+b64e8da2 Set a value for SSDP notify interval (#7110)
+e39cbe63 rebuild lwip2 1.2-30 (#7131)
 c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427dfdc1567bd52ca6d966d5640d6bb9#commitcomment-37529995 (#7121)
 2c435b1f lwip2 update: stop dhcp when interface goes down (#7114)
 0554d39c Add  support for my new board eduino wifi (#6554)
