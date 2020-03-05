@@ -1,12 +1,15 @@
-9a94ee65 Merge branch 'PR-7132'
-c69cfba2 Merge branch 'PR-7080'
-edae52cb Merge branch 'PR-7048'
-d7ea8e14 Merge branch 'PR-6889'
-e71ab7ce Merge branch 'PR-6768'
-45db5992 Merge branch 'PR-6725'
-87975980 Merge branch 'PR-6690'
-869a13a5 Process rx buffer size, cache it, because _rx_buf->tot_len is *not* the total size
-6d84735e udp: fix again pbuf management
+85b09378 Merge branch 'PR-7134'
+8149fc00 Merge branch 'PR-7080'
+87aabf71 Merge branch 'PR-6889'
+e70e7503 Merge branch 'PR-6768'
+adc8665d Merge branch 'PR-6725'
+7c03e904 Merge branch 'PR-6690'
+372a3ec2 EspSoftwareSerial release 6.7.2 fixes warnings with gcc 9.2 (#7133)
+19f7042e Merge branch 'master' into chunckedApi
+cc3e01cc expose hidden WebServer's chunked API
+fee13076 expose hidden WebServer's chunked API
+b8e4ca48 udp: fix again pbuf management (#7132)
+99740f86 expose hidden WebServer's chunked API
 b64e8da2 Set a value for SSDP notify interval (#7110)
 e39cbe63 rebuild lwip2 1.2-30 (#7131)
 c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427dfdc1567bd52ca6d966d5640d6bb9#commitcomment-37529995 (#7121)
@@ -15,8 +18,6 @@ c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427
 9b0164af Merge branch 'master' into nosizeconf
 abdd2bdb simple TZ api: bypass sprintf/sscanf: + 7KB (#7109)
 4b2bf459 Additions to UdpContext needed for LEAmDNS2 (#7048)
-59d1c1a8 Merge branch 'master' into LEA_UdpContext2
-e35dd39b no index: use NETIF_NO_INDEX (=0) instead of 0
 2d58be74 TCP: fixes backlog limit handling, and allows ephemeral TCP connections (#7096)
 27c759e7 Merge branch 'master' into noplaincount
 2b640c01 Add flash helper constructor to Uri (#7105)
@@ -28,7 +29,6 @@ a40663b6 Update to latest BearSSL (#7098)
 f69e404c SNTP: backport espressif sntp api for lwip2 (#7097)
 e6decacd Fix/enable UDP packet reassembly (#7036)
 cd56dc09 restore dtostrf when floats are disabled in printf/scanf + round fix (#7093)
-40f2c552 Merge branch 'master' into LEA_UdpContext2
 0a58172c Merge pull request #6804 from dok-net/optimistic_yield_recurrency
 5100beec Merge branch 'master' into optimistic_yield_recurrency
 afe40211 Corrections after review remarks; thanks @earlephilhower
@@ -61,11 +61,6 @@ a8515a7d use STA as default interface in mDNS (#7042)
 d0316a13 Merge branch 'master' into pr-eboot-cs-fix
 63b73bf1 add Low-Power demo (#6989)
 378c1f14 Update ESP8266HTTPClient.cpp (#7051)
-186baefc xMerge branch 'LEA_UdpContext2' of https://github.com/LaborEtArs/Arduino into LEA_UdpContext2
-9c1dd796 Addition to UdpContext needed for LEAmDNS2
-4fe12809 Merge branch 'master' into LEA_UdpContext2
-f219b06c Addition to UdpContext needed for LEAmDNS2
-aee9821f Addition to UdpContext needed for LEAmDNS2
 a2141803 Code size optimisation of ESP.getResetReason() (#7029)
 fe7faf70 Added dependencies for eboot.ld and Makefile to Makefile. Updated eboot.ld to not fill with zeros through the CS field on its way to the CRC. Added size test to elf2bin.py
 9e9515b4 clear _canReuse in setUrl if its not a local redirect (#7039)
