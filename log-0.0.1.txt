@@ -1,3 +1,5 @@
+372a3ec2 EspSoftwareSerial release 6.7.2 fixes warnings with gcc 9.2 (#7133)
+b8e4ca48 udp: fix again pbuf management (#7132)
 b64e8da2 Set a value for SSDP notify interval (#7110)
 e39cbe63 rebuild lwip2 1.2-30 (#7131)
 c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427dfdc1567bd52ca6d966d5640d6bb9#commitcomment-37529995 (#7121)
