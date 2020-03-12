@@ -1,3 +1,6 @@
+845241b7 Fix RST links for PlatformIO (#7143)
+01a4d292 Installation guide for PlatformIO (#7142)
+25224032 EspSoftwareSerial 6.8.0 adds ESP8285 support (#7139)
 372a3ec2 EspSoftwareSerial release 6.7.2 fixes warnings with gcc 9.2 (#7133)
 b8e4ca48 udp: fix again pbuf management (#7132)
 b64e8da2 Set a value for SSDP notify interval (#7110)
