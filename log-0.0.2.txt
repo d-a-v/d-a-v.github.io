@@ -1,9 +1,12 @@
-85b09378 Merge branch 'PR-7134'
-8149fc00 Merge branch 'PR-7080'
-87aabf71 Merge branch 'PR-6889'
-e70e7503 Merge branch 'PR-6768'
-adc8665d Merge branch 'PR-6725'
-7c03e904 Merge branch 'PR-6690'
+95380058 Merge branch 'PR-7134'
+46ba3fba Merge branch 'PR-7080'
+d7186022 Merge branch 'PR-6889'
+75dffee8 Merge branch 'PR-6768'
+0f27118a Merge branch 'PR-6725'
+465e4227 Merge branch 'PR-6690'
+845241b7 Fix RST links for PlatformIO (#7143)
+01a4d292 Installation guide for PlatformIO (#7142)
+25224032 EspSoftwareSerial 6.8.0 adds ESP8285 support (#7139)
 372a3ec2 EspSoftwareSerial release 6.7.2 fixes warnings with gcc 9.2 (#7133)
 19f7042e Merge branch 'master' into chunckedApi
 cc3e01cc expose hidden WebServer's chunked API
