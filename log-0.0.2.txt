@@ -1,12 +1,20 @@
-95380058 Merge branch 'PR-7134'
-46ba3fba Merge branch 'PR-7080'
-d7186022 Merge branch 'PR-6889'
-75dffee8 Merge branch 'PR-6768'
-0f27118a Merge branch 'PR-6725'
-465e4227 Merge branch 'PR-6690'
+08f8e995 Merge branch 'PR-7149'
+8f134192 Merge branch 'PR-7134'
+f3db43bc Merge branch 'PR-7080'
+d457e89b Merge branch 'PR-6889'
+5e4e21fd Merge branch 'PR-6768'
+8d756848 Merge branch 'PR-6725'
+3546450c Merge branch 'PR-6690'
+b07d7d9d Merge branch 'PR-6280'
+afb9921d avoid printing nullptr string (#7144)
+32a0a3a4 Reset state on any error condition in Updater::end
+fe02cb3c Use 2nd stack for update signature verification
 845241b7 Fix RST links for PlatformIO (#7143)
 01a4d292 Installation guide for PlatformIO (#7142)
 25224032 EspSoftwareSerial 6.8.0 adds ESP8285 support (#7139)
+548d7029 Merge branch 'master' into wifi_mesh_update_2.2
+1dcd4c4a - Fix even more merge conflicts.
+16801f3d - Rework ExpiringTimeTracker to be based on PolledTimeout.
 372a3ec2 EspSoftwareSerial release 6.7.2 fixes warnings with gcc 9.2 (#7133)
 19f7042e Merge branch 'master' into chunckedApi
 cc3e01cc expose hidden WebServer's chunked API
@@ -95,6 +103,7 @@ fa5040d5 Only update LittleFS timestamp when opened write (#6956)
 bea9cfc3 PROGMEM footprint cleanup for responseCodeToString (#6950)
 698ffc34 Various String handling cleanups (#6945)
 6c2ab250 Code size optimisations for ESP.getFullVersion() (#6936)
+a49f0470 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
 99aeeadb EspSoftwareSerial 6.5.4 (#6932)
 da39eb99 Merge branch 'master' into xmc_flash
 30bfdad4 Added missing "if (umm_heap == NULL) {..." to umm_free_heap_size_lw (#6929)
@@ -118,6 +127,7 @@ cbd217fa update API to allow changing interval on the fly
 93bc15e3 update comment
 c087e08c fix with lwip1
 60250965 wifi: ARP gratuitous API for wifi station mode
+962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
 855dd342 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
 b8e48154 merge https://github.com/esp8266/Arduino/pull/6813
 94bb1560 Merge branch 'master' into nosizeconf
@@ -133,20 +143,36 @@ f6e25592 Merge branch 'master' into xmc_flash
 781cf96e Merge branch 'master' into noplaincount
 cadc5265 fix
 e45712de webserver: do not count "plain" in argument list it is still available though
+2fef67dc - Generalize CryptoInterface.
 fc5013f9 namespace experimental for initFlashQuirks()
 55c23cf7 Merge branch 'master' into xmc_flash
 d49a4ec8 Add initFlashQuirks() for any chip specific flash initialization.
 46578fed Fix ifdef issue with spi_vendors.h
 6634415b Move the spi vendor list from Esp.h to its own header in eboot.
+3132325b - Replace Crypto files with CryptoInterface which uses BearSSL as a cryptographic backend.
+afc88f26 - Improve HelloMesh.ino.
+78812a73 - Add HelloTcpIp.ino example for the TcpIpMeshBackend.
+6b763686 - Add working FloodingMesh. Unencrypted broadcasts should work well, but are untested in large mesh networks. Encrypted broadcast support is currently experimental.
+176f2851 Fix space.
+8194197e Even better fix of conflict with master branch.
+7ca5a7e5 Fix conflict with master branch.
+f8ec4f1c - Make connectionQueue(), latestTransmissionOutcomes() and latestTransmissionSuccessful() methods static in order to match the underlying data storage.
 70634251 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
 4e05cc84 fix emulation on host when 32bit compiler is not available
 c2747a49 Merge branch 'master' into nosizeconf
 dfb6a005 fix emulation on host
 719f65a0 fix
 da308ad4 fixes
+b0ef9195 Merge branch 'master' into wifi_mesh_update_2.2
 6104b9de fixes
 28e7d089 16MB no fs was missing
 08e3b519 ESP.getFlashChipSize() returns ESP.getFlashChipRealSize()
 0decdf4e fixes
 41bc6bc2 Merge branch 'master' into nosizeconf
 8834211a flash: mapping definition by sketch at runtime depending on flash chip size and user configuration
+86025c78 - Make each mesh backend use a unique NetworkInfo class and separate connectionQueue and latestTransmissionOutcomes vectors.
+2576a091 Merge branch 'master' into wifi_mesh_update_2.2
+5834c547 - Add broadcast functionality.
+26e626de Merge branch 'master' into wifi_mesh_update_2.2
+235b02ed Merge branch 'master' into wifi_mesh_update_2.2
+d20177ae - Add new ESP-NOW mesh backend.
