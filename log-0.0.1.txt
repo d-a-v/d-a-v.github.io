@@ -1,3 +1,5 @@
+db75d2c4 Abort if BearSSL stack allocation fails (#7152)
+e2528732 Use 2nd stack for update signature verification (#7149)
 afb9921d avoid printing nullptr string (#7144)
 845241b7 Fix RST links for PlatformIO (#7143)
 01a4d292 Installation guide for PlatformIO (#7142)
