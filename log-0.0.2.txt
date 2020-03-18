@@ -1,11 +1,14 @@
-08f8e995 Merge branch 'PR-7149'
-8f134192 Merge branch 'PR-7134'
-f3db43bc Merge branch 'PR-7080'
-d457e89b Merge branch 'PR-6889'
-5e4e21fd Merge branch 'PR-6768'
-8d756848 Merge branch 'PR-6725'
-3546450c Merge branch 'PR-6690'
-b07d7d9d Merge branch 'PR-6280'
+1d0f4b94 Merge branch 'PR-7149'
+efe8c1c8 Merge branch 'PR-7134'
+faa25d11 Merge branch 'PR-7080'
+ca2553a4 Merge branch 'PR-6889'
+50076354 Merge branch 'PR-6768'
+0e16a330 Merge branch 'PR-6725'
+658ad9e7 Merge branch 'PR-6690'
+df24de2d Merge branch 'PR-6280'
+db75d2c4 Abort if BearSSL stack allocation fails (#7152)
+e2528732 Use 2nd stack for update signature verification (#7149)
+9e84878b Merge branch 'master' into safesign
 afb9921d avoid printing nullptr string (#7144)
 32a0a3a4 Reset state on any error condition in Updater::end
 fe02cb3c Use 2nd stack for update signature verification
