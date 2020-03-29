@@ -1,11 +1,19 @@
-1d0f4b94 Merge branch 'PR-7149'
-efe8c1c8 Merge branch 'PR-7134'
-faa25d11 Merge branch 'PR-7080'
-ca2553a4 Merge branch 'PR-6889'
-50076354 Merge branch 'PR-6768'
-0e16a330 Merge branch 'PR-6725'
-658ad9e7 Merge branch 'PR-6690'
-df24de2d Merge branch 'PR-6280'
+d13012c4 Merge branch 'PR-7149'
+33671190 Merge branch 'PR-7134'
+f1f4e6b3 Merge branch 'PR-7080'
+d6f9c8bc Merge branch 'PR-6889'
+677feadc Merge branch 'PR-6768'
+0e395722 Merge branch 'PR-6725'
+1ae4d818 Merge branch 'PR-6294'
+c876dcde Merge branch 'PR-6280'
+a04c3244 esp8285: properly initialize free gpio as input (#7165)
+631f66bd Attribute `__real_system_restart_local()` as `(noreturn)` (#7167)
+726df696 Switch espressif8266 platform to development branch in PlatformIO build (#7170)
+d91f1dac Better follow redirection for `HTTPClient` (#7157)
+1127a090 Add 2MB obtion to 8285 generic board (#7163)
+e64cb619 Pull GPIO initialization into its own 'weak' function. (#7044)
+afff5696 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+4ffe5190 Upgrade to GCC 9.3
 db75d2c4 Abort if BearSSL stack allocation fails (#7152)
 e2528732 Use 2nd stack for update signature verification (#7149)
 9e84878b Merge branch 'master' into safesign
@@ -26,11 +34,15 @@ b8e4ca48 udp: fix again pbuf management (#7132)
 99740f86 expose hidden WebServer's chunked API
 b64e8da2 Set a value for SSDP notify interval (#7110)
 e39cbe63 rebuild lwip2 1.2-30 (#7131)
+89cacef2 Update to latest SoftwareSerial for Delegate fix
+9074bb98 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427dfdc1567bd52ca6d966d5640d6bb9#commitcomment-37529995 (#7121)
+5d2f09de Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 2c435b1f lwip2 update: stop dhcp when interface goes down (#7114)
 0554d39c Add  support for my new board eduino wifi (#6554)
-9b0164af Merge branch 'master' into nosizeconf
 abdd2bdb simple TZ api: bypass sprintf/sscanf: + 7KB (#7109)
+91d21b66 Rebuild eboot.elf with GCC 9
+a00e6b91 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 4b2bf459 Additions to UdpContext needed for LEAmDNS2 (#7048)
 2d58be74 TCP: fixes backlog limit handling, and allows ephemeral TCP connections (#7096)
 27c759e7 Merge branch 'master' into noplaincount
@@ -118,29 +130,47 @@ ba22113f Fix Windows CI build (#6927)
 d40dbb45 device tests: some of them can be run on host (#6912)
 d1237fd0 back to 2.7.0-dev (#6917)
 b4345f6d Merge branch 'master' into gratuitous
+7090f686 Fix SPISlave interrupt attach's 2nd parameter
+87a9a500 Actually rebuild the libc.a using GCC 9.2
+6686826d Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+39dd0b9c Fix ets_irq_arratch redefinition and core IRQ handlers
+d79cd6ce Move the gdbstub example to a subdir
+54013d7b Add 2nd arg (exception handler) to ets_isr_t
+f5f76738 Remove using std::abs which conflicted with C lib headers
 e1a5cc9a Merge branch 'master' into gratuitous
 338c3df9 unsigned interval
 b34c9068 Merge branch 'master' into gratuitous
+98aa5f01 Merge branch 'master' into gcc9.1
+0f2e6ab9 Use std::abs/round to replace the macro definitions
 d54ac04a Merge branch 'gratuitous' of github.com:d-a-v/Arduino into gratuitous
 2885ac46 mock lwIP's etharp_request()
 98200aa0 Merge branch 'master' into gratuitous
 716baecf remove debug lines
 8d433ca6 update API
+4e292d7a Move to std=c++17/c17 in platform, remove abs/round
+b33206d6 Move add'l softFP from IRAM to flash
+e9a315c3 Move to gnu5 build with add'l softFP from ROM
 cbd217fa update API to allow changing interval on the fly
+541c92ed Upgrade to -gnu4 toolchain
+fe8b4da6 Merge branch 'master' into gcc9.1
+075d9c11 Update with fixes from Sming repo for PSTR and ASM
 93bc15e3 update comment
 c087e08c fix with lwip1
 60250965 wifi: ARP gratuitous API for wifi station mode
 962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
-855dd342 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-b8e48154 merge https://github.com/esp8266/Arduino/pull/6813
-94bb1560 Merge branch 'master' into nosizeconf
 814bb0d7 Merge branch 'xmc_flash' of https://github.com/ChocolateFrogsNuts/Arduino into xmc_flash
 3229f3d1 Merge branch 'master' into xmc_flash
 61c0a330 Slow down flash access during eboot firmware copy on XMC chips
 7491779b Merge branch 'master' into xmc_flash
 cb3ab4a5 Merge branch 'master' into xmc_flash
 4dc15eaf Slow down flash access during eboot firmware copy
+e684db13 Merge branch 'master' into gcc9.1
 b4e5e78d Merge branch 'master' into xmc_flash
+9d6f0f14 Reapply Ticker.h casting warning fixes for gcc9
+8115e1f5 One more merge diff fix
+293ba4d3 Merge branch 'master' into gcc9.1
+89c3add7 Fix json merge conflict
+e4c2c697 Fix Ticker merge conflict
 c63da343 Merge branch 'master' into xmc_flash
 f6e25592 Merge branch 'master' into xmc_flash
 781cf96e Merge branch 'master' into noplaincount
@@ -160,22 +190,48 @@ afc88f26 - Improve HelloMesh.ino.
 8194197e Even better fix of conflict with master branch.
 7ca5a7e5 Fix conflict with master branch.
 f8ec4f1c - Make connectionQueue(), latestTransmissionOutcomes() and latestTransmissionSuccessful() methods static in order to match the underlying data storage.
-70634251 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-4e05cc84 fix emulation on host when 32bit compiler is not available
-c2747a49 Merge branch 'master' into nosizeconf
-dfb6a005 fix emulation on host
-719f65a0 fix
-da308ad4 fixes
 b0ef9195 Merge branch 'master' into wifi_mesh_update_2.2
-6104b9de fixes
-28e7d089 16MB no fs was missing
-08e3b519 ESP.getFlashChipSize() returns ESP.getFlashChipRealSize()
-0decdf4e fixes
-41bc6bc2 Merge branch 'master' into nosizeconf
-8834211a flash: mapping definition by sketch at runtime depending on flash chip size and user configuration
+910fe3af Merge branch 'master' into gcc9.1
+d17bac3d Move to --std=gnu++14 (C++14 + GNU extensions)
+22ecb65f Upgrade to GCC 9.2, released in August 2019
+230891d7 Full rebuild of toolchain and libs
+1c3d12b9 Update libc.a to latest rev
+58e909ee Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 86025c78 - Make each mesh backend use a unique NetworkInfo class and separate connectionQueue and latestTransmissionOutcomes vectors.
 2576a091 Merge branch 'master' into wifi_mesh_update_2.2
+7f2ad70f Fix "reinterpret_case is not a constexpr" error
+b7cdc030 Fix umm_perf reference to ROM function
+cf045699 Merge branch 'master' into gcc9.1
 5834c547 - Add broadcast functionality.
 26e626de Merge branch 'master' into wifi_mesh_update_2.2
 235b02ed Merge branch 'master' into wifi_mesh_update_2.2
+6944b6f1 Update BearSSL to latest release
+bb3bde98 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+0151092c Update to latest libs, save iram
+357e2eb7 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+82406185 Rebuild with new LWIP locking
+3c695a55 Merge branch 'master' into gcc9.1
+b279f33d Rebuild moving exception.what to unique names
+c5fceddd Workaround g++ template section problem for exception strings
+9f6c8f53 Automate building of BearSSL and LWIP w/new toolchain
+86812e6f Merge branch 'master' into gcc9.1
+e5ee2859 Rebuild Bearssl using latest GCC push
+1cb9282e Make exceptions work again, get std::regex up
+1168360c Merge branch 'master' into gcc9.1
+f4cc2d12 Remove GCC support fcn that's in ROM
+71f48ac4 Fix ticker function cast warnings in GCC 9
+bb3df454 Update SDFat to remove FatFile warnings
+b0a5fe6d Trivial tab to space fix
+a68d8ce9 Make heap an undefined extend array
+3065a3f9 Dummy size for heap to avoid GCC 8/9 warnings
+a15ab565 Fix WiFiClientSecure implicit default copy ctor
+ef74b7c3 Fix AxTLS alias function defs to match real code
+3afe9e3f Fix deprecated implicit copy ctors in IP code
+726f0e9d Merge branch 'master' into gcc9.1
+33fee67c Remove gdb stub warnings w/a pragma
+83f308e2 Fix digitalRead alias warning
+99a0c6f2 Fix GDBstub linkage options
+354cfcd7 Rebuild bearssl using new toolchain
+86422045 Rebuilt using pure GNU binutils and GCC
+59023e98 Upgrade to GCC 9.1 toolchain
 d20177ae - Add new ESP-NOW mesh backend.
