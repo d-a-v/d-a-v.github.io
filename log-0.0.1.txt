@@ -1,3 +1,5 @@
+c548958f Tone limit 20KHz  (#7179)
+483bfde8 Move floating point from libgcc out of IRAM (#7180)
 a04c3244 esp8285: properly initialize free gpio as input (#7165)
 631f66bd Attribute `__real_system_restart_local()` as `(noreturn)` (#7167)
 726df696 Switch espressif8266 platform to development branch in PlatformIO build (#7170)
