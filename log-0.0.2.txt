@@ -1,12 +1,27 @@
-a4ba9f35 Merge branch 'PR-7149'
-9012ccbb Merge branch 'PR-7134'
-9a7679eb Merge branch 'PR-7080'
-88fc3f0f Merge branch 'PR-6889'
-4ce448fe Merge branch 'PR-6812'
-69c3d1ba Merge branch 'PR-6768'
-8cdb5252 Merge branch 'PR-6725'
-36ed3779 Merge branch 'PR-6294'
-c62e4e93 Merge branch 'PR-6280'
+5064c3ae Merge branch 'PR-7149'
+e42d904e Merge branch 'PR-7134'
+7d642b16 Merge branch 'PR-7080'
+ef492385 Merge branch 'PR-6812'
+e0786b12 Merge branch 'PR-6768'
+bf665fde Merge branch 'PR-6725'
+dd89b102 Merge branch 'PR-6294'
+298fb2b2 Merge branch 'PR-6280'
+9632e868 Fix espota completion success/fail check (#7204)
+1af4ea66 Allow waveforms to be specified in clock cycles (#7211)
+6cb16997 Use F_CPU if (?) CPU frequency switch is compile-time only (#6833)
+e5f45148 mDNS: protect MDNSResponder::queryService against misuse (#7216)
+e1789ddf MD5 Builder: Rework for unqiue_ptr instead of malloc,  get only member functions marked as const (#7208)
+4f27ce16 Fix TCP send to IPv6 link local addresses (#7207)
+ee619d36 Fix UDP send to IPv6 link local addresses (#6541)
+5511180c EspSoftwareSerial release 6.8.1 (#7205)
+41d271d9 Fix for MD5 leak bug, issue #7195 (#7197)
+1a9988ec fix memleak (#7203)
+fad05644 Make DNS resolution order selectable during runtime or compile time (#6865)
+bc170e6d WiFi: ARP gratuitous API for wifi station mode (#6889)
+3b85bdbc Merge branch 'master' into noplaincount
+d600cc7f Expose webserver's chunk api (#7134)
+a0f0376a Merge branch 'master' into chunckedApi
+3db610f6 Ability to define -DFP_IN_IROM when generating ld script (#7188)
 f22e3d1b Merge branch 'master' into arduinoethernet
 c548958f Tone limit 20KHz  (#7179)
 483bfde8 Move floating point from libgcc out of IRAM (#7180)
@@ -134,7 +149,6 @@ ba22113f Fix Windows CI build (#6927)
 1d0bc5ef Allow GZIP compressed flash updates (#6820)
 d40dbb45 device tests: some of them can be run on host (#6912)
 d1237fd0 back to 2.7.0-dev (#6917)
-b4345f6d Merge branch 'master' into gratuitous
 7090f686 Fix SPISlave interrupt attach's 2nd parameter
 87a9a500 Actually rebuild the libc.a using GCC 9.2
 6686826d Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
@@ -142,26 +156,14 @@ b4345f6d Merge branch 'master' into gratuitous
 d79cd6ce Move the gdbstub example to a subdir
 54013d7b Add 2nd arg (exception handler) to ets_isr_t
 f5f76738 Remove using std::abs which conflicted with C lib headers
-e1a5cc9a Merge branch 'master' into gratuitous
-338c3df9 unsigned interval
-b34c9068 Merge branch 'master' into gratuitous
 98aa5f01 Merge branch 'master' into gcc9.1
 0f2e6ab9 Use std::abs/round to replace the macro definitions
-d54ac04a Merge branch 'gratuitous' of github.com:d-a-v/Arduino into gratuitous
-2885ac46 mock lwIP's etharp_request()
-98200aa0 Merge branch 'master' into gratuitous
-716baecf remove debug lines
-8d433ca6 update API
 4e292d7a Move to std=c++17/c17 in platform, remove abs/round
 b33206d6 Move add'l softFP from IRAM to flash
 e9a315c3 Move to gnu5 build with add'l softFP from ROM
-cbd217fa update API to allow changing interval on the fly
 541c92ed Upgrade to -gnu4 toolchain
 fe8b4da6 Merge branch 'master' into gcc9.1
 075d9c11 Update with fixes from Sming repo for PSTR and ASM
-93bc15e3 update comment
-c087e08c fix with lwip1
-60250965 wifi: ARP gratuitous API for wifi station mode
 3abd421b Merge branch 'master' into arduinoethernet
 9b126044 Merge branch 'master' into arduinoethernet
 962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
