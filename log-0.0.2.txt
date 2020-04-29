@@ -1,10 +1,15 @@
-4d313a6d Merge branch 'PR-7149'
-23bcf709 Merge branch 'PR-7134'
-5a707d36 Merge branch 'PR-7080'
-79cd446c Merge branch 'PR-6812'
-92dec603 Merge branch 'PR-6768'
-95040f33 Merge branch 'PR-6725'
-45d7181b Merge branch 'PR-6280'
+7b69f313 Merge branch 'PR-7149'
+e483a1af Merge branch 'PR-7080'
+3f36ea58 Merge branch 'PR-6812'
+a5ef7e34 Merge branch 'PR-6768'
+6056a4ea Merge branch 'PR-6725'
+5aae8653 Merge branch 'PR-6280'
+668b33dd Revamp of the FSBrowser and SDWebServer examples (#7182)
+ce200ed7 - Move TypeConversion from namespace esp8266 to namespace experimental. (#7252)
+3c9a75f8 Add CryptoInterface library (#6961)
+ec764422 Hold transmitter in reset during rate change (#7248)
+1bb5ccf7 Fixed misplacement of back quotes (#7247)
+36e047e9 Allow stopWaveform to stop timed-out waveforms (#7236)
 9b41d9ac XMC flash support - WIP (#6725)
 7dd47386 Merge branch 'xmc_flash' of https://github.com/ChocolateFrogsNuts/Arduino into xmc_flash
 aa4a7119 Merge branch 'master' into xmc_flash
@@ -36,7 +41,6 @@ fad05644 Make DNS resolution order selectable during runtime or compile time (#6
 bc170e6d WiFi: ARP gratuitous API for wifi station mode (#6889)
 3b85bdbc Merge branch 'master' into noplaincount
 d600cc7f Expose webserver's chunk api (#7134)
-a0f0376a Merge branch 'master' into chunckedApi
 3db610f6 Ability to define -DFP_IN_IROM when generating ld script (#7188)
 f22e3d1b Merge branch 'master' into arduinoethernet
 c548958f Tone limit 20KHz  (#7179)
@@ -60,11 +64,7 @@ fe02cb3c Use 2nd stack for update signature verification
 1dcd4c4a - Fix even more merge conflicts.
 16801f3d - Rework ExpiringTimeTracker to be based on PolledTimeout.
 372a3ec2 EspSoftwareSerial release 6.7.2 fixes warnings with gcc 9.2 (#7133)
-19f7042e Merge branch 'master' into chunckedApi
-cc3e01cc expose hidden WebServer's chunked API
-fee13076 expose hidden WebServer's chunked API
 b8e4ca48 udp: fix again pbuf management (#7132)
-99740f86 expose hidden WebServer's chunked API
 b64e8da2 Set a value for SSDP notify interval (#7110)
 e39cbe63 rebuild lwip2 1.2-30 (#7131)
 c61b70de unblobbing commit https://github.com/esp8266/Arduino/commit/2c435b1f427dfdc1567bd52ca6d966d5640d6bb9#commitcomment-37529995 (#7121)
