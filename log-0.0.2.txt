@@ -1,14 +1,10 @@
-b92a17aa Merge branch 'PR-7149'
-98fdd918 Merge branch 'PR-7080'
-599e07b1 Merge branch 'PR-6812'
-2e962079 Merge branch 'PR-6768'
-359a8aa6 Merge branch 'PR-6280'
-ea879b6e XMC in eboot: hotfix: disabling (#7277)
+f72cddf8 Merge branch 'PR-7149'
+87141e9c Merge branch 'PR-7080'
+481627aa Merge branch 'PR-6812'
+f9f36da7 Merge branch 'PR-6768'
+c5268945 Merge branch 'PR-6280'
+56bbb99e Back to 3.0.0-dev (#7279)
 e64125a5 - Move globals to anonymous namespaces.
-83166f94 Deprecate SPIFFS, move examples to LittleFS (#7263)
-9845deb2 Document USTX in USS/UxS not working as expected (#7265)
-bf718c39 Revert "Changing listen to listen the current iface only instead of 0" (#7266)
-4e3a4b6d Back to dev (#7260)
 effcc3a2 - Make everything const by default.
 a24b8d23 Merge branch 'master' into wifi_mesh_update_2.2
 3b85bdbc Merge branch 'master' into noplaincount
