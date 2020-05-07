@@ -1,3 +1,4 @@
+ea879b6e XMC in eboot: hotfix: disabling (#7277)
 83166f94 Deprecate SPIFFS, move examples to LittleFS (#7263)
 9845deb2 Document USTX in USS/UxS not working as expected (#7265)
 bf718c39 Revert "Changing listen to listen the current iface only instead of 0" (#7266)
