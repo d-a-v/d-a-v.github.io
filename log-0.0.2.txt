@@ -1,9 +1,21 @@
-f72cddf8 Merge branch 'PR-7149'
-87141e9c Merge branch 'PR-7080'
-481627aa Merge branch 'PR-6812'
-f9f36da7 Merge branch 'PR-6768'
-c5268945 Merge branch 'PR-6280'
+8b28f5da Merge branch 'PR-7281'
+448cd764 Merge branch 'PR-7149'
+77f81a4f Merge branch 'PR-7080'
+f2ca3e51 Merge branch 'PR-6812'
+67125342 Merge branch 'PR-6768'
+0ab91597 Merge branch 'PR-6280'
+ed8add50 Update README.md (#7295)
+9cf2186a Update version links (#7294)
+7f3d837e Update release instructions (#7292)
+2ec2679d - Move all serialization code to separate Serializer namespace and files.
+ff0b1003 remove unwanted changes
+c1926675 restored former versions (legacy, LEAv1), clock example for new API
+1910848a two interface example is working (also with IPv6)
+81151348 Merge branch 'master' into LEAmDNS2
+d47f6f07 style
+560c2a5c updated Source files from LEA
 56bbb99e Back to 3.0.0-dev (#7279)
+5287f820 Merge branch 'LEAmDNS2' of https://github.com/LaborEtArs/Arduino into LEAmDNS2
 e64125a5 - Move globals to anonymous namespaces.
 effcc3a2 - Make everything const by default.
 a24b8d23 Merge branch 'master' into wifi_mesh_update_2.2
@@ -22,6 +34,10 @@ a5fdec61 Merge branch 'master' into arduinoethernet
 3abd421b Merge branch 'master' into arduinoethernet
 9b126044 Merge branch 'master' into arduinoethernet
 962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
+56015f4c Merge branch 'LEAmDNS2' of https://github.com/LaborEtArs/Arduino into LEAmDNS2
+af3a877e Second try :-)
+9600318d Merge branch 'master' into LEAmDNS2
+66e79bf8 LEAmDNS2 (Host Version)
 1da907ff replace old Ethernet Arduino-library with v2, submoduled
 781cf96e Merge branch 'master' into noplaincount
 cadc5265 fix
