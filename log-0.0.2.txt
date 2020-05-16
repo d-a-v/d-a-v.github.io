@@ -1,9 +1,19 @@
-8b28f5da Merge branch 'PR-7281'
-448cd764 Merge branch 'PR-7149'
-77f81a4f Merge branch 'PR-7080'
-f2ca3e51 Merge branch 'PR-6812'
-67125342 Merge branch 'PR-6768'
-0ab91597 Merge branch 'PR-6280'
+d885c32a Merge branch 'PR-7281'
+abe016cb Merge branch 'PR-7080'
+b0086f9e Merge branch 'PR-6965'
+d14a85ec Merge branch 'PR-6812'
+92a40423 Merge branch 'PR-6768'
+c31f47b8 Merge branch 'PR-6294'
+f29b063f Merge branch 'PR-6280'
+c5f60e31 Allocate BSSL stack for SigningVerifier (#7291)
+157ce579 bugfix2/ESP8266HTTPClient (#6476)
+8ca6e784 Built complete toolchain for all archs
+40e1f02f - Split most of the EspnowMeshBackend code into utility files and the new ConditionalPrinter, EspnowDatabase, EspnowConnectionManager, EspnowTransmitter and EspnowEncryptionBroker classes.
+43f9f0e8 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+24f55004 Merge master and fix eboot build
+3f5495bb Merge branch 'master' into wifi_mesh_update_2.2
+70ec21a7 Move to GCC 10.1
+d01e6391 - Fix build error.
 ed8add50 Update README.md (#7295)
 9cf2186a Update version links (#7294)
 7f3d837e Update release instructions (#7292)
@@ -16,21 +26,78 @@ d47f6f07 style
 560c2a5c updated Source files from LEA
 56bbb99e Back to 3.0.0-dev (#7279)
 5287f820 Merge branch 'LEAmDNS2' of https://github.com/LaborEtArs/Arduino into LEAmDNS2
+be5fe6d3 Merge branch 'master' into pr-erase-config
 e64125a5 - Move globals to anonymous namespaces.
+d661ac67 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+7926828d Rebuild all arch toolchains
 effcc3a2 - Make everything const by default.
+14fede01 Merge branch 'master' into pr-erase-config
 a24b8d23 Merge branch 'master' into wifi_mesh_update_2.2
+74129c51 Merge branch 'master' into pr-erase-config
+b2d35ea2 Merge branch 'master' into pr-erase-config
 3b85bdbc Merge branch 'master' into noplaincount
 f22e3d1b Merge branch 'master' into arduinoethernet
-9e84878b Merge branch 'master' into safesign
-32a0a3a4 Reset state on any error condition in Updater::end
-fe02cb3c Use 2nd stack for update signature verification
+828a47dd Merge branch 'master' into pr-erase-config
+afff5696 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+4ffe5190 Upgrade to GCC 9.3
+4954dcd2 Merge branch 'master' into pr-erase-config
+39b9508a CI issues
+372998cd Merge branch 'master' into pr-erase-config
+4553009e Made function name longer to avoid possible name conflicts in the future. Using static caused the compiler to inline with functions with different IRAM attributes. Updated some comments. Maybe fixed CI host issue with Update.cpp.
 548d7029 Merge branch 'master' into wifi_mesh_update_2.2
 1dcd4c4a - Fix even more merge conflicts.
 16801f3d - Rework ExpiringTimeTracker to be based on PolledTimeout.
+89cacef2 Update to latest SoftwareSerial for Delegate fix
+9074bb98 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+5d2f09de Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+91d21b66 Rebuild eboot.elf with GCC 9
+a00e6b91 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 27c759e7 Merge branch 'master' into noplaincount
+604b40ab Merge branch 'master' into pr-erase-config
+f1acb40e Access bin image header through ICACHE reduces IRAM usage by 16. Latest merge broke my TZ logic. Updated to the new configTime method.
+c0394fbc Merge branch 'master' into pr-erase-config
+39160c8f one more :(
+4e2493ad Resolve merge conflict. Changed method for reading image header, freeing 16 bytes of iRAM"
+049d91bc Added a Third method.
 044279e6 Made ESP8266WebServer::client() return a reference (fixes #7075)
+560ddc5c Set default Method to 2, to side step travis issue of using preinit(). This is just a PoC an alternate for preinit() can be created later.
+546f0cb0 Merge branch 'master' into pr-erase-config
+9c4e44bc Added print messages to show progress. And code to ensure the UART speed stayed at 74880 for a more complete viewing of messages. Well at least, it stays at 74880 for a longer time than it was. Added pinMode filter to prevent UART TX pin from being disabled during user_init().
+73f16dcc Merge branch 'master' into pr-erase-config
+71308773 Merge branch 'master' into pr-erase-config
+1ce4c601 Merge branch 'master' into pr-erase-config
+4554a7c8 style fix
+660d19ca Merge branch 'master' into pr-erase-config
+815f1dc9 Merge branch 'master' into pr-erase-config
+95eefede Update example. Removed some debug crud. Added a Flash Info hotkey option.
+9d6e0599 Merge branch 'master' into pr-erase-config
+3258d63a Merge branch 'master' into pr-erase-config
+a284b0a6 Take two
+e51ab08a Addressed Tavis CI style issues.
+bfb21b15 A proof of concept for handling Erase WiFi Setting after OTA
+afd603b7 Merge branch 'master' into pr-erase-config
+500b7cc6 Removed cleaned up debug crud and added test example.
+6d882e4c Added two_shots init to noextra4k
+c66ae2e1 Merge branch 'master' into pr-erase-config
+93fb3d3d Added a 2nd method
+6fde10f0 Proof of concept for post OTA 1st boot erase config.
 a49f0470 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
 a5fdec61 Merge branch 'master' into arduinoethernet
+7090f686 Fix SPISlave interrupt attach's 2nd parameter
+87a9a500 Actually rebuild the libc.a using GCC 9.2
+6686826d Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+39dd0b9c Fix ets_irq_arratch redefinition and core IRQ handlers
+d79cd6ce Move the gdbstub example to a subdir
+54013d7b Add 2nd arg (exception handler) to ets_isr_t
+f5f76738 Remove using std::abs which conflicted with C lib headers
+98aa5f01 Merge branch 'master' into gcc9.1
+0f2e6ab9 Use std::abs/round to replace the macro definitions
+4e292d7a Move to std=c++17/c17 in platform, remove abs/round
+b33206d6 Move add'l softFP from IRAM to flash
+e9a315c3 Move to gnu5 build with add'l softFP from ROM
+541c92ed Upgrade to -gnu4 toolchain
+fe8b4da6 Merge branch 'master' into gcc9.1
+075d9c11 Update with fixes from Sming repo for PSTR and ASM
 3abd421b Merge branch 'master' into arduinoethernet
 9b126044 Merge branch 'master' into arduinoethernet
 962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
@@ -39,6 +106,12 @@ af3a877e Second try :-)
 9600318d Merge branch 'master' into LEAmDNS2
 66e79bf8 LEAmDNS2 (Host Version)
 1da907ff replace old Ethernet Arduino-library with v2, submoduled
+e684db13 Merge branch 'master' into gcc9.1
+9d6f0f14 Reapply Ticker.h casting warning fixes for gcc9
+8115e1f5 One more merge diff fix
+293ba4d3 Merge branch 'master' into gcc9.1
+89c3add7 Fix json merge conflict
+e4c2c697 Fix Ticker merge conflict
 781cf96e Merge branch 'master' into noplaincount
 cadc5265 fix
 e45712de webserver: do not count "plain" in argument list it is still available though
@@ -52,9 +125,47 @@ afc88f26 - Improve HelloMesh.ino.
 7ca5a7e5 Fix conflict with master branch.
 f8ec4f1c - Make connectionQueue(), latestTransmissionOutcomes() and latestTransmissionSuccessful() methods static in order to match the underlying data storage.
 b0ef9195 Merge branch 'master' into wifi_mesh_update_2.2
+910fe3af Merge branch 'master' into gcc9.1
+d17bac3d Move to --std=gnu++14 (C++14 + GNU extensions)
+22ecb65f Upgrade to GCC 9.2, released in August 2019
+230891d7 Full rebuild of toolchain and libs
+1c3d12b9 Update libc.a to latest rev
+58e909ee Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 86025c78 - Make each mesh backend use a unique NetworkInfo class and separate connectionQueue and latestTransmissionOutcomes vectors.
 2576a091 Merge branch 'master' into wifi_mesh_update_2.2
+7f2ad70f Fix "reinterpret_case is not a constexpr" error
+b7cdc030 Fix umm_perf reference to ROM function
+cf045699 Merge branch 'master' into gcc9.1
 5834c547 - Add broadcast functionality.
 26e626de Merge branch 'master' into wifi_mesh_update_2.2
 235b02ed Merge branch 'master' into wifi_mesh_update_2.2
+6944b6f1 Update BearSSL to latest release
+bb3bde98 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+0151092c Update to latest libs, save iram
+357e2eb7 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
+82406185 Rebuild with new LWIP locking
+3c695a55 Merge branch 'master' into gcc9.1
+b279f33d Rebuild moving exception.what to unique names
+c5fceddd Workaround g++ template section problem for exception strings
+9f6c8f53 Automate building of BearSSL and LWIP w/new toolchain
+86812e6f Merge branch 'master' into gcc9.1
+e5ee2859 Rebuild Bearssl using latest GCC push
+1cb9282e Make exceptions work again, get std::regex up
+1168360c Merge branch 'master' into gcc9.1
+f4cc2d12 Remove GCC support fcn that's in ROM
+71f48ac4 Fix ticker function cast warnings in GCC 9
+bb3df454 Update SDFat to remove FatFile warnings
+b0a5fe6d Trivial tab to space fix
+a68d8ce9 Make heap an undefined extend array
+3065a3f9 Dummy size for heap to avoid GCC 8/9 warnings
+a15ab565 Fix WiFiClientSecure implicit default copy ctor
+ef74b7c3 Fix AxTLS alias function defs to match real code
+3afe9e3f Fix deprecated implicit copy ctors in IP code
+726f0e9d Merge branch 'master' into gcc9.1
+33fee67c Remove gdb stub warnings w/a pragma
+83f308e2 Fix digitalRead alias warning
+99a0c6f2 Fix GDBstub linkage options
+354cfcd7 Rebuild bearssl using new toolchain
+86422045 Rebuilt using pure GNU binutils and GCC
+59023e98 Upgrade to GCC 9.1 toolchain
 d20177ae - Add new ESP-NOW mesh backend.
