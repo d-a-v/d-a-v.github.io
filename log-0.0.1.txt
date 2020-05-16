@@ -1,3 +1,5 @@
+c5f60e31 Allocate BSSL stack for SigningVerifier (#7291)
+157ce579 bugfix2/ESP8266HTTPClient (#6476)
 ed8add50 Update README.md (#7295)
 9cf2186a Update version links (#7294)
 7f3d837e Update release instructions (#7292)
