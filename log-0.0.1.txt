@@ -1,3 +1,8 @@
+57627122 Bring SPIFFS up to latest version (#7276)
+7c008e31 Flash size reduction for mime-type (#7312)
+3e4d7c76 Allow non-aligned PSTR() (#7275)
+1b20cd62 - Add required BearSSL include in header. (#7310)
+4519db85 Server Sent Events example - issue #7008 (#7012)
 c5f60e31 Allocate BSSL stack for SigningVerifier (#7291)
 157ce579 bugfix2/ESP8266HTTPClient (#6476)
 ed8add50 Update README.md (#7295)
