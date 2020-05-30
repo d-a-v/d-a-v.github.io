@@ -1,10 +1,23 @@
-23d30998 Merge branch 'PR-7317'
-853e27a8 Merge branch 'PR-7281'
-f2238697 Merge branch 'PR-7080'
-f0222af9 Merge branch 'PR-6965'
-c4adbdf7 Merge branch 'PR-6812'
-e3ddf08a Merge branch 'PR-6768'
-147d85ef Merge branch 'PR-6280'
+e33cffa4 Merge branch 'PR-7317'
+df58840f Merge branch 'PR-7281'
+50c787dd Merge branch 'PR-7080'
+5e732106 Merge branch 'PR-6965'
+79c62354 Merge branch 'PR-6812'
+360b22bc Merge branch 'PR-6768'
+2568f38a Merge branch 'PR-6280'
+27ef03fc Add documentation on recovering from deep sleep with WAKE_RF_DISABLED (#7338)
+0d43338a Add FTP client/server lib link (#7336)
+51daecc2 Xmc flash 2 (#7317)
+e3f2f6bb Merge branch 'master' into xmc_flash2
+0deb8748 Document ESP.getMaxFreeBlockSize() != max malloc size (#7328)
+ad6b4260 fix for lwIP-1.4
+b5fefcfc fix for lwIP-v1
+39df38a5 Disable interrupts during the precached part of _SPICommand()
+556bb1e8 Merge branch 'master' into LEAmDNS2
+e4bbed64 Merge branch 'LEAmDNS2' of github.com:d-a-v/Arduino into LEAmDNS2
+52b3e5b7 rotate right (#7320)
+af9234eb Merge branch 'master' into arduinoethernet
+ca6ab15c Merge branch 'master' into xmc_flash2
 5ad1c0a2 After eboot copies the new firmware into place, verify the copy.
 5c8daf89 Remove unnecessary XMC support from eboot
 57627122 Bring SPIFFS up to latest version (#7276)
@@ -26,6 +39,9 @@ ed8add50 Update README.md (#7295)
 7f3d837e Update release instructions (#7292)
 2ec2679d - Move all serialization code to separate Serializer namespace and files.
 ff0b1003 remove unwanted changes
+b7c35048 remove unwanted change
+6d22b707 still using current LEA
+0e692c39 add enableArduino() into LEAmDNSv2
 c1926675 restored former versions (legacy, LEAv1), clock example for new API
 1910848a two interface example is working (also with IPv6)
 81151348 Merge branch 'master' into LEAmDNS2
