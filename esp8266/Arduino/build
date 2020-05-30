@@ -54,7 +54,7 @@ for v in 0.0.?; do
     cp package/versions/${v}/package_esp8266com_index.json $dir/package_esp8266com_index.json.new
 
     lasttag=$(git describe --tag|cut -d- -f1)
-    git log --oneline ${lasttag}.. > $dir/../../newlog.txt
+    git log --oneline ${lasttag}.. > $dir/newlog.txt
 
     cd $dir/../..
 
@@ -82,10 +82,10 @@ for v in 0.0.?; do
     done
     echo "${v}:-git-version--${ver},-list-of-included-PRs-:${SPR:-"-none"}" >> $dir/message.txt
 
-    sed -ibak "s,^version ${v}.*,version ${v}: git:'$ver' ($(date -u)) (${PR} ),g" ../../index.html
+    sed -ibak "s,^version ${v}.*,version ${v}: git:'$ver' ($(date -u)) (${PR} ),g" index.html
 
-    mv ../../newlog.txt ../../log-${v}.txt
-    git add package_esp8266com_index.json releases/download/versions/${v}/esp8266-${v}.zip ../../index.html ../../log-${v}.txt
+    mv newlog.txt log-${v}.txt
+    git add package_esp8266com_index.json releases/download/versions/${v}/esp8266-${v}.zip index.html log-${v}.txt
 
     ./rss.make ${v}
     git add rss.items.xml ../../rss.xml
