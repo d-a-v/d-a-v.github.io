@@ -1,11 +1,11 @@
-6c6e999e Merge branch 'PR-7317'
-e1c5d0a6 Merge branch 'PR-7281'
-05c0b368 Merge branch 'PR-7080'
-a0768356 Merge branch 'PR-6965'
-5a82cee3 Merge branch 'PR-6812'
-df123e77 Merge branch 'PR-6768'
-86567457 Merge branch 'PR-6680'
-3aea8a15 Merge branch 'PR-6280'
+df76f3be Merge branch 'PR-7317'
+4e261893 Merge branch 'PR-7281'
+d5b0dc46 Merge branch 'PR-7080'
+c333ef86 Merge branch 'PR-6965'
+686f69d5 Merge branch 'PR-6812'
+19f91baa Merge branch 'PR-6768'
+1a224095 Merge branch 'PR-6680'
+947f0f17 Merge branch 'PR-6280'
 50d9e83d fix compilation problem with IPv6
 d80cd318 do not filter mac address from within driver (https://github.com/d-a-v/W5500lwIP/issues/17)
 59fe44e7 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
