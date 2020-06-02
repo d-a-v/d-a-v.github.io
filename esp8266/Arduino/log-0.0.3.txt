@@ -1,11 +1,18 @@
-cf4673c5 Merge branch 'PR-7317'
-0d603023 Merge branch 'PR-7281'
-5dccc70a Merge branch 'PR-7080'
-a6003044 Merge branch 'PR-6965'
-206413a8 Merge branch 'PR-6812'
-cd3fbc6b Merge branch 'PR-6768'
-499cd90e Merge branch 'PR-6680'
-05a62f24 Merge branch 'PR-6280'
+6c6e999e Merge branch 'PR-7317'
+e1c5d0a6 Merge branch 'PR-7281'
+05c0b368 Merge branch 'PR-7080'
+a0768356 Merge branch 'PR-6965'
+5a82cee3 Merge branch 'PR-6812'
+df123e77 Merge branch 'PR-6768'
+86567457 Merge branch 'PR-6680'
+3aea8a15 Merge branch 'PR-6280'
+50d9e83d fix compilation problem with IPv6
+d80cd318 do not filter mac address from within driver (https://github.com/d-a-v/W5500lwIP/issues/17)
+59fe44e7 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
+fef264e9 Merge branch 'master' into ethernet
+e258e16a Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
+6f91be09 Merge branch 'master' into pr-erase-config
+8ee67ab2 Return FALSE on seek past EOF (#7324)
 27ef03fc Add documentation on recovering from deep sleep with WAKE_RF_DISABLED (#7338)
 0d43338a Add FTP client/server lib link (#7336)
 51daecc2 Xmc flash 2 (#7317)
@@ -119,6 +126,7 @@ c66ae2e1 Merge branch 'master' into pr-erase-config
 6fde10f0 Proof of concept for post OTA 1st boot erase config.
 a49f0470 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
 51aca37f Merge branch 'master' into ethernet
+df04b3cd Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 a5fdec61 Merge branch 'master' into arduinoethernet
 b3acf27f Merge branch 'master' into ethernet
 3abd421b Merge branch 'master' into arduinoethernet
