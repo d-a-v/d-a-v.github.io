@@ -1,12 +1,32 @@
-85e59f3f Merge branch 'PR-7281'
-a78af211 Merge branch 'PR-7080'
-9a4e2787 Merge branch 'PR-6965'
-a5176d86 Merge branch 'PR-6812'
-841da9e6 Merge branch 'PR-6768'
-371606df Merge branch 'PR-6294'
-5f66043a Merge branch 'PR-6280'
+c7bd09a7 Merge branch 'PR-7356'
+157721b5 Merge branch 'PR-7281'
+d04b492b Merge branch 'PR-7237'
+e446a14f Merge branch 'PR-7080'
+f7af5f63 Merge branch 'PR-6965'
+42fb3c66 Merge branch 'PR-6812'
+e4236da1 Merge branch 'PR-6768'
+272ec253 Merge branch 'PR-6294'
+41a90f88 Merge branch 'PR-6280'
+83523c02 umm_malloc manual merge with upstream (#7337)
+0d04124b EspSoftwareSerial service release 6.8.2. (#7354)
+8693ad4d Use a prebuild, portable Python3 for OSX (#7348)
+e70092ca Recognize MSYS(MINGW) as Windows for toolchain get (#7358)
+45feadcb emulation on host: various fixes (#7355)
+096d2f29 fix emulation on host
+3c3cbea4 fix std:: dependencies
+9cb4a55e ditto
+27f57438 move features to features.h
+62bb52b4 wip: brings polledTimeout to the same level as millis()
+23febc18 elf2bin.py objcopy cleanup (#7351)
+66138a67 - Add protected getters for _forwardingBacklog and _macIgnoreList in FloodingMesh.
+1d2b6b5c - Make HelloMesh.ino stylish.
+40b39f32 - Polish README.md.
+5661ec07 Merge branch 'master' into wifi_mesh_update_2.2
+fba4ac15 - Make most type definitions public instead of protected, to facilitate use in composition.
+6b1cdb85 Merge branch 'master' into pr-erase-config
 7c29e678 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 c3796a4d Graph example (#7299)
+96eacc39 Merge branch 'master' into pr-dns-forwarder
 6f91be09 Merge branch 'master' into pr-erase-config
 8ee67ab2 Return FALSE on seek past EOF (#7324)
 27ef03fc Add documentation on recovering from deep sleep with WAKE_RF_DISABLED (#7338)
@@ -60,6 +80,15 @@ d661ac67 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 7926828d Rebuild all arch toolchains
 effcc3a2 - Make everything const by default.
 14fede01 Merge branch 'master' into pr-erase-config
+16d02f69 Merge branch 'master' into pr-dns-forwarder
+ee977779 Updated HTML to limit/remove screen flash when using show password.
+ad62a7f3 Added missing include for unsupported build environment
+3fc1be26 Merge branch 'master' into pr-dns-forwarder
+a1018090 Add/updated comments. Remove commented code. Reduced size of a chunk of HTML string. Added maxlength to HTML input fields for credentials.
+aa430d02 Fixed insert error
+63f89587 Cleanup for CI
+0e33d6e8 Added example to use DNS forwarder
+407e4812 Added DNS forwarder support.
 a24b8d23 Merge branch 'master' into wifi_mesh_update_2.2
 74129c51 Merge branch 'master' into pr-erase-config
 b2d35ea2 Merge branch 'master' into pr-erase-config
