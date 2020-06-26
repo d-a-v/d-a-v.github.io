@@ -1,18 +1,18 @@
-<!DOCTYPE html><html><body style="background-color:#000000;">
+<!DOCTYPE html><html><body style="color: #fffdd0; background-color:#000000;">
                               <pre>ESP01 nodemcu d1-mini GPIO  boot
 <span style="color:#FF00FF">
 </span><span style="color:#00FF00">        D0     D0     16 (no intr, internal-pull-down-not-up)
 </span><span style="color:#FF00FF">        D1     D1      5            i2c-sclk
 </span><span style="color:#00FF00">        D2     D2      4            i2c-sda
-</span><span style="color:#FF00FF">  X     D3     D3      0 PULL-up
-</span><span style="color:#00FF00">  X     D4     D4      2 PULL-up    uart1-tx                   i2so-ws
+</span><span style="color:#FF00FF">  ✓     D3     D3      0 PULL-up
+</span><span style="color:#00FF00">  ✓     D4     D4      2 PULL-up    uart1-tx                   i2so-ws
 </span><span style="color:#FF00FF">        D5     D5     14                              spi-sclk i2si-ws
 </span><span style="color:#00FF00">        D6     D6     12                              spi-miso i2si-data
 </span><span style="color:#FF00FF">        D7     D7     13            uart0-swapped-rx  spi-mosi i2si-bck
 </span><span style="color:#00FF00">        D8     D8     15 PULL-down  uart0-swapped-tx  spi-ss   i2so-bck
-</span><span style="color:#FF00FF">  X     D9     RX      3            uart0-rx                   i2so-data
-</span><span style="color:#00FF00">  X     D10    TX      1            uart0-tx
+</span><span style="color:#FF00FF">  ✓     D9     RX      3            uart0-rx                   i2so-data
+</span><span style="color:#00FF00">  ✓     D10    TX      1            uart0-tx
 </span>
-d1_mini: R=10k LED on D4/2       - <a href="https://www.wemos.cc/en/latest/d1/d1_mini.html">pdf</a>
-nodemcu: R=12k LED on D0/16+D4/2 - <a href="https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF">pdf</a>
+d1_mini: R=12k, LED on D4/2       - <a href="https://www.wemos.cc/en/latest/d1/d1_mini.html">pdf</a>
+nodemcu: R=12k, LED on D4/2+D0/16 - <a href="https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF">pdf</a>
 </pre></body></html>
