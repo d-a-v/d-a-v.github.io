@@ -1,1 +1,3 @@
+d979b57d Upgrade to GCC 10.1 toolchain (#6294)
+7b48b9de boards: 4dsystems (gen4iod) updates (#7433)
 d59b1486 done with release 2.7.2 (#7430)
