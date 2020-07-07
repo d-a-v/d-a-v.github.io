@@ -1,23 +1,30 @@
-c7bd09a7 Merge branch 'PR-7356'
-157721b5 Merge branch 'PR-7281'
-d04b492b Merge branch 'PR-7237'
-e446a14f Merge branch 'PR-7080'
-f7af5f63 Merge branch 'PR-6965'
-42fb3c66 Merge branch 'PR-6812'
-e4236da1 Merge branch 'PR-6768'
-272ec253 Merge branch 'PR-6294'
-41a90f88 Merge branch 'PR-6280'
-83523c02 umm_malloc manual merge with upstream (#7337)
-0d04124b EspSoftwareSerial service release 6.8.2. (#7354)
-8693ad4d Use a prebuild, portable Python3 for OSX (#7348)
-e70092ca Recognize MSYS(MINGW) as Windows for toolchain get (#7358)
-45feadcb emulation on host: various fixes (#7355)
+0f225aeb Merge branch 'PR-7356'
+51e2d782 Merge branch 'PR-7281'
+5e85c6b8 Merge branch 'PR-7237'
+57af07ef Merge branch 'PR-7080'
+138c2d14 Merge branch 'PR-6965'
+ebd5a1f6 Merge branch 'PR-6812'
+e1712144 Merge branch 'PR-6768'
+0bd4fe24 Merge branch 'PR-6294'
+ce324c0e Merge branch 'PR-6280'
+d59b1486 done with release 2.7.2 (#7430)
+db8ef89d Rebuild with Platform.io JSON tag in release tgzs
+06622748 Merge branch 'master' into wifi_mesh_update_2.2
+fcb8b21f Merge branch 'master' into pr-erase-config
+eb1f508a Merge branch 'master' into pr-dns-forwarder
+5559729c Dump faulting function PC in stack overflow
+2c994535 Fix duplicated stc=gnu99/c17 in build
+8f8a1964 Merge branch 'master' into gcc9.1
+803bcf8f Optional stack smash protection -fstack-protector
+c4dea28c Fix several asm warnings in PIO build
+48281fb1 - Correct terminology in README.md.
+20b620d9 Use PR's toolchain in platformio build
+7a20b532 Update platform.io to platform C/C++ standards
 096d2f29 fix emulation on host
 3c3cbea4 fix std:: dependencies
 9cb4a55e ditto
 27f57438 move features to features.h
 62bb52b4 wip: brings polledTimeout to the same level as millis()
-23febc18 elf2bin.py objcopy cleanup (#7351)
 66138a67 - Add protected getters for _forwardingBacklog and _macIgnoreList in FloodingMesh.
 1d2b6b5c - Make HelloMesh.ino stylish.
 40b39f32 - Polish README.md.
@@ -25,33 +32,19 @@ e70092ca Recognize MSYS(MINGW) as Windows for toolchain get (#7358)
 fba4ac15 - Make most type definitions public instead of protected, to facilitate use in composition.
 6b1cdb85 Merge branch 'master' into pr-erase-config
 7c29e678 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
-c3796a4d Graph example (#7299)
 96eacc39 Merge branch 'master' into pr-dns-forwarder
 6f91be09 Merge branch 'master' into pr-erase-config
-8ee67ab2 Return FALSE on seek past EOF (#7324)
-27ef03fc Add documentation on recovering from deep sleep with WAKE_RF_DISABLED (#7338)
-0d43338a Add FTP client/server lib link (#7336)
-51daecc2 Xmc flash 2 (#7317)
-0deb8748 Document ESP.getMaxFreeBlockSize() != max malloc size (#7328)
 ad6b4260 fix for lwIP-1.4
 b5fefcfc fix for lwIP-v1
 556bb1e8 Merge branch 'master' into LEAmDNS2
 e4bbed64 Merge branch 'LEAmDNS2' of github.com:d-a-v/Arduino into LEAmDNS2
-52b3e5b7 rotate right (#7320)
 af9234eb Merge branch 'master' into arduinoethernet
 ce07fd56 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
 d2b4e4c7 Pull in latest PSTR changes and fix GCC10.1 build
-57627122 Bring SPIFFS up to latest version (#7276)
-7c008e31 Flash size reduction for mime-type (#7312)
 0516b306 - Fix Readme links.
 f059e573 - Use the new Crypto, TypeConversion and random() functionality added to the Arduino core, instead of the versions local to the mesh library.
-3e4d7c76 Allow non-aligned PSTR() (#7275)
 595fb231 Merge branch 'master' into wifi_mesh_update_2.2
-1b20cd62 - Add required BearSSL include in header. (#7310)
-4519db85 Server Sent Events example - issue #7008 (#7012)
 cfd54dfe Merge branch 'master' into pr-erase-config
-c5f60e31 Allocate BSSL stack for SigningVerifier (#7291)
-157ce579 bugfix2/ESP8266HTTPClient (#6476)
 8ca6e784 Built complete toolchain for all archs
 40e1f02f - Split most of the EspnowMeshBackend code into utility files and the new ConditionalPrinter, EspnowDatabase, EspnowConnectionManager, EspnowTransmitter and EspnowEncryptionBroker classes.
 43f9f0e8 Merge branch 'master' of https://github.com/esp8266/Arduino into gcc9.1
@@ -59,9 +52,6 @@ c5f60e31 Allocate BSSL stack for SigningVerifier (#7291)
 3f5495bb Merge branch 'master' into wifi_mesh_update_2.2
 70ec21a7 Move to GCC 10.1
 d01e6391 - Fix build error.
-ed8add50 Update README.md (#7295)
-9cf2186a Update version links (#7294)
-7f3d837e Update release instructions (#7292)
 2ec2679d - Move all serialization code to separate Serializer namespace and files.
 ff0b1003 remove unwanted changes
 b7c35048 remove unwanted change
@@ -72,7 +62,6 @@ c1926675 restored former versions (legacy, LEAv1), clock example for new API
 81151348 Merge branch 'master' into LEAmDNS2
 d47f6f07 style
 560c2a5c updated Source files from LEA
-56bbb99e Back to 3.0.0-dev (#7279)
 5287f820 Merge branch 'LEAmDNS2' of https://github.com/LaborEtArs/Arduino into LEAmDNS2
 be5fe6d3 Merge branch 'master' into pr-erase-config
 e64125a5 - Move globals to anonymous namespaces.
