@@ -23,8 +23,7 @@ for pr in array:
         print('%s \"%s\" \"%s\"' % (pr['number'], label['name'].encode('utf8'), pr['title'].encode('utf8')))
 " > ${dir}/PR.labels.txt
 
-#for v in 0.0.?; do
-for v in 0.0.2; do
+for v in 0.0.?; do
 (
     cd gh || { git clone -b ${branch} ${url} gh; cd gh; }
 
