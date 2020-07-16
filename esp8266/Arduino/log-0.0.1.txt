@@ -1,3 +1,6 @@
+3c1bd65a WebServer: Allow client to send many requests on the same connection (#7414)
+709ba798 Change BSSL_CertStore test URL (#7370)
+dfd5a4f1 replace old Ethernet Arduino-library with v2, submoduled (#6812)
 3bd24587 Transition from TravisCI to GitHub CI (#7444)
 f8091311 Update to BearSSL version lost in GCC10 update (#7453)
 e58bb60f webserver: do not count "plain" in argument list (#6768)
