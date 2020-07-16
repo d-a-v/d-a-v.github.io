@@ -8,7 +8,23 @@ branch=master
 
 rm -f package_esp8266com_index.json.new message.txt
 
-for v in 0.0.?; do
+test `find ${dir}/PR.open.json -mmin +60` && rm -f ${dir}/PR.open.json
+if [ ! -r ${dir}/PR.open.json ]; then
+    curl "https://api.github.com/repos/esp8266/Arduino/pulls?state=open&per_page=100" > ${dir}/PR.open.json
+fi
+python -c "
+import json
+
+with open('${dir}/PR.open.json', 'r') as f:
+    array = json.load(f)
+
+for pr in array:
+    for label in pr['labels']:
+        print('%s \"%s\" \"%s\"' % (pr['number'], label['name'].encode('utf8'), pr['title'].encode('utf8')))
+" > ${dir}/PR.labels.txt
+
+#for v in 0.0.?; do
+for v in 0.0.2; do
 (
     cd gh || { git clone -b ${branch} ${url} gh; cd gh; }
 
@@ -32,13 +48,20 @@ for v in 0.0.?; do
 
     # apply PRs if any
     prok=""
-    for pr in $(cat ${dir}/${v}); do
-        git branch -D PR-${pr} || true
-        git fetch origin pull/${pr}/head:PR-${pr}
-        git checkout ${branch}
-        git merge --no-edit PR-${pr} || { git merge --abort; continue; }
-        prok+=" ${pr}"
+    labels="$(cat ${dir}/${v})"
+    for label in ${labels}; do
+        prs="$(grep $label ${dir}/PR.labels.txt | cut -d\  -f 1)"
+        for pr in ${prs}; do
+            git branch -D PR-${pr} || true
+            git fetch origin pull/${pr}/head:PR-${pr}
+            git checkout ${branch}
+            git merge --no-edit PR-${pr} || { git merge --abort; continue; }
+            prok="${prok} ${pr}"
+        done
     done
+
+    # skip when not 0.0.1 and empty PR list
+    [ -z "$prok" -a ${v} != 0.0.1 ] && continue
 
     export REMOTE_URL=http://d-a-v.github.io/esp8266/Arduino/releases/download
     git tag -d ${v} || true
