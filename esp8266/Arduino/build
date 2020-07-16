@@ -47,6 +47,8 @@ for v in 0.0.?; do
     cd package
     rm -rf versions
     export MOREJSONPACKAGES=$dir/package_esp8266com_index.json.new
+    export GITHUB_EVENT_PATH=$(pwd)/../../.github_event_path
+    echo "{\"ref\":\"${v}\"}" > ${GITHUB_EVENT_PATH}
     ./build_boards_manager_package.sh
     cd ..
 
