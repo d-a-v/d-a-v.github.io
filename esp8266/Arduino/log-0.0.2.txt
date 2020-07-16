@@ -1,12 +1,11 @@
-1323159d Merge branch 'PR-7356'
-9d3adfa6 Merge branch 'PR-7237'
-88f7cc32 Merge branch 'PR-7080'
-4a3db250 Merge branch 'PR-6965'
-22f279ee Merge branch 'PR-6812'
-73644595 Merge branch 'PR-6768'
-64088e5a Merge branch 'PR-6680'
-53b7fdc4 Merge branch 'PR-6280'
-ad7fc8a5 Merge branch 'master' into arduinoethernet
+7dabe078 Merge branch 'PR-6280'
+7704fd77 Merge branch 'PR-6680'
+9afadcd7 Merge branch 'PR-6965'
+09f58538 Merge branch 'PR-7237'
+5b8e52e4 Merge branch 'PR-7356'
+3c1bd65a WebServer: Allow client to send many requests on the same connection (#7414)
+709ba798 Change BSSL_CertStore test URL (#7370)
+dfd5a4f1 replace old Ethernet Arduino-library with v2, submoduled (#6812)
 49068fdf fix example
 5af73820 recompile lwip2
 63354f21 merge with master
@@ -17,7 +16,6 @@ f8c7f104 fix compilation without local lwip1.4
 3bd24587 Transition from TravisCI to GitHub CI (#7444)
 f8091311 Update to BearSSL version lost in GCC10 update (#7453)
 e58bb60f webserver: do not count "plain" in argument list (#6768)
-2c111d67 Merge branch 'master' into noplaincount
 628298cd - Polish README.md.
 1ef128c9 typo
 2b2def22 Corrected new errors after upgrade to GCC 10.1 toolchain. Method 3 was failing with an unaligned access due to 32-bit word access being optomized to an 8-bit when accessing ICACHE memory. Added noinline with IRAM_CACHE attribute in module erase_config.cpp. Also, revised print macros to be more globally unique.
@@ -66,7 +64,6 @@ e258e16a Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 1b67f969 Merge branch 'pr-dns-forwarder' of github.com:mhightower83/Arduino into pr-dns-forwarder
 96eacc39 Merge branch 'master' into pr-dns-forwarder
 6f91be09 Merge branch 'master' into pr-erase-config
-af9234eb Merge branch 'master' into arduinoethernet
 0516b306 - Fix Readme links.
 f059e573 - Use the new Crypto, TypeConversion and random() functionality added to the Arduino core, instead of the versions local to the mesh library.
 595fb231 Merge branch 'master' into wifi_mesh_update_2.2
@@ -103,8 +100,6 @@ aa430d02 Fixed insert error
 a24b8d23 Merge branch 'master' into wifi_mesh_update_2.2
 74129c51 Merge branch 'master' into pr-erase-config
 b2d35ea2 Merge branch 'master' into pr-erase-config
-3b85bdbc Merge branch 'master' into noplaincount
-f22e3d1b Merge branch 'master' into arduinoethernet
 828a47dd Merge branch 'master' into pr-erase-config
 4954dcd2 Merge branch 'master' into pr-erase-config
 39b9508a CI issues
@@ -123,7 +118,6 @@ cc2be531 fix warning with macro
 488ae3ec Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 50fec053 Merge branch 'master' into ethernet
 29d3de73 Merge branch 'master' into ethernet
-27c759e7 Merge branch 'master' into noplaincount
 604b40ab Merge branch 'master' into pr-erase-config
 f1acb40e Access bin image header through ICACHE reduces IRAM usage by 16. Latest merge broke my TZ logic. Updated to the new configTime method.
 c0394fbc Merge branch 'master' into pr-erase-config
@@ -132,7 +126,6 @@ c0394fbc Merge branch 'master' into pr-erase-config
 049d91bc Added a Third method.
 540e4465 sync with lwip2
 6e12d9e4 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-044279e6 Made ESP8266WebServer::client() return a reference (fixes #7075)
 560ddc5c Set default Method to 2, to side step travis issue of using preinit(). This is just a PoC an alternate for preinit() can be created later.
 546f0cb0 Merge branch 'master' into pr-erase-config
 9c4e44bc Added print messages to show progress. And code to ensure the UART speed stayed at 74880 for a more complete viewing of messages. Well at least, it stays at 74880 for a longer time than it was. Added pinMode filter to prevent UART TX pin from being disabled during user_init().
@@ -157,10 +150,7 @@ c66ae2e1 Merge branch 'master' into pr-erase-config
 a49f0470 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
 51aca37f Merge branch 'master' into ethernet
 df04b3cd Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-a5fdec61 Merge branch 'master' into arduinoethernet
 b3acf27f Merge branch 'master' into ethernet
-3abd421b Merge branch 'master' into arduinoethernet
-9b126044 Merge branch 'master' into arduinoethernet
 a81d1108 Merge branch 'master' into ethernet
 962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
 9d77d1d9 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
@@ -169,11 +159,7 @@ a81d1108 Merge branch 'master' into ethernet
 bd8b32ac move hostname() from STA to generic interface
 6b27eaa5 Merge branch 'master' into ethernet
 9eb9dee3 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-1da907ff replace old Ethernet Arduino-library with v2, submoduled
 8f57757b Merge branch 'master' into ethernet
-781cf96e Merge branch 'master' into noplaincount
-cadc5265 fix
-e45712de webserver: do not count "plain" in argument list it is still available though
 2fef67dc - Generalize CryptoInterface.
 3132325b - Replace Crypto files with CryptoInterface which uses BearSSL as a cryptographic backend.
 6ee5df98 Merge branch 'master' into ethernet
