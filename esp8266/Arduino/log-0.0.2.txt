@@ -1,8 +1,8 @@
-e469992e Merge branch 'PR-6280'
-db463e5b Merge branch 'PR-6680'
-8e0fd610 Merge branch 'PR-6965'
-4476751c Merge branch 'PR-7237'
-68e7aca6 Merge branch 'PR-7356'
+18ca3d03 Merge branch 'PR-6280'
+49de8dfb Merge branch 'PR-6680'
+3c55ab33 Merge branch 'PR-6965'
+e7c8a280 Merge branch 'PR-7237'
+fc432712 Merge branch 'PR-7356'
 c3c61a5f Fix typo in platform.txt causing device test fails (#7463)
 c18f7cb1 Made ESP8266WebServer::client() return a reference (fixes #7075) (#7080)
 3c1bd65a WebServer: Allow client to send many requests on the same connection (#7414)
