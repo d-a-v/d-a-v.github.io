@@ -14,7 +14,7 @@ This is <a href="http://github.com/esp8266/Arduino">esp8266/Arduino</a>
 described by this commit: <a href="https://github.com/esp8266/Arduino/pull/6512#issuecomment-531172388">Testing</a>.<br>
 <li>snapshot release (v0.0.1) which reflects git master at the specified date
 <br>
-<li>alpha release (v0.0.2) which if v0.0.1 plus all opened unmerged PR tagged with "alpha"
+<li>alpha release (v0.0.2) which is snapshot/v0.0.1 plus all opened unmerged PR tagged with "alpha" label.
 </h3>
 <br>
 <h1>
