@@ -23,7 +23,7 @@ for pr in array:
         print('%s \"%s\" \"%s\"' % (pr['number'], label['name'].encode('utf8'), pr['title'].encode('utf8')))
 " > ${dir}/PR.labels.txt
 
-cp index.html.template index.html
+cp index.html.template index.html.temp
 
 for v in 0.0.?; do
 (
@@ -113,9 +113,10 @@ for v in 0.0.?; do
     done
     echo "${v}:-git-version--${ver},-list-of-included-PRs-:${SPR:-"-none"}" >> $dir/message.txt
 
-    echo "<br><li>version ${v}: git:'${ver}' ($(date -u)) (${PR})<br>" >> index.html
-    echo "<a href="log-{$v}.txt">List of all commits</a> since latest official release<br>" >> index,html
-    [ -f prdetails.html ] && (echo "Additional PRs:<br>"; cat ${dir}/prdetails.html; ) >> index.html
+    echo "<br><li>version ${v}: git:'${ver}' ($(date -u)) (${PR})<br>" >> index.html.temp
+    echo "<a href="log-{$v}.txt">List of all commits</a> since latest official release<br>" >> index.html.temp
+    [ -f prdetails.html ] && (echo "Additional PRs:<br>"; cat ${dir}/prdetails.html; ) >> index.html.temp
+    cp index.html.temp index.html
 
     mv newlog.txt log-${v}.txt
     git add package_esp8266com_index.json releases/download/versions/${v}/esp8266-${v}.zip index.html log-${v}.txt
