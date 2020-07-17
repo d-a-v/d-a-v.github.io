@@ -23,6 +23,8 @@ for pr in array:
         print('%s \"%s\" \"%s\"' % (pr['number'], label['name'].encode('utf8'), pr['title'].encode('utf8')))
 " > ${dir}/PR.labels.txt
 
+cp index.html.template index.html
+
 for v in 0.0.?; do
 (
     cd gh || { git clone -b ${branch} ${url} gh; cd gh; }
@@ -47,9 +49,14 @@ for v in 0.0.?; do
 
     # apply PRs if any
     prok=""
+    rm -f ${dir}/list.txt
     labels="$(cat ${dir}/${v})"
     for label in ${labels}; do
-        prs="$(grep $label ${dir}/PR.labels.txt | cut -d\  -f 1)"
+        grep \"${label}\" ${dir}/PR.labels.txt | sed \
+            -e 's,$,</a><br>,g' \
+            -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1>#\1,g' \
+            >> ${dir}/list.txt
+        prs="$(grep \"${label}\" ${dir}/PR.labels.txt | cut -d\  -f 1)"
         for pr in ${prs}; do
             git branch -D PR-${pr} || true
             git fetch origin pull/${pr}/head:PR-${pr}
@@ -106,7 +113,9 @@ for v in 0.0.?; do
     done
     echo "${v}:-git-version--${ver},-list-of-included-PRs-:${SPR:-"-none"}" >> $dir/message.txt
 
-    sed -ibak "s,^version ${v}.*,version ${v}: git:'$ver' ($(date -u)) (${PR} ),g" index.html
+    #sed -ibak "s,^version ${v}.*,version ${v}: git:'$ver' ($(date -u)) (${PR} ),g" index.html
+    echo "<br>version ${v}: git:'${ver}' ($(date -u)) (${PR})<br>" >> index.html
+    cat ${dir}/list.txt >> index.html
 
     mv newlog.txt log-${v}.txt
     git add package_esp8266com_index.json releases/download/versions/${v}/esp8266-${v}.zip index.html log-${v}.txt

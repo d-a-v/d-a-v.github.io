@@ -1,0 +1,22 @@
+<link rel="alternate" type="application/rss+xml" href="https://d-a-v.github.io/rss.xml" title="esp8266/arduino snapshots">
+<style type="text/css">
+body { color: #fffdd0; background: #15202a; }
+a:link { color:#aaaaff; background-color:#15202a; }
+a:visited { color:#aaccaa; background-color:#15202a; }
+</style>
+<title>esp8266 Arduino snapshot</title>
+<small><a href="../../rss.xml">RSS Feed</a></small>
+<h1>esp8266 Arduino - snapshot / beta release channel</h1>
+<hr>
+<br>
+This is <a href="http://github.com/esp8266/Arduino">esp8266/Arduino</a>
+beta (v0.0.1), alpha (v0.0.2) <!-- and gamma (v0.0.3) --> release channel meant for
+<a href="https://github.com/esp8266/Arduino/pull/6512#issuecomment-531172388">Testing</a>.<br>
+<br>
+The following URL provides regularly updated "0.0.x" versions for Arduino IDE board manager:<br>
+<br>
+<h1>
+<b>Board manager URL:</b><br>
+<font face="monospace">https://d-a-v.github.io/esp8266/Arduino/package_esp8266com_index.json</font>
+</h1>
+<br>
