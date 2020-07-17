@@ -1,3 +1,5 @@
+c3c61a5f Fix typo in platform.txt causing device test fails (#7463)
+c18f7cb1 Made ESP8266WebServer::client() return a reference (fixes #7075) (#7080)
 3c1bd65a WebServer: Allow client to send many requests on the same connection (#7414)
 709ba798 Change BSSL_CertStore test URL (#7370)
 dfd5a4f1 replace old Ethernet Arduino-library with v2, submoduled (#6812)
