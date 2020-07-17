@@ -49,13 +49,13 @@ for v in 0.0.?; do
 
     # apply PRs if any
     prok=""
-    rm -f ${dir}/list.txt
+    rm -f ${dir}/prdetails.html
     labels="$(cat ${dir}/${v})"
     for label in ${labels}; do
         grep \"${label}\" ${dir}/PR.labels.txt | sed \
             -e 's,$,</a><br>,g' \
             -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1>#\1,g' \
-            >> ${dir}/list.txt
+            >> ${dir}/prdetails.html
         prs="$(grep \"${label}\" ${dir}/PR.labels.txt | cut -d\  -f 1)"
         for pr in ${prs}; do
             git branch -D PR-${pr} || true
@@ -115,7 +115,7 @@ for v in 0.0.?; do
 
     #sed -ibak "s,^version ${v}.*,version ${v}: git:'$ver' ($(date -u)) (${PR} ),g" index.html
     echo "<br>version ${v}: git:'${ver}' ($(date -u)) (${PR})<br>" >> index.html
-    cat ${dir}/list.txt >> index.html
+    [ -f prdetails.html ] && cat ${dir}/prdetails.html >> index.html
 
     mv newlog.txt log-${v}.txt
     git add package_esp8266com_index.json releases/download/versions/${v}/esp8266-${v}.zip index.html log-${v}.txt
