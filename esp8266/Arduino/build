@@ -113,9 +113,9 @@ for v in 0.0.?; do
     done
     echo "${v}:-git-version--${ver},-list-of-included-PRs-:${SPR:-"-none"}" >> $dir/message.txt
 
-    #sed -ibak "s,^version ${v}.*,version ${v}: git:'$ver' ($(date -u)) (${PR} ),g" index.html
-    echo "<br>version ${v}: git:'${ver}' ($(date -u)) (${PR})<br>" >> index.html
-    [ -f prdetails.html ] && cat ${dir}/prdetails.html >> index.html
+    echo "<br><li>version ${v}: git:'${ver}' ($(date -u)) (${PR})<br>" >> index.html
+    echo "<a href="log-{$v}.txt">List of all commits</a> since latest official release<br>" >> index,html
+    [ -f prdetails.html ] && (echo "Additional PRs:<br>"; cat ${dir}/prdetails.html; ) >> index.html
 
     mv newlog.txt log-${v}.txt
     git add package_esp8266com_index.json releases/download/versions/${v}/esp8266-${v}.zip index.html log-${v}.txt

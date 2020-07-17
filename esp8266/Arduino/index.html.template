@@ -6,14 +6,16 @@ a:visited { color:#aaccaa; background-color:#15202a; }
 </style>
 <title>esp8266 Arduino snapshot</title>
 <small><a href="../../rss.xml">RSS Feed</a></small>
-<h1>esp8266 Arduino - snapshot / beta release channel</h1>
+<h1>esp8266 Arduino - snapshot and alpha release channel</h1>
 <hr>
 <br>
+<h3>
 This is <a href="http://github.com/esp8266/Arduino">esp8266/Arduino</a>
-beta (v0.0.1), alpha (v0.0.2) <!-- and gamma (v0.0.3) --> release channel meant for
-<a href="https://github.com/esp8266/Arduino/pull/6512#issuecomment-531172388">Testing</a>.<br>
+described by this commit: <a href="https://github.com/esp8266/Arduino/pull/6512#issuecomment-531172388">Testing</a>.<br>
+<li>snapshot release (v0.0.1) which reflects git master at the specified date
 <br>
-The following URL provides regularly updated "0.0.x" versions for Arduino IDE board manager:<br>
+<li>alpha release (v0.0.2) which if v0.0.1 plus all opened unmerged PR tagged with "alpha"
+</h3>
 <br>
 <h1>
 <b>Board manager URL:</b><br>
