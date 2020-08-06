@@ -1,8 +1,47 @@
-18ca3d03 Merge branch 'PR-6280'
-49de8dfb Merge branch 'PR-6680'
-3c55ab33 Merge branch 'PR-6965'
-e7c8a280 Merge branch 'PR-7237'
-fc432712 Merge branch 'PR-7356'
+67a28411 Merge branch 'PR-6280'
+b1a4584a Merge branch 'PR-6680'
+4c6d7fa9 Merge branch 'PR-6690'
+3bda1256 Merge branch 'PR-7237'
+11a03f2e Merge branch 'PR-7356'
+3e567e94 Add SerialEvent() callback to loop processing (#7505)
+9afb0841 Clean up minor warnings from LGTM.com (#7500)
+a8e35a57 Add valgrind mocked test to CI (#7501)
+fc1aa554 Remove warnings when buinding NoAssert (#7499)
+3be0cbb3 Typo (#7502)
+a0239ac1 per review and fixes
+30a2aa77 reorder members
+8be65338 ppp server: release resource on fail
+38942f4c rst blackhole
+955a1452 doc format
+3f30bec1 doc format
+c75e812b documentation, auto-256KBFS for 2MB chips
+7c9a8320 Merge branch 'master' into nosizeconf
+109a1199 use a global define to experimentally enable global polledTimeout
+3053441c comment out namespace import
+f165e698 Merge branch 'ptoupd' of github.com:d-a-v/Arduino into ptoupd
+eba9c600 Merge branch 'master' into ptoupd
+e0cefd96 Merge branch 'master' into ptoupd
+96eb8996 Merge branch 'master' into ethernet
+d92e1eda Basic authentication with ESP8266httpUpdate (#7190)
+85ea47e9 Fixed PUYA flash write buffer alignment (#7491)
+1041a9d7 webhook/http1.1: prevent from losing a new client while waiting (#7492)
+d5187790 Mention OTA Update class blocks flash mode changes (#7321)
+a6798691 BREAKING - analogWriteRange 8-bit default (#7456)
+33083861 webserver hook: allow to handle external http protocol (#7459)
+88701794 Merge branch 'master' into ptoupd
+63b41bcf Use root cert, not fingerprint for api.github.com (#7490)
+355b2916 CVE-2020-12638 workaround for WPA downgrade attack (#7486)
+e815b921 Correct stack string buffer length. (#7488)
+0e129069 Initialize _ledPin (#7487)
+83fc47f6 Small update to ease manual release generation (#7467)
+555c9ebd Update FP for tls.mbed.org (#7479)
+f42cf7a5 Fix uninitted class variables from #7464 (#7478)
+22769c5d Merge branch 'master' into pr-dns-forwarder
+c94d36d8 Comment out verify step in eboot.c (#7468)
+696c8653 Merge branch 'master' into pr-dns-forwarder
+91427a16 Keep client certs when server authentication set (#7464)
+2516c106 Merge branch 'master' into ptoupd
+9a899d3e Merge branch 'master' into ptoupd
 c3c61a5f Fix typo in platform.txt causing device test fails (#7463)
 c18f7cb1 Made ESP8266WebServer::client() return a reference (fixes #7075) (#7080)
 3c1bd65a WebServer: Allow client to send many requests on the same connection (#7414)
@@ -20,7 +59,6 @@ f8091311 Update to BearSSL version lost in GCC10 update (#7453)
 e58bb60f webserver: do not count "plain" in argument list (#6768)
 628298cd - Polish README.md.
 1ef128c9 typo
-2b2def22 Corrected new errors after upgrade to GCC 10.1 toolchain. Method 3 was failing with an unaligned access due to 32-bit word access being optomized to an 8-bit when accessing ICACHE memory. Added noinline with IRAM_CACHE attribute in module erase_config.cpp. Also, revised print macros to be more globally unique.
 0613216a Fixed errors.
 33aed64a Merge branch 'master' into pr-dns-forwarder
 f9371b35 Corrected case statement in getPhyModeChar(). Plus 1 for new complier catch!
@@ -36,13 +74,11 @@ af1bc71a remove lwip-v1.4 specific code (#7436)
 1ead1575 Fix spelling typos in files under packages dir (#7439)
 252cb1d9 Remove wget dump during CI (#7438)
 c663c559 Free space of overwritten files in LittleFS (#7434)
-c40a8735 Merge branch 'master' into pr-erase-config
 88d1abfd Merge branch 'master' into pr-dns-forwarder
 d979b57d Upgrade to GCC 10.1 toolchain (#6294)
 7b48b9de boards: 4dsystems (gen4iod) updates (#7433)
 d59b1486 done with release 2.7.2 (#7430)
 06622748 Merge branch 'master' into wifi_mesh_update_2.2
-fcb8b21f Merge branch 'master' into pr-erase-config
 eb1f508a Merge branch 'master' into pr-dns-forwarder
 48281fb1 - Correct terminology in README.md.
 096d2f29 fix emulation on host
@@ -55,7 +91,6 @@ eb1f508a Merge branch 'master' into pr-dns-forwarder
 40b39f32 - Polish README.md.
 5661ec07 Merge branch 'master' into wifi_mesh_update_2.2
 fba4ac15 - Make most type definitions public instead of protected, to facilitate use in composition.
-6b1cdb85 Merge branch 'master' into pr-erase-config
 08dca76c Merge branch 'master' into ethernet
 8b817091 per https://github.com/d-a-v/W5500lwIP/issues/17#issuecomment-638229509
 50d9e83d fix compilation problem with IPv6
@@ -65,17 +100,14 @@ fef264e9 Merge branch 'master' into ethernet
 e258e16a Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 1b67f969 Merge branch 'pr-dns-forwarder' of github.com:mhightower83/Arduino into pr-dns-forwarder
 96eacc39 Merge branch 'master' into pr-dns-forwarder
-6f91be09 Merge branch 'master' into pr-erase-config
 0516b306 - Fix Readme links.
 f059e573 - Use the new Crypto, TypeConversion and random() functionality added to the Arduino core, instead of the versions local to the mesh library.
 595fb231 Merge branch 'master' into wifi_mesh_update_2.2
-cfd54dfe Merge branch 'master' into pr-erase-config
 40e1f02f - Split most of the EspnowMeshBackend code into utility files and the new ConditionalPrinter, EspnowDatabase, EspnowConnectionManager, EspnowTransmitter and EspnowEncryptionBroker classes.
 3f5495bb Merge branch 'master' into wifi_mesh_update_2.2
 d01e6391 - Fix build error.
 2ec2679d - Move all serialization code to separate Serializer namespace and files.
 10f63119 Added logic to handle dividing large PROGMEM strings into smaller chunks to avoid large allocations to buffer the send.
-be5fe6d3 Merge branch 'master' into pr-erase-config
 e64125a5 - Move globals to anonymous namespaces.
 74535449 Merge branch 'master' into pr-dns-forwarder
 b18ec7bb fix copy from pointer
@@ -89,7 +121,6 @@ e0e7cdb3 remove non readable characters from comments
 3c15b761 + comments
 effcc3a2 - Make everything const by default.
 6755a5b0 Reserved space in String page. Re-adjusted size of chuncks. Added print statements for monitoring size of chunks etc. Novice improvents to HTML and variable names.
-14fede01 Merge branch 'master' into pr-erase-config
 16d02f69 Merge branch 'master' into pr-dns-forwarder
 ee977779 Updated HTML to limit/remove screen flash when using show password.
 ad62a7f3 Added missing include for unsupported build environment
@@ -100,13 +131,6 @@ aa430d02 Fixed insert error
 0e33d6e8 Added example to use DNS forwarder
 407e4812 Added DNS forwarder support.
 a24b8d23 Merge branch 'master' into wifi_mesh_update_2.2
-74129c51 Merge branch 'master' into pr-erase-config
-b2d35ea2 Merge branch 'master' into pr-erase-config
-828a47dd Merge branch 'master' into pr-erase-config
-4954dcd2 Merge branch 'master' into pr-erase-config
-39b9508a CI issues
-372998cd Merge branch 'master' into pr-erase-config
-4553009e Made function name longer to avoid possible name conflicts in the future. Using static caused the compiler to inline with functions with different IRAM attributes. Updated some comments. Maybe fixed CI host issue with Update.cpp.
 548d7029 Merge branch 'master' into wifi_mesh_update_2.2
 1dcd4c4a - Fix even more merge conflicts.
 16801f3d - Rework ExpiringTimeTracker to be based on PolledTimeout.
@@ -120,35 +144,9 @@ cc2be531 fix warning with macro
 488ae3ec Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 50fec053 Merge branch 'master' into ethernet
 29d3de73 Merge branch 'master' into ethernet
-604b40ab Merge branch 'master' into pr-erase-config
-f1acb40e Access bin image header through ICACHE reduces IRAM usage by 16. Latest merge broke my TZ logic. Updated to the new configTime method.
-c0394fbc Merge branch 'master' into pr-erase-config
-39160c8f one more :(
-4e2493ad Resolve merge conflict. Changed method for reading image header, freeing 16 bytes of iRAM"
-049d91bc Added a Third method.
+9b0164af Merge branch 'master' into nosizeconf
 540e4465 sync with lwip2
 6e12d9e4 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-560ddc5c Set default Method to 2, to side step travis issue of using preinit(). This is just a PoC an alternate for preinit() can be created later.
-546f0cb0 Merge branch 'master' into pr-erase-config
-9c4e44bc Added print messages to show progress. And code to ensure the UART speed stayed at 74880 for a more complete viewing of messages. Well at least, it stays at 74880 for a longer time than it was. Added pinMode filter to prevent UART TX pin from being disabled during user_init().
-73f16dcc Merge branch 'master' into pr-erase-config
-71308773 Merge branch 'master' into pr-erase-config
-1ce4c601 Merge branch 'master' into pr-erase-config
-4554a7c8 style fix
-660d19ca Merge branch 'master' into pr-erase-config
-815f1dc9 Merge branch 'master' into pr-erase-config
-95eefede Update example. Removed some debug crud. Added a Flash Info hotkey option.
-9d6e0599 Merge branch 'master' into pr-erase-config
-3258d63a Merge branch 'master' into pr-erase-config
-a284b0a6 Take two
-e51ab08a Addressed Tavis CI style issues.
-bfb21b15 A proof of concept for handling Erase WiFi Setting after OTA
-afd603b7 Merge branch 'master' into pr-erase-config
-500b7cc6 Removed cleaned up debug crud and added test example.
-6d882e4c Added two_shots init to noextra4k
-c66ae2e1 Merge branch 'master' into pr-erase-config
-93fb3d3d Added a 2nd method
-6fde10f0 Proof of concept for post OTA 1st boot erase config.
 a49f0470 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
 51aca37f Merge branch 'master' into ethernet
 df04b3cd Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
@@ -158,6 +156,9 @@ a81d1108 Merge branch 'master' into ethernet
 9d77d1d9 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 21694be8 Merge branch 'master' into ethernet
 55b874ca Merge branch 'master' into ethernet
+855dd342 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+b8e48154 merge https://github.com/esp8266/Arduino/pull/6813
+94bb1560 Merge branch 'master' into nosizeconf
 bd8b32ac move hostname() from STA to generic interface
 6b27eaa5 Merge branch 'master' into ethernet
 9eb9dee3 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
@@ -183,7 +184,19 @@ d09d62e9 fix example
 fc6fb1df fix example
 370bd62d Merge branch 'master' into ethernet
 3282a3f1 fix dhcp server on AP
+70634251 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+4e05cc84 fix emulation on host when 32bit compiler is not available
+c2747a49 Merge branch 'master' into nosizeconf
+dfb6a005 fix emulation on host
+719f65a0 fix
+da308ad4 fixes
 b0ef9195 Merge branch 'master' into wifi_mesh_update_2.2
+6104b9de fixes
+28e7d089 16MB no fs was missing
+08e3b519 ESP.getFlashChipSize() returns ESP.getFlashChipRealSize()
+0decdf4e fixes
+41bc6bc2 Merge branch 'master' into nosizeconf
+8834211a flash: mapping definition by sketch at runtime depending on flash chip size and user configuration
 7bdadd45 missing file
 c6c38052 sync with lwip2
 6be23827 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
