@@ -1,3 +1,7 @@
+6feda9eb base64 class uses String, adding harmless #include (#7517)
+77732370 webserver: add define WEBSERVER_HAS_HOOK when ::addHook() is present (#7515)
+fc2426a5 sys/pgmspace.h: Refactor inline asm (#7510)
+79fc0b3b CI: on host: force 64 bit mode like `make -j2 CI` implicitly does (#7513)
 3e567e94 Add SerialEvent() callback to loop processing (#7505)
 9afb0841 Clean up minor warnings from LGTM.com (#7500)
 a8e35a57 Add valgrind mocked test to CI (#7501)
