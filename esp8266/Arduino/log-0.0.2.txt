@@ -1,13 +1,30 @@
-294c4a8a Merge branch 'PR-6280'
-362f6dbd Merge branch 'PR-6680'
-548cf9cd Merge branch 'PR-6690'
-295f984c Merge branch 'PR-7237'
-ee5f9f08 Merge branch 'PR-7356'
+c26a99c8 Merge branch 'PR-6280'
+36550b56 Merge branch 'PR-6680'
+259dde29 Merge branch 'PR-6690'
+8efad890 Merge branch 'PR-7237'
+be812d2a Netump Initial commit (#7527)
+b9db9440 Delete owner field (#7563)
+6d73c20d Merge branch 'master' into nosizeconf
+953dfd94 Avoid float-double-conversion (#7559)
+59873908 Use direct member initialization instead of ctr initialisation (#7556)
+c366f845 Add CI test for eboot build (#7546)
+53e4dec5 getCpuFreqMHz(): fix when F_CPU is not defined (#7554)
+e53aa871 emulation-on-host makefile update, allowing to pass more options (#7552)
+83535a01 add sdk options to "generic esp8285 module" (#7550)
+1ff927d0 Fix spelling typo under doc/faq (#7538)
+c33a6a26 Updater MD5 cleanup on begin (#7534)
+5b3d290d Add synthetic IntegerDivideByZero exception (#7496)
+f42327da doc: gcc handles duplicate literal strings (#7531)
+59282117 Merge branch 'master' into ethernet
+e2b8f6ac Update PIO CI to be less chatty, fix CI fail (#7530)
+b2dac9bf Merge branch 'master' into ethernet
+e0fedc57 avoid circular #include dependence for PolledTimeout (#7356)
+01edc0e5 Fix and add details to Serial doc (#7521)
+683b8e60 Fix spelling typos in files under doc/esp8266wifi (#7520)
 6feda9eb base64 class uses String, adding harmless #include (#7517)
 77732370 webserver: add define WEBSERVER_HAS_HOOK when ::addHook() is present (#7515)
 fc2426a5 sys/pgmspace.h: Refactor inline asm (#7510)
 79fc0b3b CI: on host: force 64 bit mode like `make -j2 CI` implicitly does (#7513)
-8db7e4b4 Merge branch 'master' into ptoupd
 3e567e94 Add SerialEvent() callback to loop processing (#7505)
 9afb0841 Clean up minor warnings from LGTM.com (#7500)
 a8e35a57 Add valgrind mocked test to CI (#7501)
@@ -21,11 +38,6 @@ a0239ac1 per review and fixes
 3f30bec1 doc format
 c75e812b documentation, auto-256KBFS for 2MB chips
 7c9a8320 Merge branch 'master' into nosizeconf
-109a1199 use a global define to experimentally enable global polledTimeout
-3053441c comment out namespace import
-f165e698 Merge branch 'ptoupd' of github.com:d-a-v/Arduino into ptoupd
-eba9c600 Merge branch 'master' into ptoupd
-e0cefd96 Merge branch 'master' into ptoupd
 96eb8996 Merge branch 'master' into ethernet
 d92e1eda Basic authentication with ESP8266httpUpdate (#7190)
 85ea47e9 Fixed PUYA flash write buffer alignment (#7491)
@@ -33,7 +45,6 @@ d92e1eda Basic authentication with ESP8266httpUpdate (#7190)
 d5187790 Mention OTA Update class blocks flash mode changes (#7321)
 a6798691 BREAKING - analogWriteRange 8-bit default (#7456)
 33083861 webserver hook: allow to handle external http protocol (#7459)
-88701794 Merge branch 'master' into ptoupd
 63b41bcf Use root cert, not fingerprint for api.github.com (#7490)
 355b2916 CVE-2020-12638 workaround for WPA downgrade attack (#7486)
 e815b921 Correct stack string buffer length. (#7488)
@@ -45,8 +56,6 @@ f42cf7a5 Fix uninitted class variables from #7464 (#7478)
 c94d36d8 Comment out verify step in eboot.c (#7468)
 696c8653 Merge branch 'master' into pr-dns-forwarder
 91427a16 Keep client certs when server authentication set (#7464)
-2516c106 Merge branch 'master' into ptoupd
-9a899d3e Merge branch 'master' into ptoupd
 c3c61a5f Fix typo in platform.txt causing device test fails (#7463)
 c18f7cb1 Made ESP8266WebServer::client() return a reference (fixes #7075) (#7080)
 3c1bd65a WebServer: Allow client to send many requests on the same connection (#7414)
@@ -86,11 +95,6 @@ d59b1486 done with release 2.7.2 (#7430)
 06622748 Merge branch 'master' into wifi_mesh_update_2.2
 eb1f508a Merge branch 'master' into pr-dns-forwarder
 48281fb1 - Correct terminology in README.md.
-096d2f29 fix emulation on host
-3c3cbea4 fix std:: dependencies
-9cb4a55e ditto
-27f57438 move features to features.h
-62bb52b4 wip: brings polledTimeout to the same level as millis()
 66138a67 - Add protected getters for _forwardingBacklog and _macIgnoreList in FloodingMesh.
 1d2b6b5c - Make HelloMesh.ino stylish.
 40b39f32 - Polish README.md.
