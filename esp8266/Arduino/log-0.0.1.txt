@@ -1,4 +1,27 @@
+40eb5747 sntp: use one time source and fix unsynchronized sntp time stamp (#7595)
+8418aaf4 ci: apt update (#7596)
+a460cb79 Add clear method to IPAddress (#7586)
+08f17051 Check also if IP is not IPADDR_NONE (#7585)
+8258db53 Fix error message typo (#7581)
+88be34e2 Update certs-from-mozilla.py (#7578)
+bfecdb0e Update DigestAuthorization.ino (Simple example update) (#7579)
+2171a2e8 Fix gzip+signed OTA error (#7577)
+22a197ee Properly replace toolchain in PlatformIO CI script (#7580)
+e636a658 Update certs-from-mozilla.py (#7573)
+d02bc02f Merge pull request #7547 from earlephilhower/noboom
+f1c8982a Merge branch 'master' into noboom
+8b7126d9 Fixup weird combination of oneline/multi line comments (#7566)
+df01d19d Reduce codesize of setOutputPower (#7572)
+ca149a23 Merge pull request #7569 from standby24x7/tests-typo
+cbb44b2c Fix typos in tests
+885851a5 Merge pull request #7557 from dok-net/fixfix
+c74dcc92 Force gcc inlining, use same style for getCycleCount as for getCpuFreqMHz.
+400632f8 Even more concise #if form.
+72051eea Inline, fewer LOC, remove redundant definition in cpp.
+5b767a37 new w/ OOM now aborts by defaults, or throw an exception (#7536)
+ef92ab28 Merge branch 'master' into stdnothrow
 be812d2a Netump Initial commit (#7527)
+247d5f12 Merge branch 'master' into stdnothrow
 b9db9440 Delete owner field (#7563)
 953dfd94 Avoid float-double-conversion (#7559)
 59873908 Use direct member initialization instead of ctr initialisation (#7556)
@@ -6,8 +29,18 @@ c366f845 Add CI test for eboot build (#7546)
 53e4dec5 getCpuFreqMHz(): fix when F_CPU is not defined (#7554)
 e53aa871 emulation-on-host makefile update, allowing to pass more options (#7552)
 83535a01 add sdk options to "generic esp8285 module" (#7550)
+3ee6710f board generator: remove comments, remove now useless define
+f23e765a fix displaying caller address
+c1117132 overwrite weak `new (std::nothrow)` calls
+2b6423ed new w/ OOM raises an exception, shows the caller address for decoders
+11f7d176 remove (std::nothrow) where nullptr case is not handled remove legacy new management
+cf1b8e06 Don't overwrite boot sector unless OTA changes it
+a16e1e5b fixes
+f23caa2d Merge branch 'master' into stdnothrow
 1ff927d0 Fix spelling typo under doc/faq (#7538)
 c33a6a26 Updater MD5 cleanup on begin (#7534)
+385bfd76 deleted:    arduino_new/arduino_new.ino
+69259822 replace `new` by `new (std::nothrow)`, remove `arduino_new`
 5b3d290d Add synthetic IntegerDivideByZero exception (#7496)
 f42327da doc: gcc handles duplicate literal strings (#7531)
 e2b8f6ac Update PIO CI to be less chatty, fix CI fail (#7530)
