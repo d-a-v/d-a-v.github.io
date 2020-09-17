@@ -1,3 +1,6 @@
+32470fbf Avoid #includes with a surrounding namespace (#7560)
+e5c84c95 Update path of gdb (#7603)
+c883605b EspSoftwareSerial 6.9.0: data/strings in flash alignment handling fix. Yielding during write() improvement. (#7604)
 40eb5747 sntp: use one time source and fix unsynchronized sntp time stamp (#7595)
 8418aaf4 ci: apt update (#7596)
 a460cb79 Add clear method to IPAddress (#7586)
