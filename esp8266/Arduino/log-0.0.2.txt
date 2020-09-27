@@ -1,7 +1,17 @@
-cff69630 Merge branch 'PR-6280'
-6a27e094 Merge branch 'PR-6680'
-ed830678 Merge branch 'PR-6965'
-d0ee11a9 Merge branch 'PR-7237'
+4ce5bcaf Merge branch 'PR-6280'
+1264ced6 Merge branch 'PR-6680'
+57efabcd Merge branch 'PR-6965'
+a68af734 Merge branch 'PR-7237'
+0a0f8a53 lwip2: recompiled PPP branch after sync w/ master
+509999b9 Merge branch 'master' into ethernet
+a3281fe2 LEA mDNS v2 (#7540)
+faf59f51 Update to GCC 10.2 (#7607)
+c24109fd WString: mark move ctor as noexcept (#7610)
+4a24d3cc FIX MIME-Type for txt-suffix (#7608)
+3cbf3039 FIX StaticRequestHandler crashes when cache_header is null and DEBUG_ESP_CORE is enabled (#7609)
+97ad7ab8 Merge branch 'master' into ethernet
+e5539fe8 Merge branch 'master' into pr-erase-config
+e09e6e8e Merge branch 'master' into pr-dns-forwarder
 32470fbf Avoid #includes with a surrounding namespace (#7560)
 e5c84c95 Update path of gdb (#7603)
 c883605b EspSoftwareSerial 6.9.0: data/strings in flash alignment handling fix. Yielding during write() improvement. (#7604)
