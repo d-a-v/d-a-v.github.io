@@ -1,3 +1,8 @@
+a3281fe2 LEA mDNS v2 (#7540)
+faf59f51 Update to GCC 10.2 (#7607)
+c24109fd WString: mark move ctor as noexcept (#7610)
+4a24d3cc FIX MIME-Type for txt-suffix (#7608)
+3cbf3039 FIX StaticRequestHandler crashes when cache_header is null and DEBUG_ESP_CORE is enabled (#7609)
 32470fbf Avoid #includes with a surrounding namespace (#7560)
 e5c84c95 Update path of gdb (#7603)
 c883605b EspSoftwareSerial 6.9.0: data/strings in flash alignment handling fix. Yielding during write() improvement. (#7604)
