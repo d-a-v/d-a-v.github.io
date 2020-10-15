@@ -1,3 +1,29 @@
+79ea883f New flash writing method with offset/memory/size alignment handling (#7514)
+200e47fc Fix error when debug enabled but no port chosen (#7648)
+bc2b13ae LEAmDNSv2: change a macro name to be independant from LEAmDNS1 (#7640)
+36b444db Allow test framework to use cores/esp8266/Arduino.h directly (#7377)
+7ba31010 Update OTA HTTP Server Header Information (#7633)
+01cfc54c Add missing sntp_init/sntp_stop (#7628)
+4aeb0f5c Use direct member initialization instead of ctr initialisation (#7558)
+8b8639e8 Prevent rewriting Updater_Signing.h if content unchanged (#7627)
+d0300806 Merge pull request #7631 from Erriez/feature/documentation-wifi-multi
+9c9e193f Add WiFi Multi to readme.rst
+85ba53a2 Remove stray axtls refs, deprecated compat funcs (#7626)
+7c8f934d Merge pull request #7619 from Erriez/redesign-wifi-multi
+fcb5414e Merge branch 'master' into redesign-wifi-multi
+93f41dcb Pull deprecated axtls link (#7624)
+1e54cb25 Merge branch 'master' into redesign-wifi-multi
+fceb390a Redesign ESP8266WiFiMulti.[cpp|h]
+5dbc572b Update README.md (#7623)
+96243d7c Merge pull request #7040 from dok-net/print64bit
+6f57c222 Eliminate code duplication by template for printNumber(...)/printFloat(...).
+0b502b3f Eliminate code duplication by template for println(...).
+8c725d57 Fix for 32bit long used in long long printNumber.
+7e1d891e Revert to explicit calculation of modulo, saving 16 bytes in IROM.
+af53772e Extend Print class for 64bit integers.
+f5421750 httpclient: remove deprecated API (#7617)
+37ef41ce mdns: #ifndef/#define/#endif (#7615)
+cc042b99 WString: c_str() returns null pointer after move (#7611)
 a3281fe2 LEA mDNS v2 (#7540)
 faf59f51 Update to GCC 10.2 (#7607)
 c24109fd WString: mark move ctor as noexcept (#7610)
