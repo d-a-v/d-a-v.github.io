@@ -1,3 +1,5 @@
+95fb1045 settimeofday_cb: distinguish from user or sntp (#7637)
+ace5e98b Fix eboot crash with exception 28. ets_printf() should take pointer argument. (#7666)
 e920564b Fix Netdump library architecture (#7659)
 bbc14c09 Use 32b loads to set print strings (#7545)
 e79eb117 BREAKING: Change return EEPROM.end() to bool (#7630)
