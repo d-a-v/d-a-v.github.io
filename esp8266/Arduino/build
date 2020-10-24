@@ -59,7 +59,11 @@ for v in 0.0.?; do
         prs="$(grep \"${label}\" ${dir}/PR.labels.txt | cut -d\  -f 1)"
         for pr in ${prs}; do
             git branch -D PR-${pr} || true
-            git fetch origin pull/${pr}/head:PR-${pr}
+
+            git fetch origin pull/${pr}/head:PR-${pr} || true
+            git checkout PR-${pr}
+            git submodule update
+
             git checkout ${branch}
             git merge --no-edit PR-${pr} || { git merge --abort; continue; }
             prok="${prok} ${pr}"
