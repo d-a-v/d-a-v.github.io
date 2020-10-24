@@ -67,7 +67,7 @@ for v in 0.0.?; do
             git reset --hard
             git clean -xfd
             git submodule foreach git clean -xfd
-            git checkout PR-${pr}
+            git checkout -f PR-${pr}
             git submodule update
             git reset --hard
             git clean -xfd
