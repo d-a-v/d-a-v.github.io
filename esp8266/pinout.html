@@ -17,10 +17,10 @@ d1_mini: R=12k, LED on D4/2       - <a href="https://www.wemos.cc/en/latest/d1/d
 nodemcu: R=12k, LED on D4/2+D0/16 - <a href="https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF">pdf</a>
 
 ESP01:
-    -----------------------------------
-    | 1/TX   GND          ,----+---|  |
-    |  EN     2 b:u       |____| |--  |
-    | /RST    0 b:u=R/d=F  +  +  --|  |
-    | 3.3v  3/RX           +  +    |  |
-    -----------------------+--+--------
+    ,---------------------------.
+    | 1/TX    GND   .----.---.  |   /u: must be up at boot time
+    | EN/u    2/u   `----'.--'  |   0:  down at boot time => flash mode
+    | /RST/u  0/u    #  # `--.  |
+    | 3.3v   3/RX    #  #  --'  |
+    `---------------------------'
 </pre></body></html>
