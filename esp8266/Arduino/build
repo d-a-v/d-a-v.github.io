@@ -58,15 +58,17 @@ for v in 0.0.?; do
             >> ${dir}/prdetails.html
         prs="$(grep \"${label}\" ${dir}/PR.labels.txt | cut -d\  -f 1)"
         for pr in ${prs}; do
+            git reset --hard
+            git clean -xfd
+            git submodule foreach git clean -xfd
+            git checkout master
             git branch -D PR-${pr} || true
-
             git fetch origin pull/${pr}/head:PR-${pr} || true
             git reset --hard
             git clean -xfd
             git submodule foreach git clean -xfd
             git checkout PR-${pr}
             git submodule update
-
             git reset --hard
             git clean -xfd
             git submodule foreach git clean -xfd
