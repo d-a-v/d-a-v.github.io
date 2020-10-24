@@ -1,3 +1,5 @@
+8d2f53d9 Remove Travis-CI configuration (#7674)
+64def3cd boards.txt: sort by displayed name (#7670)
 95fb1045 settimeofday_cb: distinguish from user or sntp (#7637)
 ace5e98b Fix eboot crash with exception 28. ets_printf() should take pointer argument. (#7666)
 e920564b Fix Netdump library architecture (#7659)
