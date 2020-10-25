@@ -71,7 +71,7 @@ for v in 0.0.?; do
             git clean -xfd
             git submodule foreach git clean -xfd
             git checkout ${branch}
-            ( git merge --no-edit PR-${pr} || { git merge --abort; continue; } ) 2>&1 > ${dir}/merge-PR-${pr}.log
+            git merge --no-edit PR-${pr} 2>&1 > ${dir}/merge-PR-${pr}.log || { git merge --abort; continue; }
             prok="${prok} ${pr}"
             grep "${pr}.*\"${label}\"" ${dir}/PR.labels.txt | sed \
                 -e 's,$,</a><br>,g' \
