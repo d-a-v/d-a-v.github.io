@@ -49,7 +49,7 @@ for v in 0.0.?; do
 
     # apply PRs if any
     prok=""
-    rm -f ${dir}/prdetails.html
+    rm -f ${dir}/prdetails.html ${dir}/merge-PR-*.log
     labels="$(cat ${dir}/${v})"
     for label in ${labels}; do
         prs="$(grep \"${label}\" ${dir}/PR.labels.txt | cut -d\  -f 1)"
@@ -69,12 +69,12 @@ for v in 0.0.?; do
             git clean -xfd
             git submodule foreach git clean -xfd
             git checkout ${branch}
-            ( git merge --no-edit PR-${pr} || { git merge --abort; continue; } ) 2>&1 > ../merge-PR-${pr}.log
+            ( git merge --no-edit PR-${pr} || { git merge --abort; continue; } ) 2>&1 > ${dir}/merge-PR-${pr}.log
             prok="${prok} ${pr}"
-            grep \"${pr} .*${label}\" ${dir}/PR.labels.txt | sed \
+            grep \"${pr}.*${label}\" ${dir}/PR.labels.txt | sed \
                 -e 's,$,</a><br>,g' \
                 -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
-                >> ${dir}/prdetails.html
+                >> ${dir}/prdetails.html 2>${dir}/merge-PR-${pr}.log
         done
     done
 
