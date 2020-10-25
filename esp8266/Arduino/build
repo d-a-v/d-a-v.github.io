@@ -52,10 +52,6 @@ for v in 0.0.?; do
     rm -f ${dir}/prdetails.html
     labels="$(cat ${dir}/${v})"
     for label in ${labels}; do
-        grep \"${label}\" ${dir}/PR.labels.txt | sed \
-            -e 's,$,</a><br>,g' \
-            -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
-            >> ${dir}/prdetails.html
         prs="$(grep \"${label}\" ${dir}/PR.labels.txt | cut -d\  -f 1)"
         for pr in ${prs}; do
             git reset --hard
@@ -73,8 +69,12 @@ for v in 0.0.?; do
             git clean -xfd
             git submodule foreach git clean -xfd
             git checkout ${branch}
-            git merge --no-edit PR-${pr} || { git merge --abort; continue; }
+            ( git merge --no-edit PR-${pr} || { git merge --abort; continue; } ) > merge-PR-${pr}.log
             prok="${prok} ${pr}"
+            grep \"${pr} .*${label}\" ${dir}/PR.labels.txt | sed \
+                -e 's,$,</a><br>,g' \
+                -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
+                >> ${dir}/prdetails.html
         done
     done
 
