@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export FILTER_BRANCH_SQUELCH_WARNING=1
+
 set -xe
 dir=$(cd ${0%/*}; pwd)
 
@@ -71,10 +73,10 @@ for v in 0.0.?; do
             git checkout ${branch}
             ( git merge --no-edit PR-${pr} || { git merge --abort; continue; } ) 2>&1 > ${dir}/merge-PR-${pr}.log
             prok="${prok} ${pr}"
-            (set -x; grep \"${pr}.*${label}\" ${dir}/PR.labels.txt | sed \
+            grep "${pr}.*\"${label}\"" ${dir}/PR.labels.txt | sed \
                 -e 's,$,</a><br>,g' \
                 -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
-                >> ${dir}/prdetails.html ) 2>${dir}/TEST-PR-${pr}${label}.log
+                >> ${dir}/prdetails.html
         done
     done
 
