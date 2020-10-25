@@ -71,12 +71,20 @@ for v in 0.0.?; do
             git clean -xfd
             git submodule foreach git clean -xfd
             git checkout ${branch}
-            git merge --no-edit PR-${pr} 2>&1 > ${dir}/merge-PR-${pr}.log || { git merge --abort; continue; }
-            prok="${prok} ${pr}"
-            grep "${pr}.*\"${label}\"" ${dir}/PR.labels.txt | sed \
-                -e 's,$,</a><br>,g' \
-                -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
-                >> ${dir}/prdetails.html
+            if git merge --no-edit PR-${pr} 2>&1 > ${dir}/merge-PR-${pr}.log; then
+                prok="${prok} ${pr}"
+                grep "${pr}.*\"${label}\"" ${dir}/PR.labels.txt | sed \
+                    -e 's,$,</a><br>,g' \
+                    -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
+                    >> ${dir}/prdetails.html
+            else
+                git merge --abort
+                grep "${pr}.*\"${label}\"" ${dir}/PR.labels.txt | sed \
+                    -e 's,$,</a><br>,g' \
+                    -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
+                    -e 's,^,ISSUE while merging: ,g' \
+                    >> ${dir}/prdetails.html
+            fi
         done
     done
 
