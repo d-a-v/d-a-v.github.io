@@ -1,7 +1,20 @@
-b221be41 Merge branch 'PR-6280'
-e0945a75 Merge branch 'PR-6690'
-eb798924 Merge branch 'PR-6979'
-24a1b153 Merge branch 'PR-7237'
+55caa943 Merge branch 'PR-6280'
+2f27443a Merge branch 'PR-6690'
+0331da81 Merge branch 'PR-6979'
+3c75274b Merge branch 'PR-7237'
+9eca03c8 sync with master
+d5d2ee58 Merge branch 'master' into streamto
+5d2563ee Fixed bug in parsing POST file uploads (#7543)
+1bb0815f Hook up custom timestamp proc for SD/SDFS (#7686)
+996211f1 Compile failure fix with FS_NO_GLOBALS flag (#7685)
+77bd71ec Add Stream loaders for BearSSL (#7675)
+cfdcff10 Catch and display SSL errors for fatal alerts (#7681)
+eb7e082a Revive a dead link (#7679)
+7f38e141 BREAKING: Add Print::availableForWrite method (#7658)
+95de525a Refactor WiFi scan example (#7655)
+98e07d70 Merge branch 'master' into nosizeconf
+3c807b01 emulation on host: fix 64 bits mode
+c6562662 Fix long password validation in WebServer (#7676)
 8bcc1346 fix emulation on host
 e4534eda Merge branch 'master' into nosizeconf
 82688073 fix emulation on host
