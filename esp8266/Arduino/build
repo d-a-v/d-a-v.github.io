@@ -1,12 +1,12 @@
 #!/bin/bash
 
-export FILTER_BRANCH_SQUELCH_WARNING=1
-
 set -xe
 dir=$(cd ${0%/*}; pwd)
 
 url=https://github.com/esp8266/Arduino.git
 branch=master
+
+test -d git-filter-repo && ( cd git-filter-repo; git pull; ) || git clone https://github.com/newren/git-filter-repo.git
 
 rm -f package_esp8266com_index.json.new message.txt
 
@@ -115,18 +115,18 @@ for v in 0.0.?; do
         lasttag=$(git describe --tag|cut -d- -f1)
         git log --oneline ${lasttag}.. > $dir/newlog.txt
 
-        cd $dir/../..
-
-        git filter-branch --tree-filter "rm -rf esp8266/Arduino/releases/download/versions/${v}/esp8266-${v}.zip" --prune-empty HEAD
-
-        set +e
-        git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
-        git commit -m 'Removing previous v${v} from git history'
-        set -e
-
-        git gc
+        #cd $dir/../..
+        #export FILTER_BRANCH_SQUELCH_WARNING=1
+        #git filter-branch --tree-filter "rm -rf esp8266/Arduino/releases/download/versions/${v}/esp8266-${v}.zip" --prune-empty HEAD
+        #set +e
+        #git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+        #git commit -m 'Removing previous v${v} from git history'
+        #set -e
+        #git gc
+        #cd $dir
 
         cd $dir
+        git-filter-repo/git-filter-repo --path esp8266/Arduino/releases/download/versions/${v}/esp8266-${v}.zip --invert-paths
 
         mkdir -p releases/download/versions/${v}/
         mv esp8266-${v}.zip releases/download/versions/${v}/
