@@ -178,3 +178,5 @@ git add package_esp8266com_index.json
 git commit -m "comments"
 
 echo "now execute: 'git push --force'"
+
+git remote add origin git@github.com:d-a-v/d-a-v.github.io.git
