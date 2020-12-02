@@ -1,10 +1,43 @@
-b15cd9d5 Merge branch 'PR-6280'
-f258021e Merge branch 'PR-6680'
-3f7158ec Merge branch 'PR-6965'
-b6498495 Merge branch 'PR-7237'
+8879bc51 Merge branch 'PR-6280'
+cfe07a19 Merge branch 'PR-6965'
+a8674083 Merge branch 'PR-7237'
+afd44300 Merge branch 'PR-7708'
+56310513 Update a02-my-esp-crashes.rst (#7739)
+2c178235 emulation on host: makefile rework (#7738)
+8565ac8f Update to pyserial 3.5, esptool 3.0 (#7737)
+11519dd1 Clarified implementation of the signed OTA implementation (#7736)
+38f12f07 The tools/sdk/libc directory isn't used, remove it
+9540bbe5 Dieable CI caching and fix time header include
+82989524 Adjust macro defined isXXX_l character classifiers
+5ba4d337 Merge branch 'master' into newlib330
+e9891715 Modified local isXXX functions in newlib
+7a368747 ETag support for WebServer (#7709)
+2e4563c7 Receiving no data in Updater is an error (#7729)
+cfd9a34c Specify where Additional Boards Manager URLs is (#7733)
+7faf5d8c Remove unneeded include file
+a50843a2 Merge branch 'master' of https://github.com/esp8266/Arduino into newlib330
+418f2676 Clean rebuild to newlib 4.0.0
+0e4c838a Update to latest BearSSL as of Nov 2020 (#7732)
+92175d70 Rewrite multipart boundary detection (#7728)
+04b0c270 Added GZipped OTA support in elf2bin and PlatformIO (#7727)
+8c7fd6aa PROGMEM compatibility changes to String (#7724)
+32dbc2cb Merge pull request #7717 from dok-net/phaselocked_cb_fix
+f8115c32 Fix callback expected return to CPU cycles instead of µs for PR 7022. Fix inline documentaton for both
+47a57e1e Update to ESP8266HTTPClient.cpp for no Content-Length (#7691)
+27b54f57 CI waveform flavour select (#7715)
+4c7a2086 Undo accidental loss of 6.10.0 SoftwareSerial (#7714)
+ccdde5f3 Re-implement PWM generator logic (#7231)
+59315836 schedule_recurrent_function_us should be in iram (#7713)
+eec4dc49 install a new waveform-flavouring Arduino IDE menu and a new PIO #define (#7712)
+0e735e38 Waveform: fix significant jitter, that stresses servos and is clearly audible in Tone output (#7022)
+b5748261 Add new include files part of newlib update
+cb3aa7a1 Merge branch 'master' into newlib330
+43a8df33 Upgrade to Newlib 4.0.0 - needs toochain rebuild
+64a81914 Merge branch 'master' into pr-dns-forwarder
 8fe80f16 WString: Optimize a bit (#7553)
 5ae3efb8 EspSoftwareSerial 6.10.0: override keyword for recent Print::availableForWrite() addition (#7710)
 979bbfea Use -std=gnu17 instead of -std=c17 for GCC and test (#7588)
+1395ef96 Upgrade to upstream newlib 3.3.0 release
 417aacc5 Fix sntp_get_real_time prototype in header (#7707)
 9b437d7c Change servo defaults to safer defaults (#7023)
 c5c9f845 Provide String::indexOf for a char* needle (#7706)
@@ -14,8 +47,6 @@ c5c9f845 Provide String::indexOf for a char* needle (#7706)
 f50b3a6b Merge branch 'master' into pr-erase-config
 4de681b5 Help newlib TZ parser (#7699)
 c919f611 update documentation example (#7697)
-8094f2d9 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-ee5acfe4 add lwip_hook_dhcp_parse_option()
 5d2563ee Fixed bug in parsing POST file uploads (#7543)
 1bb0815f Hook up custom timestamp proc for SD/SDFS (#7686)
 996211f1 Compile failure fix with FS_NO_GLOBALS flag (#7685)
@@ -24,9 +55,7 @@ cfdcff10 Catch and display SSL errors for fatal alerts (#7681)
 eb7e082a Revive a dead link (#7679)
 7f38e141 BREAKING: Add Print::availableForWrite method (#7658)
 95de525a Refactor WiFi scan example (#7655)
-723bed13 Merge branch 'master' into ethernet
 c6562662 Fix long password validation in WebServer (#7676)
-dbc55c01 Merge branch 'master' into ethernet
 8d2f53d9 Remove Travis-CI configuration (#7674)
 64def3cd boards.txt: sort by displayed name (#7670)
 95fb1045 settimeofday_cb: distinguish from user or sntp (#7637)
@@ -39,7 +68,6 @@ e79eb117 BREAKING: Change return EEPROM.end() to bool (#7630)
 ccecbfe4 Add Copyright notice to Schedule.h (#7653)
 9003b028 MDNS MultiInterface (#7636)
 1c624dd7 BREAKING: Add Wrong Password wifi status case (#7652)
-29a3e29f Merge branch 'master' into ethernet
 79ea883f New flash writing method with offset/memory/size alignment handling (#7514)
 200e47fc Fix error when debug enabled but no port chosen (#7648)
 bc2b13ae LEAmDNSv2: change a macro name to be independant from LEAmDNS1 (#7640)
@@ -68,17 +96,11 @@ af53772e Extend Print class for 64bit integers.
 f5421750 httpclient: remove deprecated API (#7617)
 37ef41ce mdns: #ifndef/#define/#endif (#7615)
 cc042b99 WString: c_str() returns null pointer after move (#7611)
-a3aaa499 fix emulatio on host too
-38fbe413 fix include file name, remove private constructor
-788928ce fix file name case confusion after merging from master
-0a0f8a53 lwip2: recompiled PPP branch after sync w/ master
-509999b9 Merge branch 'master' into ethernet
 a3281fe2 LEA mDNS v2 (#7540)
 faf59f51 Update to GCC 10.2 (#7607)
 c24109fd WString: mark move ctor as noexcept (#7610)
 4a24d3cc FIX MIME-Type for txt-suffix (#7608)
 3cbf3039 FIX StaticRequestHandler crashes when cache_header is null and DEBUG_ESP_CORE is enabled (#7609)
-97ad7ab8 Merge branch 'master' into ethernet
 e5539fe8 Merge branch 'master' into pr-erase-config
 e09e6e8e Merge branch 'master' into pr-dns-forwarder
 32470fbf Avoid #includes with a surrounding namespace (#7560)
@@ -90,8 +112,6 @@ a460cb79 Add clear method to IPAddress (#7586)
 08f17051 Check also if IP is not IPADDR_NONE (#7585)
 8258db53 Fix error message typo (#7581)
 88be34e2 Update certs-from-mozilla.py (#7578)
-94fb55ec Merge branch 'master' into ethernet
-27ff946c Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 bfecdb0e Update DigestAuthorization.ino (Simple example update) (#7579)
 2171a2e8 Fix gzip+signed OTA error (#7577)
 22a197ee Properly replace toolchain in PlatformIO CI script (#7580)
@@ -128,16 +148,13 @@ c1117132 overwrite weak `new (std::nothrow)` calls
 cf1b8e06 Don't overwrite boot sector unless OTA changes it
 a16e1e5b fixes
 f23caa2d Merge branch 'master' into stdnothrow
-55ef5efc Merge branch 'master' into ethernet
 1ff927d0 Fix spelling typo under doc/faq (#7538)
 c33a6a26 Updater MD5 cleanup on begin (#7534)
 385bfd76 deleted:    arduino_new/arduino_new.ino
 69259822 replace `new` by `new (std::nothrow)`, remove `arduino_new`
 5b3d290d Add synthetic IntegerDivideByZero exception (#7496)
 f42327da doc: gcc handles duplicate literal strings (#7531)
-59282117 Merge branch 'master' into ethernet
 e2b8f6ac Update PIO CI to be less chatty, fix CI fail (#7530)
-b2dac9bf Merge branch 'master' into ethernet
 e0fedc57 avoid circular #include dependence for PolledTimeout (#7356)
 01edc0e5 Fix and add details to Serial doc (#7521)
 683b8e60 Fix spelling typos in files under doc/esp8266wifi (#7520)
@@ -150,10 +167,6 @@ fc2426a5 sys/pgmspace.h: Refactor inline asm (#7510)
 a8e35a57 Add valgrind mocked test to CI (#7501)
 fc1aa554 Remove warnings when buinding NoAssert (#7499)
 3be0cbb3 Typo (#7502)
-a0239ac1 per review and fixes
-30a2aa77 reorder members
-8be65338 ppp server: release resource on fail
-96eb8996 Merge branch 'master' into ethernet
 d92e1eda Basic authentication with ESP8266httpUpdate (#7190)
 85ea47e9 Fixed PUYA flash write buffer alignment (#7491)
 1041a9d7 webhook/http1.1: prevent from losing a new client while waiting (#7492)
@@ -177,13 +190,6 @@ c18f7cb1 Made ESP8266WebServer::client() return a reference (fixes #7075) (#7080
 3c1bd65a WebServer: Allow client to send many requests on the same connection (#7414)
 709ba798 Change BSSL_CertStore test URL (#7370)
 dfd5a4f1 replace old Ethernet Arduino-library with v2, submoduled (#6812)
-49068fdf fix example
-5af73820 recompile lwip2
-63354f21 merge with master
-f8c7f104 fix compilation without local lwip1.4
-90da681c Merge branch 'master' into ethernet
-24f0e9ac Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-03b0670e update
 3bd24587 Transition from TravisCI to GitHub CI (#7444)
 f8091311 Update to BearSSL version lost in GCC10 update (#7453)
 e58bb60f webserver: do not count "plain" in argument list (#6768)
@@ -220,13 +226,6 @@ eb1f508a Merge branch 'master' into pr-dns-forwarder
 5661ec07 Merge branch 'master' into wifi_mesh_update_2.2
 fba4ac15 - Make most type definitions public instead of protected, to facilitate use in composition.
 6b1cdb85 Merge branch 'master' into pr-erase-config
-08dca76c Merge branch 'master' into ethernet
-8b817091 per https://github.com/d-a-v/W5500lwIP/issues/17#issuecomment-638229509
-50d9e83d fix compilation problem with IPv6
-d80cd318 do not filter mac address from within driver (https://github.com/d-a-v/W5500lwIP/issues/17)
-59fe44e7 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-fef264e9 Merge branch 'master' into ethernet
-e258e16a Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 1b67f969 Merge branch 'pr-dns-forwarder' of github.com:mhightower83/Arduino into pr-dns-forwarder
 96eacc39 Merge branch 'master' into pr-dns-forwarder
 6f91be09 Merge branch 'master' into pr-erase-config
@@ -242,15 +241,6 @@ d01e6391 - Fix build error.
 be5fe6d3 Merge branch 'master' into pr-erase-config
 e64125a5 - Move globals to anonymous namespaces.
 74535449 Merge branch 'master' into pr-dns-forwarder
-b18ec7bb fix copy from pointer
-147f5a9e rebuild lwip libs
-44a680dc rebuild lwip libs
-0673d0db Merge branch 'master' into ethernet
-a60ffaad rebuild lwip lib
-639ef04e more comments
-af938023 magic_cookie is part of bootp rfc
-e0e7cdb3 remove non readable characters from comments
-3c15b761 + comments
 effcc3a2 - Make everything const by default.
 6755a5b0 Reserved space in String page. Re-adjusted size of chuncks. Added print statements for monitoring size of chunks etc. Novice improvents to HTML and variable names.
 14fede01 Merge branch 'master' into pr-erase-config
@@ -274,24 +264,12 @@ b2d35ea2 Merge branch 'master' into pr-erase-config
 548d7029 Merge branch 'master' into wifi_mesh_update_2.2
 1dcd4c4a - Fix even more merge conflicts.
 16801f3d - Rework ExpiringTimeTracker to be based on PolledTimeout.
-0f133ccc lwIP-1.4 include fix
-967c3498 lwIP-1.4 include fix
-0dcfc843 fix include file with lwip1.4
-cc2be531 fix warning with macro
-043d32c6 fix using softserial API
-0b4689be style
-21ffcfe9 Merge branch 'master' into ethernet
-488ae3ec Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-50fec053 Merge branch 'master' into ethernet
-29d3de73 Merge branch 'master' into ethernet
 604b40ab Merge branch 'master' into pr-erase-config
 f1acb40e Access bin image header through ICACHE reduces IRAM usage by 16. Latest merge broke my TZ logic. Updated to the new configTime method.
 c0394fbc Merge branch 'master' into pr-erase-config
 39160c8f one more :(
 4e2493ad Resolve merge conflict. Changed method for reading image header, freeing 16 bytes of iRAM"
 049d91bc Added a Third method.
-540e4465 sync with lwip2
-6e12d9e4 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
 560ddc5c Set default Method to 2, to side step travis issue of using preinit(). This is just a PoC an alternate for preinit() can be created later.
 546f0cb0 Merge branch 'master' into pr-erase-config
 9c4e44bc Added print messages to show progress. And code to ensure the UART speed stayed at 74880 for a more complete viewing of messages. Well at least, it stays at 74880 for a longer time than it was. Added pinMode filter to prevent UART TX pin from being disabled during user_init().
@@ -314,21 +292,9 @@ c66ae2e1 Merge branch 'master' into pr-erase-config
 93fb3d3d Added a 2nd method
 6fde10f0 Proof of concept for post OTA 1st boot erase config.
 a49f0470 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
-51aca37f Merge branch 'master' into ethernet
-df04b3cd Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-b3acf27f Merge branch 'master' into ethernet
-a81d1108 Merge branch 'master' into ethernet
 962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
-9d77d1d9 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-21694be8 Merge branch 'master' into ethernet
-55b874ca Merge branch 'master' into ethernet
-bd8b32ac move hostname() from STA to generic interface
-6b27eaa5 Merge branch 'master' into ethernet
-9eb9dee3 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-8f57757b Merge branch 'master' into ethernet
 2fef67dc - Generalize CryptoInterface.
 3132325b - Replace Crypto files with CryptoInterface which uses BearSSL as a cryptographic backend.
-6ee5df98 Merge branch 'master' into ethernet
 afc88f26 - Improve HelloMesh.ino.
 78812a73 - Add HelloTcpIp.ino example for the TcpIpMeshBackend.
 6b763686 - Add working FloodingMesh. Unencrypted broadcasts should work well, but are untested in large mesh networks. Encrypted broadcast support is currently experimental.
@@ -336,53 +302,7 @@ afc88f26 - Improve HelloMesh.ino.
 8194197e Even better fix of conflict with master branch.
 7ca5a7e5 Fix conflict with master branch.
 f8ec4f1c - Make connectionQueue(), latestTransmissionOutcomes() and latestTransmissionSuccessful() methods static in order to match the underlying data storage.
-04d02c39 fix example warnings
-58165902 fix emulation on host
-d9d93390 add missing files (ppp)
-d09d62e9 fix example
-1366903c fi macro arithmetic
-4ebd5c86 fixes for lwip1
-4b5a2c48 fix dhcp server when ipv6 is enabled
-900c594c fix former declaration of dhcp server, and its current use
-fc6fb1df fix example
-370bd62d Merge branch 'master' into ethernet
-3282a3f1 fix dhcp server on AP
 b0ef9195 Merge branch 'master' into wifi_mesh_update_2.2
-7bdadd45 missing file
-c6c38052 sync with lwip2
-6be23827 Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-a8e231b5 sync with lwip2
-f35f712e Merge branch 'master' into ethernet
-6ac98dac fix upstream url
-f15a93cb Merge branch 'ethernet' of github.com:d-a-v/Arduino into ethernet
-3fec74ac argument reorder common function for ::config()
-b79d841e comments
-5b38c0d8 astyle
-756ce0cd PPPServer: example
-8d10e91e restyle
-574be131 ppp server updates
-16ddd265 Merge branch 'master' into ethernet
-919839d1 ethernet wip
-b8485d17 Merge branch 'master' into ethernet
-a3b1d918 ethernet wip: dhcp server working for legacy AP on boot, and external devices
-deebbcbd ethernet wip static or dhcp works
-833d3af3 Merge branch 'master' into ethernet
-5898985d ethernet wip
-e89f352b Merge branch 'master' into ethernet
-19146a68 lwip2: no more dhcp inside
-7df15f3c ethernet wip
-f893c325 ethernet wip
-cc2c2ce2 now needed: void preinit(){ESP8266WiFiClass::preinitWiFiOff();} (will be fixed)
-04b5ed79 ethernet wip
-c5c921e5 ethernet wip: dhcpserver in a class wip
-9a3df518 ethernet wip
-05d5b689 ethernet wip
-9229ca53 Merge branch 'master' into ethernet
-d279c665 ethernet wip
-de4a2874 ethernet wip
-cb198b4e Merge branch 'master' into ethernet
-1793b279 ethernet wip
-04bcb887 Extracts dhcp server from lwip2 and add it to the core. It must always be present, it is linked and can be called by fw on boot. So it cannot be stored in a library.
 86025c78 - Make each mesh backend use a unique NetworkInfo class and separate connectionQueue and latestTransmissionOutcomes vectors.
 2576a091 Merge branch 'master' into wifi_mesh_update_2.2
 5834c547 - Add broadcast functionality.
