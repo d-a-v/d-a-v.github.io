@@ -1,7 +1,11 @@
-8879bc51 Merge branch 'PR-6280'
-cfe07a19 Merge branch 'PR-6965'
-a8674083 Merge branch 'PR-7237'
-afd44300 Merge branch 'PR-7708'
+e02d43f8 Merge branch 'PR-6280'
+29589e3e Merge branch 'PR-6965'
+93c204c5 Merge branch 'PR-7237'
+538093dd Merge branch 'PR-7708'
+7d36d28d Fix 64-bit time for LittleFS
+47e7b2db emulation on host: various minor fixes (#7741)
+594831d6 WiFiClientSecure: use context (#7680)
+35a5a702 emulation on host: fix make clean (#7740)
 56310513 Update a02-my-esp-crashes.rst (#7739)
 2c178235 emulation on host: makefile rework (#7738)
 8565ac8f Update to pyserial 3.5, esptool 3.0 (#7737)
