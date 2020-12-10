@@ -1,7 +1,8 @@
-258aae1a Merge branch 'PR-6280'
-522a1d14 Merge branch 'PR-6680'
-6db4e179 Merge branch 'PR-6965'
-f41251b9 Merge branch 'PR-7237'
+c2a73723 Merge branch 'PR-6280'
+c24d6aca Merge branch 'PR-6680'
+a624eb93 Merge branch 'PR-6965'
+9e24a376 Merge branch 'PR-7237'
+eaaa1dbc Normalize platform.txt pattern numbers (#7752)
 d4254e03 Fixes https://github.com/esp8266/Arduino/issues/7749#issue-760585820 (#7750)
 025bb2f2 Merge branch 'master' into pr-erase-config
 7178c2e4 Merge branch 'master' into pr-dns-forwarder
