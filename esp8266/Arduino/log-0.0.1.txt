@@ -1,3 +1,4 @@
+d4254e03 Fixes https://github.com/esp8266/Arduino/issues/7749#issue-760585820 (#7750)
 8b662ed3 PoC cache configuration control (#7060)
 47e7b2db emulation on host: various minor fixes (#7741)
 594831d6 WiFiClientSecure: use context (#7680)
