@@ -1,8 +1,10 @@
-a031de6c Merge branch 'PR-6280'
-b4db3398 Merge branch 'PR-6680'
-77dcb2c3 Merge branch 'PR-7237'
+fa0e5234 Merge branch 'PR-6280'
+e2ceddf2 Merge branch 'PR-6680'
+ee56e24f Merge branch 'PR-7237'
+d1e73922 Merge branch 'PR-7785'
 7b80424c style
 ee539cf0 LEAmDNSv1: fix macro name
+efb3bb19 Rationalize File timestamp callback
 98632531 Update cores/esp8266/LwipIntfDev.h
 36f451dc LEAmDNS2 removed
 f3521da1 Move uzlib to master branch (#7782)
