@@ -1,6 +1,6 @@
-e0c1df47 Merge branch 'PR-6280'
-c278d5d6 Merge branch 'PR-6680'
-cbbb2889 Merge branch 'PR-7237'
+a031de6c Merge branch 'PR-6280'
+b4db3398 Merge branch 'PR-6680'
+77dcb2c3 Merge branch 'PR-7237'
 7b80424c style
 ee539cf0 LEAmDNSv1: fix macro name
 98632531 Update cores/esp8266/LwipIntfDev.h
