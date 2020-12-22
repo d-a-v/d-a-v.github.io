@@ -1,3 +1,4 @@
+7dbef42a LEAmDNS fixes (#7786)
 f3521da1 Move uzlib to master branch (#7782)
 a9c46d07 Update to latest uzlib upstream (#7776)
 dbe7eb89 EspSoftwareSerial bug fix release 6.10.1: preciseDelay() could delay() for extremely long time, if period duration was exceeded on entry. (#7771)
