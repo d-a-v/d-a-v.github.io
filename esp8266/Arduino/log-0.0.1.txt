@@ -1,3 +1,5 @@
+c487ca52 Update to SdFat 2.0.2, speed SD access (#7779)
+9de8373f BREAKING - Upgrade to upstream newlib 4.0.0 release (#7708)
 e25ad86c mock: +hexdump() from debug.cpp (#7789)
 51c2a143 more lwIP physical interfaces (#6680)
 35d22ede Rationalize File timestamp callback (#7785)
