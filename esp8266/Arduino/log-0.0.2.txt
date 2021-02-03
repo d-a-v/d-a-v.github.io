@@ -1,7 +1,40 @@
-5aee92000 Merge branch 'PR-6280'
-40b9e3b91 Merge branch 'PR-6965'
-d1d764dc6 Merge branch 'PR-6979'
-9b2b1d0e4 Merge branch 'PR-7237'
+a23fac4c3 Merge branch 'PR-6280'
+919f7f5f7 Merge branch 'PR-6965'
+2059024a0 Merge branch 'PR-6979'
+d345cb277 Merge branch 'PR-7237'
+739c5322a Merge branch 'PR-7859'
+358ca7d3c At MDNS.end() also release services
+085dbd223 SSEND2HTTPC() => StreamReportToHttpClientReport()
+e29947495 english
+3be63d52e english
+44fb3783e doc: insist on reference implementation
+e0084f393 typo in doc
+b73a9ca8d typo in doc
+908f980aa remove comment
+784771cc6 32767->maxInt16
+e1e6fdb5d remove another useless cast
+dae26cb85 remove useless cast
+711bfe8f8 rename getLastSendReport => getLastSendResult
+36a6bce02 rename StreamPtr:: to StreamConstPtr::
+94e8d60ec rename ::reset() to ::resetPointer() in StringPtr and S2Stream
+9035f5139 add comments to StreamString example
+395dae357 reenable StreamPtr(const String &)
+b70a00234 removed StreamPr::StreamPtr(String)
+5ab741518 ::sendNow() => ::sendAvailable()  +  fix doc
+da1240a9b {input,output}TimeoutPossible => {input,output}CanTimeout
+2783c19d6 ::peekBufferAPI() => ::hasPeekBufferAPI()
+592b44014 ::streamSize => ::streamRemaining
+84d8bc693 define STREAMSEND_API globally (for checking on its presence)
+4779433a7 Merge branch 'master' into streamto
+3c1e104d8 typo in tests
+abca00b2b fix licences
+41d1868fb rename private variable (_x => _zero)
+92a6302ef addressible => addressable
+21a50ed84 remove useless comment
+7b35d70dd update comment
+20413f817 Update toolchain to support std::remainder (#7849)
+39d14530f Add a check for all URLs in the package file (#7848)
+600c5d7c0 Fix typo in 32-bit Windows package JSON (#7847)
 c2393d05b Fix improper GENERIC board IDs (#7839)
 f2d83ba43 allow to set pin to OUTPUT_OPEN_DRAIN in analogWriteMode (#7841)
 746fcd2e9 Merge branch 'master' into streamto
