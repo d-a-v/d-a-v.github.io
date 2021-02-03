@@ -1,3 +1,6 @@
+20413f817 Update toolchain to support std::remainder (#7849)
+39d14530f Add a check for all URLs in the package file (#7848)
+600c5d7c0 Fix typo in 32-bit Windows package JSON (#7847)
 c2393d05b Fix improper GENERIC board IDs (#7839)
 f2d83ba43 allow to set pin to OUTPUT_OPEN_DRAIN in analogWriteMode (#7841)
 53e568845 Update to EspSoftwareSerial 6.11.3: prepares for ESP8266 Arduino core PR 6979. (#7840)
