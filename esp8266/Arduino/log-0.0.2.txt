@@ -1,9 +1,25 @@
-a23fac4c3 Merge branch 'PR-6280'
-919f7f5f7 Merge branch 'PR-6965'
-2059024a0 Merge branch 'PR-6979'
-d345cb277 Merge branch 'PR-7237'
-739c5322a Merge branch 'PR-7859'
-358ca7d3c At MDNS.end() also release services
+d2f471a33 Merge branch 'PR-6280'
+c02f50d8f Merge branch 'PR-6965'
+29c59e2fc Merge branch 'PR-6979'
+885d575c2 Merge branch 'PR-7237'
+e88d21e0c fix variable type
+d32361c78 Merge branch 'master' into streamto
+70eb9e8a9 webserver: check/print in debug mode
+bfad4fc4b check for outputCanTimeout() on right stream
+bc3daef76 WIFI_RESUME improve speed and example (#7877)
+1188958dc replace sendcontent()/template by proper sendcontent(ref)
+c0a1c38d1 Merge branch 'master' into streamto
+e4435fa30 Update board-specific defines (#7875)
+483519f85 String: compatibility with 64 bits scalars (#7863)
+a886515ce Fix ESP8266SdFat architecture, Windows CI (#7866)
+07b4c09b9 eboot: .RODATA, upstream uzlib, move CRC, save 112 bytes  (#7844)
+bfe7ee7ee style
+747a1a96e rename StreamDev.cpp -> StreamSend.cpp
+756ca7224 split Stream::StreamSend()
+c2232651a rename StreamDev.cpp -> StreamSend.cpp
+354288bb3 changed the report enum to a class enum
+6c564c269 EspSoftwareSerial bug-fix release 6.11.4 (#7862)
+27da34760 At MDNS.end() also release services (#7859)
 085dbd223 SSEND2HTTPC() => StreamReportToHttpClientReport()
 e29947495 english
 3be63d52e english
