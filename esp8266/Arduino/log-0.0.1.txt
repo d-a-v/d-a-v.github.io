@@ -1,3 +1,4 @@
+83f5f29cf Support to reboot into UART download mode (#7854)
 bc3daef76 WIFI_RESUME improve speed and example (#7877)
 e4435fa30 Update board-specific defines (#7875)
 483519f85 String: compatibility with 64 bits scalars (#7863)
