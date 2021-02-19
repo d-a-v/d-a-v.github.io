@@ -1,3 +1,5 @@
+a5308d6ef String: add missing long long operator implementations (#7888)
+d41b4037c board manager: + Agrumino lemon v4 (#7883)
 83f5f29cf Support to reboot into UART download mode (#7854)
 bc3daef76 WIFI_RESUME improve speed and example (#7877)
 e4435fa30 Update board-specific defines (#7875)
