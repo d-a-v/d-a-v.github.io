@@ -1,19 +1,11 @@
-25cbbb584 Merge branch 'PR-6280'
-088716bd6 Merge branch 'PR-6965'
-8686819fa Merge branch 'PR-6979'
-0cae4e4be Merge branch 'PR-7237'
-761f20847 boards.txt that will be updated
-dc7185950 changed request by earlephilhower file mod boards.txt.py
-87b8c4d98 Merge branch 'master' into master
+655e63895 Merge branch 'PR-6280'
+30276bf6f Merge branch 'PR-6965'
+197ae0436 Merge branch 'PR-6979'
+35c9cd058 Merge branch 'PR-7237'
+24a117cdd Merge branch 'master' into pr-erase-config
+a5308d6ef String: add missing long long operator implementations (#7888)
+d41b4037c board manager: + Agrumino lemon v4 (#7883)
 83f5f29cf Support to reboot into UART download mode (#7854)
-40614dd0b Merge pull request #1 from d-a-v/bhp
-48527fc25 update variant
-20a0401fa restrict to 2M no FS
-dd4354898 +missing variant file
-f476769f8 simplify
-fc0f24997 agruminolemon fixes
-3284c737f Merge branch 'master' into master
-fa2cb5e99 Add Agrumino lemon v4 board with esp8266
 e88d21e0c fix variable type
 d32361c78 Merge branch 'master' into streamto
 70eb9e8a9 webserver: check/print in debug mode
