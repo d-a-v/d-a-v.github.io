@@ -1,7 +1,30 @@
-655e63895 Merge branch 'PR-6280'
-30276bf6f Merge branch 'PR-6965'
-197ae0436 Merge branch 'PR-6979'
-35c9cd058 Merge branch 'PR-7237'
+c58da96c1 Merge branch 'PR-6280'
+04b39a605 Merge branch 'PR-6965'
+2b3437fe3 Merge branch 'PR-6979'
+73cb0c022 Merge branch 'PR-7237'
+9bf5c3b86 Merge branch 'PR-7896'
+3d4887554 Merge branch 'PR-7899'
+22abddc7d Merge branch 'PR-7901'
+3ca568db6 Merge branch 'PR-7902'
+d3d49d5db Update mklittlefs executable (#7906)
+28ac12400 Merge branch 'master' into set-sleep-esp32-compat
+c90c329a4 Track creation time of LittleFS FS (#7873)
+e49d38ec6 Merge branch 'master' into set-sleep-esp32-compat
+22442f087 Added ESP32 compatible methods for setting/getting hostname (#7900)
+b2a53b798 mv enableWiFiAtBootTime() to core_esp8266_features.h
+5ead6a2ff Merge branch 'WiFiOffAtBoot' of github.com:d-a-v/Arduino into WiFiOffAtBoot
+253bbc550 Merge branch 'master' into WiFiOffAtBoot
+68d338eb8 Merge branch 'master' into WiFiOffAtBoot
+807ed51d0 AP & dhcp-server: fix uninitialized variables (#7905)
+330b229a3 remove now useless example
+6310da8aa +define WIFI_IS_OFF_AT_BOOT
+ab16b8c37 Disable WiFi at boot by default
+455e99847 Added ESP32 compatible methods for setting/getting sleep mode
+91e933553 Added broadcastIP method to WiFiSTA class
+2fc53fe7e host tests counterpart
+5f3ce9ee2 rename ClientContext::wait_until_sent() to wait_until_acked()
+e3fe7a577 EspSoftwareSerial, bump up Arduino library manager related files 6.11.6 (#7891)
+f42ab617e Update to EspSoftwareSerial 6.11.5 (#7889)
 24a117cdd Merge branch 'master' into pr-erase-config
 a5308d6ef String: add missing long long operator implementations (#7888)
 d41b4037c board manager: + Agrumino lemon v4 (#7883)
