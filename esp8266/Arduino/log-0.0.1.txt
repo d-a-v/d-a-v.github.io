@@ -1,3 +1,4 @@
+9fc5afd5f OOM: avoid warn when calling *alloc(0) (#7909)
 d3d49d5db Update mklittlefs executable (#7906)
 c90c329a4 Track creation time of LittleFS FS (#7873)
 22442f087 Added ESP32 compatible methods for setting/getting hostname (#7900)
