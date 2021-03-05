@@ -1,13 +1,29 @@
-c58da96c1 Merge branch 'PR-6280'
-04b39a605 Merge branch 'PR-6965'
-2b3437fe3 Merge branch 'PR-6979'
-73cb0c022 Merge branch 'PR-7237'
-9bf5c3b86 Merge branch 'PR-7896'
-3d4887554 Merge branch 'PR-7899'
-22abddc7d Merge branch 'PR-7901'
-3ca568db6 Merge branch 'PR-7902'
+f51e4ef84 Merge branch 'PR-6280'
+f4c3f94e1 Merge branch 'PR-6965'
+a734c1a84 Merge branch 'PR-6979'
+d136ca84c Merge branch 'PR-7237'
+eb014a291 Merge branch 'PR-7874'
+fd8e7dfe6 Merge branch 'PR-7896'
+c16961d79 Merge branch 'PR-7897'
+fe86d89c3 Merge branch 'PR-7899'
+de7860bda Merge branch 'PR-7901'
+aec9bcab9 Merge branch 'PR-7902'
+4ebdbf52a Merge branch 'master' into i2sclass
+85e2e52bc warn only when capacity had already reached the threshold
+5eb6d66ed threshold set to 128 bytes, +defines
+7c9039ac5 Update comments
+deadb5350 Merge branch 'master' into stroom
+6a55158df Update I2S.h
+09122144c Merge branch 'i2sclass' of https://github.com/earlephilhower/Arduino into i2sclass
+a93f39424 Update comments per review
+9fc5afd5f OOM: avoid warn when calling *alloc(0) (#7909)
+447a79f17 OOM debug: warn about String reallocation
+ae1cd10f3 Merge branch 'master' into i2sclass
+7bf79d2f3 Fix review issues, NO_GLOBAL ifdefs
 d3d49d5db Update mklittlefs executable (#7906)
+cd1d4fbd3 Refactored loop() and cmdLoop()
 28ac12400 Merge branch 'master' into set-sleep-esp32-compat
+816fd3137 Merge branch 'master' into i2sclass
 c90c329a4 Track creation time of LittleFS FS (#7873)
 e49d38ec6 Merge branch 'master' into set-sleep-esp32-compat
 22442f087 Added ESP32 compatible methods for setting/getting hostname (#7900)
@@ -20,7 +36,10 @@ b2a53b798 mv enableWiFiAtBootTime() to core_esp8266_features.h
 6310da8aa +define WIFI_IS_OFF_AT_BOOT
 ab16b8c37 Disable WiFi at boot by default
 455e99847 Added ESP32 compatible methods for setting/getting sleep mode
+843f8ee6e Fixed race condition
 91e933553 Added broadcastIP method to WiFiSTA class
+7e7e77444 Style
+65a012301 Add example for using ESP.rebootIntoUartDownloadMode()
 2fc53fe7e host tests counterpart
 5f3ce9ee2 rename ClientContext::wait_until_sent() to wait_until_acked()
 e3fe7a577 EspSoftwareSerial, bump up Arduino library manager related files 6.11.6 (#7891)
@@ -38,6 +57,9 @@ bc3daef76 WIFI_RESUME improve speed and example (#7877)
 c0a1c38d1 Merge branch 'master' into streamto
 e4435fa30 Update board-specific defines (#7875)
 483519f85 String: compatibility with 64 bits scalars (#7863)
+ad8de936e Add backward header compatibility
+efe58a5b0 Fix samples formatting
+367cab170 Add I2S class support
 a886515ce Fix ESP8266SdFat architecture, Windows CI (#7866)
 07b4c09b9 eboot: .RODATA, upstream uzlib, move CRC, save 112 bytes  (#7844)
 bfe7ee7ee style
