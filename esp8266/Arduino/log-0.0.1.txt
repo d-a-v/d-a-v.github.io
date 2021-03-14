@@ -1,3 +1,9 @@
+6743a6598 Minor EspSoftwareSerial release 6.11.7, for deprecated ICACHE_RAM_ATTR in upcoming ESP8266 Arduino core 3.0.0. (#7922)
+49a09279e Merge pull request #6280 from aerlon/wifi_mesh_update_2.2
+7fbf620ab Merge branch 'master' into wifi_mesh_update_2.2
+444002180 OOM debug: warn about String reallocation (#7908)
+e07542d70 Fix link to ESP8266 NonOS SDK (#7914)
+e99df4fe1 Add I2S class support (#7874)
 9fc5afd5f OOM: avoid warn when calling *alloc(0) (#7909)
 d3d49d5db Update mklittlefs executable (#7906)
 c90c329a4 Track creation time of LittleFS FS (#7873)
@@ -247,7 +253,9 @@ dfd5a4f12 replace old Ethernet Arduino-library with v2, submoduled (#6812)
 3bd24587e Transition from TravisCI to GitHub CI (#7444)
 f8091311a Update to BearSSL version lost in GCC10 update (#7453)
 e58bb60f8 webserver: do not count "plain" in argument list (#6768)
+628298cd4 - Polish README.md.
 1134194ed Fix spelling typos in readme.rst (#7447)
+2ae3f6fd3 - Update README.md.
 2d4a601c1 webserver: string optimization (#7446)
 83158affa Pass String by const reference [3.0] (#6583)
 df9bc38bc Grammar fixes (#7441)
@@ -260,3 +268,41 @@ c663c5592 Free space of overwritten files in LittleFS (#7434)
 d979b57d7 Upgrade to GCC 10.1 toolchain (#6294)
 7b48b9de5 boards: 4dsystems (gen4iod) updates (#7433)
 d59b1486c done with release 2.7.2 (#7430)
+06622748d Merge branch 'master' into wifi_mesh_update_2.2
+48281fb1f - Correct terminology in README.md.
+66138a67c - Add protected getters for _forwardingBacklog and _macIgnoreList in FloodingMesh.
+1d2b6b5c5 - Make HelloMesh.ino stylish.
+40b39f32e - Polish README.md.
+5661ec07b Merge branch 'master' into wifi_mesh_update_2.2
+fba4ac15f - Make most type definitions public instead of protected, to facilitate use in composition.
+0516b3065 - Fix Readme links.
+f059e5732 - Use the new Crypto, TypeConversion and random() functionality added to the Arduino core, instead of the versions local to the mesh library.
+595fb2312 Merge branch 'master' into wifi_mesh_update_2.2
+40e1f02ff - Split most of the EspnowMeshBackend code into utility files and the new ConditionalPrinter, EspnowDatabase, EspnowConnectionManager, EspnowTransmitter and EspnowEncryptionBroker classes.
+3f5495bb3 Merge branch 'master' into wifi_mesh_update_2.2
+d01e6391b - Fix build error.
+2ec2679d6 - Move all serialization code to separate Serializer namespace and files.
+e64125a53 - Move globals to anonymous namespaces.
+effcc3a2d - Make everything const by default.
+a24b8d23f Merge branch 'master' into wifi_mesh_update_2.2
+548d70296 Merge branch 'master' into wifi_mesh_update_2.2
+1dcd4c4a7 - Fix even more merge conflicts.
+16801f3da - Rework ExpiringTimeTracker to be based on PolledTimeout.
+a49f04709 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
+962a23d25 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
+2fef67dcb - Generalize CryptoInterface.
+3132325bf - Replace Crypto files with CryptoInterface which uses BearSSL as a cryptographic backend.
+afc88f265 - Improve HelloMesh.ino.
+78812a733 - Add HelloTcpIp.ino example for the TcpIpMeshBackend.
+6b763686d - Add working FloodingMesh. Unencrypted broadcasts should work well, but are untested in large mesh networks. Encrypted broadcast support is currently experimental.
+176f2851e Fix space.
+8194197e9 Even better fix of conflict with master branch.
+7ca5a7e5b Fix conflict with master branch.
+f8ec4f1c7 - Make connectionQueue(), latestTransmissionOutcomes() and latestTransmissionSuccessful() methods static in order to match the underlying data storage.
+b0ef9195b Merge branch 'master' into wifi_mesh_update_2.2
+86025c788 - Make each mesh backend use a unique NetworkInfo class and separate connectionQueue and latestTransmissionOutcomes vectors.
+2576a0912 Merge branch 'master' into wifi_mesh_update_2.2
+5834c5471 - Add broadcast functionality.
+26e626de1 Merge branch 'master' into wifi_mesh_update_2.2
+235b02ede Merge branch 'master' into wifi_mesh_update_2.2
+d20177ae3 - Add new ESP-NOW mesh backend.
