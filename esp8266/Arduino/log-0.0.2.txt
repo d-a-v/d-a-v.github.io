@@ -1,29 +1,30 @@
-5c9bffadd Merge branch 'PR-6280'
-30ada77ba Merge branch 'PR-6965'
-a594aa497 Merge branch 'PR-6979'
-927ca2ce2 Merge branch 'PR-7237'
-4895178f8 Merge branch 'PR-7874'
-8a3a48828 Merge branch 'PR-7896'
-2c4c3cd92 Merge branch 'PR-7897'
-7a864b32c Merge branch 'PR-7899'
-a7bfc2906 Merge branch 'PR-7901'
-799d52f17 Merge branch 'PR-7902'
-4ebdbf52a Merge branch 'master' into i2sclass
-85e2e52bc warn only when capacity had already reached the threshold
-5eb6d66ed threshold set to 128 bytes, +defines
+7f49cf7c2 Merge branch 'PR-6965'
+86ea38b3b Merge branch 'PR-6979'
+c2f7bc9d9 Merge branch 'PR-7237'
+c28bcead0 Merge branch 'PR-7896'
+f9cddf4b4 Merge branch 'PR-7897'
+61171c6fe Merge branch 'PR-7899'
+434107257 Merge branch 'PR-7901'
+e9fbd00d8 Merge branch 'PR-7902'
+6743a6598 Minor EspSoftwareSerial release 6.11.7, for deprecated ICACHE_RAM_ATTR in upcoming ESP8266 Arduino core 3.0.0. (#7922)
+0b0151824 Replaced ROM_uart_div_modify and associated logic, with the current method of handling direct ROM calls.
+4e31c91ac Merge branch 'master' into pr-erase-config
+5f16b2c04 Merge branch 'master' into pr-uartdownload-example
+49a09279e Merge pull request #6280 from aerlon/wifi_mesh_update_2.2
+7fbf620ab Merge branch 'master' into wifi_mesh_update_2.2
+444002180 OOM debug: warn about String reallocation (#7908)
+f0498b57f fix by @devyte's internal review:
+e07542d70 Fix link to ESP8266 NonOS SDK (#7914)
+32eb9bfc2 constexpr are static in classes
+81290b6bc update messages and python code in wifiecho example
+b4ca0ddac use a constexpr for stack buffer size
+594d77b34 bugfix: avoid using peekBuffer API when not available
+e99df4fe1 Add I2S class support (#7874)
 7c9039ac5 Update comments
-deadb5350 Merge branch 'master' into stroom
-6a55158df Update I2S.h
-09122144c Merge branch 'i2sclass' of https://github.com/earlephilhower/Arduino into i2sclass
-a93f39424 Update comments per review
 9fc5afd5f OOM: avoid warn when calling *alloc(0) (#7909)
-447a79f17 OOM debug: warn about String reallocation
-ae1cd10f3 Merge branch 'master' into i2sclass
-7bf79d2f3 Fix review issues, NO_GLOBAL ifdefs
 d3d49d5db Update mklittlefs executable (#7906)
 cd1d4fbd3 Refactored loop() and cmdLoop()
 28ac12400 Merge branch 'master' into set-sleep-esp32-compat
-816fd3137 Merge branch 'master' into i2sclass
 c90c329a4 Track creation time of LittleFS FS (#7873)
 e49d38ec6 Merge branch 'master' into set-sleep-esp32-compat
 22442f087 Added ESP32 compatible methods for setting/getting hostname (#7900)
@@ -57,9 +58,6 @@ bc3daef76 WIFI_RESUME improve speed and example (#7877)
 c0a1c38d1 Merge branch 'master' into streamto
 e4435fa30 Update board-specific defines (#7875)
 483519f85 String: compatibility with 64 bits scalars (#7863)
-ad8de936e Add backward header compatibility
-efe58a5b0 Fix samples formatting
-367cab170 Add I2S class support
 a886515ce Fix ESP8266SdFat architecture, Windows CI (#7866)
 07b4c09b9 eboot: .RODATA, upstream uzlib, move CRC, save 112 bytes  (#7844)
 bfe7ee7ee style
