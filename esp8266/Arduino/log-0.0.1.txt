@@ -1,3 +1,14 @@
+2406fe8fb Adds the method setSSLVersions() also to WiFiClientSecure in order to use that new feature. (#7925)
+7475ba7ff Add setSSLVersion call to SSL object (#7920)
+dcdd4313c Clean up ICACHE_RAM_ATTR in VM PR (#7924)
+55cee059f EspSoftwareSerial minor release 6.12.0 completes adaptation to new Stream::send() (#7923)
+48e1ccbff Added ESP32 compatible methods for setting/getting sleep mode (#7901)
+9d82ebe6f Add example for using ESP.rebootIntoUartDownloadMode() (#7897)
+47b8947e7 ESP8266WebServer: Add variadic template version of collectHeaders() (#7296)
+8ffe41b7d Enable 128K virtual memory via external SPI SRAM (#6994)
+c720c0d9e Stream::send() (#6979)
+4cc147282 [BREAKING] base64::encode() compat with esp32: no newlines by default (#7910)
+656a33e6f BREAKING - Use IRAM_ATTR in place of ICACHE_RAM_ATTR (#7921)
 6743a6598 Minor EspSoftwareSerial release 6.11.7, for deprecated ICACHE_RAM_ATTR in upcoming ESP8266 Arduino core 3.0.0. (#7922)
 49a09279e Merge pull request #6280 from aerlon/wifi_mesh_update_2.2
 7fbf620ab Merge branch 'master' into wifi_mesh_update_2.2
