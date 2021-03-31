@@ -1,3 +1,15 @@
+5ac64ffa2 Merge pull request #7949 from dok-net/hwserial
+8430a09aa Adapt MockUART.cpp
+2cf76ba78 HW Serial swap and pin setting work only on a few pins, return false on failure.
+eedb009c6 Bug-fix release 6.12.1: a documentation error was reported by a user; dropped bit-patterns that masked the stop-bit fixed. (#7938)
+c1118dfce Stream::Send fixes: doc + StreamConstPtr byte-by-byte + missing SSL availableForWrite (#7935)
+0a4fcdf09 Merge pull request #7940 from mcspr/wifi-evt-ssid
+3ff573103 Fix WiFi events with 32byte wide SSIDs
+fdc295dfa Fix typo in EEPROM debug message (#7934)
+edcbdbea4 Update Root Certificate (#7932)
+3b1e8eab2 rename ClientContext::wait_until_sent() to wait_until_acked() (#7896)
+0894b514c WString: direct operator overloads instead of StringSumHelper (#7781)
+1b922edad Added broadcastIP method to WiFiSTA class (#7899)
 2406fe8fb Adds the method setSSLVersions() also to WiFiClientSecure in order to use that new feature. (#7925)
 7475ba7ff Add setSSLVersion call to SSL object (#7920)
 dcdd4313c Clean up ICACHE_RAM_ATTR in VM PR (#7924)
