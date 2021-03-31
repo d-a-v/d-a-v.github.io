@@ -1,8 +1,39 @@
-aeb41b7ec Merge branch 'PR-6965'
-bf2e3a029 Merge branch 'PR-7237'
-ceadff810 Merge branch 'PR-7896'
-cbed02eed Merge branch 'PR-7899'
-9111dbd10 Merge branch 'PR-7902'
+e643dcb50 Merge branch 'PR-6965'
+c16fbc4e2 Merge branch 'PR-7010'
+318a80362 Merge branch 'PR-7237'
+bf1d36da0 Merge branch 'PR-7902'
+f0f1f550e do not wake up from sleep when mode if OFF
+da5966bea move force modem up to when mode has changed (per @mcspr review)
+2eb8bb113 undeprecate preinit()
+4e5abc633 Merge branch 'master' into WiFiOffAtBoot
+e429938f8 fix emulation on host
+a507e89be fix WiFiClient::write(flash or iram)
+37efba85e Update boards.txt
+e7c50617e Merge branch 'master' into pr-hwdt-stack-dump
+5ac64ffa2 Merge pull request #7949 from dok-net/hwserial
+8430a09aa Adapt MockUART.cpp
+2cf76ba78 HW Serial swap and pin setting work only on a few pins, return false on failure.
+eedb009c6 Bug-fix release 6.12.1: a documentation error was reported by a user; dropped bit-patterns that masked the stop-bit fixed. (#7938)
+c1118dfce Stream::Send fixes: doc + StreamConstPtr byte-by-byte + missing SSL availableForWrite (#7935)
+0a4fcdf09 Merge pull request #7940 from mcspr/wifi-evt-ssid
+3ff573103 Fix WiFi events with 32byte wide SSIDs
+fdc295dfa Fix typo in EEPROM debug message (#7934)
+edcbdbea4 Update Root Certificate (#7932)
+3b1e8eab2 rename ClientContext::wait_until_sent() to wait_until_acked() (#7896)
+0894b514c WString: direct operator overloads instead of StringSumHelper (#7781)
+20020c049 legacy: restore persistence
+df8f8a7bb fix doc
+8332c42a1 fix link name
+8ecc7f06f doc: remove sphinx warnings (fix links and formatting)
+6d9ec2633 ditto
+8b0d6411d Merge branch 'WiFiOffAtBoot' of github.com:d-a-v/Arduino into WiFiOffAtBoot
+eca13670d fix doc
+227e5577c Merge branch 'master' into WiFiOffAtBoot
+9d7eb2ea8 WiFi persistence is now false by default
+c15cb5dd7 doc
+1b922edad Added broadcastIP method to WiFiSTA class (#7899)
+7fd411699 per @earlephilhower review: a file was missing
+1059bebda Merge branch 'master' into WiFiOffAtBoot
 2406fe8fb Adds the method setSSLVersions() also to WiFiClientSecure in order to use that new feature. (#7925)
 7475ba7ff Add setSSLVersion call to SSL object (#7920)
 851067028 Merge branch 'master' into WiFiOffAtBoot
@@ -38,9 +69,6 @@ b2a53b798 mv enableWiFiAtBootTime() to core_esp8266_features.h
 330b229a3 remove now useless example
 6310da8aa +define WIFI_IS_OFF_AT_BOOT
 ab16b8c37 Disable WiFi at boot by default
-91e933553 Added broadcastIP method to WiFiSTA class
-2fc53fe7e host tests counterpart
-5f3ce9ee2 rename ClientContext::wait_until_sent() to wait_until_acked()
 e3fe7a577 EspSoftwareSerial, bump up Arduino library manager related files 6.11.6 (#7891)
 f42ab617e Update to EspSoftwareSerial 6.11.5 (#7889)
 24a117cdd Merge branch 'master' into pr-erase-config
@@ -69,6 +97,8 @@ b3fe0aab1 Hexdump fix&update (#7831)
 d90015e32 Merge branch 'master' into feature/issue-2246-multi-wifi-hidden
 85e2ffffe Allow users to inherit and override CertStore (#7827)
 f5fd5912f Allow specifying waveform generator in source code (#7800)
+96b6ddbb0 Merge branch 'master' into pr-hwdt-stack-dump
+755ab97be Merge branch 'pr-hwdt-stack-dump' of github.com:mhightower83/Arduino into pr-hwdt-stack-dump
 a4b6003c2 Replacement for Boot ROM aes_unwrap (#7773)
 dbc5e4164 Supersede #3856, remove undef min/max (#7824)
 df5e113b8 HeapSelectDram for pvPortMalloc, ... (#7790)
@@ -92,6 +122,7 @@ edade1cb9 Merge branch 'master' into pr-erase-config
 a3a7a23a9 Typo error in ESP8266WiFiGeneric.h (#7797)
 5c29517d1 lwip2: use pvPortXalloc/vPortFree and "-free -fipa-pta" (#7793)
 5356c87b5 Use smarter cache key, cache Arduino IDE (#7791)
+9801d2840 Merge branch 'master' into pr-hwdt-stack-dump
 c487ca523 Update to SdFat 2.0.2, speed SD access (#7779)
 9de8373f1 BREAKING - Upgrade to upstream newlib 4.0.0 release (#7708)
 e25ad86c9 mock: +hexdump() from debug.cpp (#7789)
@@ -101,9 +132,11 @@ f1dc6e90e Update to LittleFS v2.3 (#7787)
 032db6fc8 WiFiServerSecure: Cache SSL sessions (#7774)
 8add1fd2d platform.txt: instruct GCC to perform more aggressive optimization (#7770)
 7dbef42ad LEAmDNS fixes (#7786)
+5b161db2a Updated comments and #if in aes_unwrap.
 f3521da17 Move uzlib to master branch (#7782)
 a9c46d07d Update to latest uzlib upstream (#7776)
 dbe7eb89b EspSoftwareSerial bug fix release 6.10.1: preciseDelay() could delay() for extremely long time, if period duration was exceeded on entry. (#7771)
+504b769e6 Merge branch 'master' into pr-hwdt-stack-dump
 dd8c2e6b8 Fixed OOM double count in umm_realloc. (#7768)
 9eb618e3a Added missing check for failure on umm_push_heap calls in Esp.cpp (#7767)
 fd69945ab Fix: cannot build after #7060 on Win64 (#7754)
@@ -115,6 +148,7 @@ e76a98d33 Removed obsolete debug code (#7757)
 eaaa1dbcc Normalize platform.txt pattern numbers (#7752)
 d4254e03f Fixes https://github.com/esp8266/Arduino/issues/7749#issue-760585820 (#7750)
 025bb2f22 Merge branch 'master' into pr-erase-config
+b94777e50 Merge branch 'master' into pr-hwdt-stack-dump Resolved conflicts.
 7178c2e48 Merge branch 'master' into pr-dns-forwarder
 8b662ed3b PoC cache configuration control (#7060)
 47e7b2db6 emulation on host: various minor fixes (#7741)
@@ -130,6 +164,8 @@ cfd9a34c4 Specify where Additional Boards Manager URLs is (#7733)
 0e4c838a0 Update to latest BearSSL as of Nov 2020 (#7732)
 92175d709 Rewrite multipart boundary detection (#7728)
 04b0c270e Added GZipped OTA support in elf2bin and PlatformIO (#7727)
+fd1e2e1ca Merge branch 'master' into pr-hwdt-stack-dump
+761d736b5 Added missed update to heap.cpp for change to use PSTR instead of PSTR4
 8c7fd6aac PROGMEM compatibility changes to String (#7724)
 32dbc2cb3 Merge pull request #7717 from dok-net/phaselocked_cb_fix
 f8115c32c Fix callback expected return to CPU cycles instead of µs for PR 7022. Fix inline documentaton for both
@@ -151,23 +187,30 @@ c5c9f845d Provide String::indexOf for a char* needle (#7706)
 5234f3fda Updated wifi_health_t and WiFiDisconnectLog_t to take advange of C++ element initialization options.
 94365e191 Fixed merge errors and code rot.
 f50b3a6be Merge branch 'master' into pr-erase-config
+2b46960f0 Merge branch 'master' into pr-hwdt-stack-dump
 4de681b50 Help newlib TZ parser (#7699)
 c919f6116 update documentation example (#7697)
 5d2563eee Fixed bug in parsing POST file uploads (#7543)
 1bb0815fe Hook up custom timestamp proc for SD/SDFS (#7686)
 996211f13 Compile failure fix with FS_NO_GLOBALS flag (#7685)
+720fe3b62 Merge branch 'master' into pr-hwdt-stack-dump
 77bd71ec2 Add Stream loaders for BearSSL (#7675)
 cfdcff102 Catch and display SSL errors for fatal alerts (#7681)
 eb7e082a3 Revive a dead link (#7679)
+a1ab73d39 Improve cont stack trace for yielding case. Check if cont stack is yielding to SYS, use g_pcont->sp_yield to limit the amount of the cont stack dumped.
 7f38e141c BREAKING: Add Print::availableForWrite method (#7658)
 95de525af Refactor WiFi scan example (#7655)
+ea1f384f7 Update umm_info_safe_printf_P to support default of unaligned PROGMEM strings.
 c65626622 Fix long password validation in WebServer (#7676)
+8bfcda70e Merge branch 'master' into pr-hwdt-stack-dump Updated boards
 8d2f53d9a Remove Travis-CI configuration (#7674)
 64def3cd8 boards.txt: sort by displayed name (#7670)
 95fb10456 settimeofday_cb: distinguish from user or sntp (#7637)
 ace5e98bf Fix eboot crash with exception 28. ets_printf() should take pointer argument. (#7666)
 8efaa645c Merge branch 'master' into feature/issue-2246-multi-wifi-hidden
+fd1131d71 Add replacement aes_unwrap for the debug HWDT option. Improves the SYS stack space available when using the extra 4K Heap option in conjunction with HWDT. Replaces the ROM AES buffer at 0x3FFFEA80 with one provided by malloc().
 e920564b8 Fix Netdump library architecture (#7659)
+dea96b2bb Merge branch 'master' into pr-hwdt-stack-dump
 bbc14c097 Use 32b loads to set print strings (#7545)
 e79eb1174 BREAKING: Change return EEPROM.end() to bool (#7630)
 81a10a48a BREAKING: Change return type of channel() (#7656)
@@ -189,6 +232,7 @@ bc2b13ae1 LEAmDNSv2: change a macro name to be independant from LEAmDNS1 (#7640)
 d0300806c Merge pull request #7631 from Erriez/feature/documentation-wifi-multi
 9c9e193f7 Add WiFi Multi to readme.rst
 85ba53a24 Remove stray axtls refs, deprecated compat funcs (#7626)
+ba524a391 Merge branch 'master' into pr-hwdt-stack-dump
 7c8f934d2 Merge pull request #7619 from Erriez/redesign-wifi-multi
 fcb5414e0 Merge branch 'master' into redesign-wifi-multi
 93f41dcbb Pull deprecated axtls link (#7624)
@@ -197,12 +241,15 @@ fceb390a1 Redesign ESP8266WiFiMulti.[cpp|h]
 5dbc572b2 Update README.md (#7623)
 502d8bcde Merge branch 'master' into pr-erase-config
 ab0472e6e Merge branch 'master' into pr-dns-forwarder
+dbc2c3493 Merge branch 'master' into pr-hwdt-stack-dump
+b080d333d Adjusted down the ROM Stack space for the extra 4K Heap option. If too large, a really bad crashes occurs.
 96243d7cc Merge pull request #7040 from dok-net/print64bit
 6f57c222c Eliminate code duplication by template for printNumber(...)/printFloat(...).
 0b502b3f7 Eliminate code duplication by template for println(...).
 8c725d573 Fix for 32bit long used in long long printNumber.
 7e1d891e8 Revert to explicit calculation of modulo, saving 16 bytes in IROM.
 af53772e7 Extend Print class for 64bit integers.
+b7e4b6846 Merge branch 'master' into pr-hwdt-stack-dump
 f54217500 httpclient: remove deprecated API (#7617)
 37ef41ceb mdns: #ifndef/#define/#endif (#7615)
 cc042b99d WString: c_str() returns null pointer after move (#7611)
@@ -212,6 +259,7 @@ c24109fd5 WString: mark move ctor as noexcept (#7610)
 4a24d3cc1 FIX MIME-Type for txt-suffix (#7608)
 3cbf3039b FIX StaticRequestHandler crashes when cache_header is null and DEBUG_ESP_CORE is enabled (#7609)
 e5539fe86 Merge branch 'master' into pr-erase-config
+67085cdb6 Merge branch 'master' into pr-hwdt-stack-dump
 e09e6e8ed Merge branch 'master' into pr-dns-forwarder
 32470fbfa Avoid #includes with a surrounding namespace (#7560)
 e5c84c950 Update path of gdb (#7603)
@@ -230,6 +278,7 @@ d02bc02fa Merge pull request #7547 from earlephilhower/noboom
 f1c8982a9 Merge branch 'master' into noboom
 ab9b6b205 Corrected manual merge error, with init order of class.
 b21172713 Merge branch 'master' into pr-erase-config
+18a5f41a0 Merge branch 'master' into pr-hwdt-stack-dump
 ff5d79a85 Merge branch 'master' into pr-dns-forwarder
 8b7126d9e Fixup weird combination of oneline/multi line comments (#7566)
 df01d19d2 Reduce codesize of setOutputPower (#7572)
@@ -272,7 +321,13 @@ e0fedc577 avoid circular #include dependence for PolledTimeout (#7356)
 777323709 webserver: add define WEBSERVER_HAS_HOOK when ::addHook() is present (#7515)
 fc2426a5e sys/pgmspace.h: Refactor inline asm (#7510)
 79fc0b3b4 CI: on host: force 64 bit mode like `make -j2 CI` implicitly does (#7513)
+c31a354f8 CI style
+65f8e1dc2 Made compatible with `disable_extra4k_at_link_time()` usage.
 3e567e948 Add SerialEvent() callback to loop processing (#7505)
+1bd4e33ef Improve meshing of HWDT and NOEXTRA4K
+3a351aea1 Merge branch 'pr-hwdt-stack-dump' of github.com:mhightower83/Arduino into pr-hwdt-stack-dump
+2ce297cf2 Updated comment to reflect support via Arduino IDE Tools menu.
+1f7342d04 Merge branch 'master' into pr-hwdt-stack-dump
 9afb08415 Clean up minor warnings from LGTM.com (#7500)
 a8e35a579 Add valgrind mocked test to CI (#7501)
 fc1aa554c Remove warnings when buinding NoAssert (#7499)
@@ -284,6 +339,7 @@ d5187790b Mention OTA Update class blocks flash mode changes (#7321)
 a67986915 BREAKING - analogWriteRange 8-bit default (#7456)
 33083861c webserver hook: allow to handle external http protocol (#7459)
 63b41bcfa Use root cert, not fingerprint for api.github.com (#7490)
+902418407 Fix stack character buffer length.
 355b29161 CVE-2020-12638 workaround for WPA downgrade attack (#7486)
 e815b9219 Correct stack string buffer length. (#7488)
 0e1290695 Initialize _ledPin (#7487)
@@ -292,10 +348,13 @@ e815b9219 Correct stack string buffer length. (#7488)
 f42cf7a5a Fix uninitted class variables from #7464 (#7478)
 48ed5e9b6 Merge branch 'master' into pr-erase-config
 22769c5d0 Merge branch 'master' into pr-dns-forwarder
+8c2d21483 Changes to move feature into core.
 c94d36d80 Comment out verify step in eboot.c (#7468)
+ec2ef11c9 Merge branch 'pr-hwdt-stack-dump' of github.com:mhightower83/Arduino into pr-hwdt-stack-dump
 696c86533 Merge branch 'master' into pr-dns-forwarder
 91427a169 Keep client certs when server authentication set (#7464)
 c3c61a5f7 Fix typo in platform.txt causing device test fails (#7463)
+f14db29a7 Merge branch 'master' into pr-hwdt-stack-dump
 c18f7cb1e Made ESP8266WebServer::client() return a reference (fixes #7075) (#7080)
 3c1bd65a7 WebServer: Allow client to send many requests on the same connection (#7414)
 709ba7981 Change BSSL_CertStore test URL (#7370)
@@ -303,7 +362,9 @@ dfd5a4f12 replace old Ethernet Arduino-library with v2, submoduled (#6812)
 3bd24587e Transition from TravisCI to GitHub CI (#7444)
 f8091311a Update to BearSSL version lost in GCC10 update (#7453)
 e58bb60f8 webserver: do not count "plain" in argument list (#6768)
+dcce57dfa Work around divide by 0 HWDT event under toolchain 10.1.
 628298cd4 - Polish README.md.
+7d75454fd Corrected new errors from upgrade to GCC 10.1 toolchain related to constexpr and casting integers to pointers. Cleared warning for asm.
 1ef128c99 typo
 2b2def228 Corrected new errors after upgrade to GCC 10.1 toolchain. Method 3 was failing with an unaligned access due to 32-bit word access being optomized to an 8-bit when accessing ICACHE memory. Added noinline with IRAM_CACHE attribute in module erase_config.cpp. Also, revised print macros to be more globally unique.
 0613216ac Fixed errors.
@@ -322,12 +383,14 @@ af1bc71a9 remove lwip-v1.4 specific code (#7436)
 252cb1d96 Remove wget dump during CI (#7438)
 c663c5592 Free space of overwritten files in LittleFS (#7434)
 c40a87359 Merge branch 'master' into pr-erase-config
+f74ebbdd9 Merge branch 'master' into pr-hwdt-stack-dump
 88d1abfdb Merge branch 'master' into pr-dns-forwarder
 d979b57d7 Upgrade to GCC 10.1 toolchain (#6294)
 7b48b9de5 boards: 4dsystems (gen4iod) updates (#7433)
 d59b1486c done with release 2.7.2 (#7430)
 06622748d Merge branch 'master' into wifi_mesh_update_2.2
 fcb8b21f1 Merge branch 'master' into pr-erase-config
+0592c4a6d Merge branch 'master' into pr-hwdt-stack-dump
 eb1f508a3 Merge branch 'master' into pr-dns-forwarder
 48281fb1f - Correct terminology in README.md.
 66138a67c - Add protected getters for _forwardingBacklog and _macIgnoreList in FloodingMesh.
@@ -339,6 +402,8 @@ fba4ac15f - Make most type definitions public instead of protected, to facilitat
 1b67f9693 Merge branch 'pr-dns-forwarder' of github.com:mhightower83/Arduino into pr-dns-forwarder
 96eacc39e Merge branch 'master' into pr-dns-forwarder
 6f91be098 Merge branch 'master' into pr-erase-config
+fa835868a Merge branch 'pr-hwdt-stack-dump' of github.com:mhightower83/Arduino into pr-hwdt-stack-dump
+4db3c0db5 Merge branch 'master' into pr-hwdt-stack-dump
 0516b3065 - Fix Readme links.
 f059e5732 - Use the new Crypto, TypeConversion and random() functionality added to the Arduino core, instead of the versions local to the mesh library.
 595fb2312 Merge branch 'master' into wifi_mesh_update_2.2
@@ -348,6 +413,8 @@ cfd54dfef Merge branch 'master' into pr-erase-config
 d01e6391b - Fix build error.
 2ec2679d6 - Move all serialization code to separate Serializer namespace and files.
 10f631198 Added logic to handle dividing large PROGMEM strings into smaller chunks to avoid large allocations to buffer the send.
+1da67e340 Updated comments
+8dd28e27f Merge branch 'master' into pr-hwdt-stack-dump
 be5fe6d3d Merge branch 'master' into pr-erase-config
 e64125a53 - Move globals to anonymous namespaces.
 745354493 Merge branch 'master' into pr-dns-forwarder
@@ -355,7 +422,11 @@ effcc3a2d - Make everything const by default.
 6755a5b0f Reserved space in String page. Re-adjusted size of chuncks. Added print statements for monitoring size of chunks etc. Novice improvents to HTML and variable names.
 14fede01f Merge branch 'master' into pr-erase-config
 16d02f699 Merge branch 'master' into pr-dns-forwarder
+15d11ffb4 Merge branch 'master' into pr-hwdt-stack-dump
+126439417 Update style used for structure and typedef to match that used in core when snake case is used. Moved a constexpr block up a scope so that some #ifdef debug code compiles again.
+eec0192fb comment cleanup. added missing additional #if defined() Made structure name unique. Changed HWDT_INFO to HWDR_INFO_S.
 ee9777796 Updated HTML to limit/remove screen flash when using show password.
+06a001d49 Merge branch 'master' into pr-hwdt-stack-dump
 ad62a7f3e Added missing include for unsupported build environment
 3fc1be265 Merge branch 'master' into pr-dns-forwarder
 a10180909 Add/updated comments. Remove commented code. Reduced size of a chunk of HTML string. Added maxlength to HTML input fields for credentials.
@@ -365,9 +436,14 @@ aa430d025 Fixed insert error
 407e4812a Added DNS forwarder support.
 a24b8d23f Merge branch 'master' into wifi_mesh_update_2.2
 74129c513 Merge branch 'master' into pr-erase-config
+dbfaf0dfe Merge branch 'master' into pr-hwdt-stack-dump
 b2d35ea26 Merge branch 'master' into pr-erase-config
+32737bb57 Merge branch 'master' into pr-hwdt-stack-dump
+e8bf3f00d Merge branch 'master' into pr-hwdt-stack-dump
 828a47dd3 Merge branch 'master' into pr-erase-config
 4954dcd2a Merge branch 'master' into pr-erase-config
+714ab078d Merge branch 'master' into pr-hwdt-stack-dump
+7288abf1b Added support to print ThunkStack. Adjustments to inline asm. Added "memory" when callx0 is used.
 39b9508ae CI issues
 372998cde Merge branch 'master' into pr-erase-config
 4553009e6 Made function name longer to avoid possible name conflicts in the future. Using static caused the compiler to inline with functions with different IRAM attributes. Updated some comments. Maybe fixed CI host issue with Update.cpp.
@@ -380,12 +456,37 @@ c0394fbc3 Merge branch 'master' into pr-erase-config
 39160c8fb one more :(
 4e2493ad6 Resolve merge conflict. Changed method for reading image header, freeing 16 bytes of iRAM"
 049d91bca Added a Third method.
+1f0e6f4a9 Changed ICACHE size from 32K to 16K to avoid conflict with SDK or core selecting smaller 16K ICACHE.
+1c4b35654 Merge branch 'master' into pr-hwdt-stack-dump
 560ddc5cb Set default Method to 2, to side step travis issue of using preinit(). This is just a PoC an alternate for preinit() can be created later.
+c0121fea8 Merge branch 'master' into pr-hwdt-stack-dump
 546f0cb07 Merge branch 'master' into pr-erase-config
 9c4e44bc8 Added print messages to show progress. And code to ensure the UART speed stayed at 74880 for a more complete viewing of messages. Well at least, it stays at 74880 for a longer time than it was. Added pinMode filter to prevent UART TX pin from being disabled during user_init().
+17fab8a9c Merge branch 'master' into pr-hwdt-stack-dump
+81418df13 Now runs from flash before SDK is started. Cache_Read_Enable working. Free 1K of IRAM and 200 bytes of DRAM.
 73f16dcca Merge branch 'master' into pr-erase-config
 713087736 Merge branch 'master' into pr-erase-config
+b60b6a24b Merge branch 'master' into pr-hwdt-stack-dump
+ed826ea4d Removed unused include. Code cleanup. Comments.
+45284460b Several corrections to set_uart_speed Comment improvements Added missing ";"
+e458e7ebe Merge branch 'pr-hwdt-stack-dump' of github.com:mhightower83/Arduino into pr-hwdt-stack-dump
+be7417a16 Improved comments. Print caution message when stack integrity checks failed.
+ca0eab3dc Merge branch 'master' into pr-hwdt-stack-dump
+b08714b1d Comment changes. Added a few newlines to printing. Decreased the settling delay after the uart_div_modify call.
 1ce4c601b Merge branch 'master' into pr-erase-config
+ad3bbad21 Finished TODO looked at assembly of app_entry_redefinable to confirm no mixed up stack frame was created. Also removed no longer needed extra level of function calling. Use existing macros from uart_register,h to handle getting current UART speed. Added some missing `const`.
+99c6e4ca4 Merge branch 'pr-hwdt-stack-dump' of github.com:mhightower83/Arduino into pr-hwdt-stack-dump
+1df82c06f Added delays around uart_div_modify. This appeara to resolve the lost data problem that occurs when printing after a flash upload using esptool. Curiously, esptool stub also uses similar delays. Word choices and description improvements.
+309ac45b8 Merge branch 'master' into pr-hwdt-stack-dump
+c2cbb87df Removed clutter of having an alternate printing method. Regular global strings have worked reliably. Tweaked reset reason detection. Reordered elements in global structure. Improve #if test for debug option Always improving comments.
+b8abe5bab Moved all configuration options to the top. Adjusted configuration option order for most likely to be used to the top. Tried to improve comments. Replace numbers with enum values.
+25f0140b4 Style plus Fix issue with HWDT reason detection when sketch crashes too fast. Added sample sketch menu option for crashing with a function defined with a weak attribute via prototype, but never actually defined in full function form. eg. `void trouble(void){return;}`
+7978860da Merge branch 'master' into pr-hwdt-stack-dump
+093ac0242 Improvements to reset reason determination. Improved comments. Added option to match the UART speed used by the sketch. Added option to print greeting at the start to indicate the HWDT stack dump code is active. Isolated logic for handling strings: one assuming they are not inited at the time the code is running and one that does. The later appears to be the case.
+254c50fa3 Update comments.
+e2721111b Style and typos
+8fbaa7e9e Corrected Style. Improved HWDT reset detectionat boot.
+82c7d332e Hardware WDT Stack Dump
 4554a7c8b style fix
 660d19ca0 Merge branch 'master' into pr-erase-config
 815f1dc95 Merge branch 'master' into pr-erase-config
