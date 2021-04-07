@@ -82,7 +82,7 @@ for v in 0.0.?; do
                 grep "${pr}.*\"${label}\"" ${dir}/PR.labels.txt | sed \
                     -e 's,$,</a><br>,g' \
                     -e 's,^\([0-9]*\),<a href="https://github.com/esp8266/Arduino/pull/\1">#\1,g' \
-                    -e 's,^,ISSUE while merging: ,g' \
+                    -e 's,^,not merged: ,g' \
                     >> ${dir}/prdetails.html
             fi
         done
