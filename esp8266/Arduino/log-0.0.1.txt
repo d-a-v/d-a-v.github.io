@@ -1,3 +1,5 @@
+1cc6960a [BREAKING] Disable WiFi at boot by default (#7902)
+da6ec83b Hardware WDT Stack Dump Tool (#7010)
 0049090e comments in `ClientContext::connect()` (#7961)
 bde6ab1d Merge pull request #6117 from PurpleAir/master
 57fbd69a Merge branch 'master' into master
