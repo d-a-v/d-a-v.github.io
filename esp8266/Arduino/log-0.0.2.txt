@@ -1,5 +1,10 @@
-6a3ccb2c Merge branch 'PR-6965'
-6ab0a460 Merge branch 'PR-7237'
+2193eaff Merge branch 'PR-6690'
+c7113acf Merge branch 'PR-7237'
+aec0ff18 Merge branch 'PR-7987'
+28c3d32b boards: wemos d1 clones: new entry with menus for flash mode and flash freq
+ae879789 fixes for WiFiClient::write(Stream) - remove deprecated WiFiClient::write(Stream,size) - fix and deprecate WiFiClient::write(Stream) to use Stream::sendAll instead of ::sendAvailable - update ESP8266WebServer::streamFile to use file.sendAll(client) instead of client.write(file)
+209e4671 doc: analogRead must not be called to frequently with WiFi is on (#7981)
+33478596 Merge branch 'master' into nosizeconf
 1cc6960a [BREAKING] Disable WiFi at boot by default (#7902)
 da6ec83b Hardware WDT Stack Dump Tool (#7010)
 0049090e comments in `ClientContext::connect()` (#7961)
@@ -10,8 +15,6 @@ eb1966b6 Merge branch 'master' into hwserial
 0593cbdc Merge branch 'master' into master
 cd7d1377 Per review.
 1c57b340 fix WiFiClient::write(from flash or iram) (#7951)
-217b2d28 Cleanup merge conflict. Now use IRAM_ATTR and _NOINLINE_STATIC w/o changes. Fixed missed edit (rom_uart_div_modify) for debug build.
-f9a3f95b Merge branch 'master' into pr-erase-config
 2e214843 Minor code cleanup.
 5ac64ffa Merge pull request #7949 from dok-net/hwserial
 8430a09a Adapt MockUART.cpp
@@ -37,21 +40,26 @@ c720c0d9 Stream::send() (#6979)
 4cc14728 [BREAKING] base64::encode() compat with esp32: no newlines by default (#7910)
 656a33e6 BREAKING - Use IRAM_ATTR in place of ICACHE_RAM_ATTR (#7921)
 6743a659 Minor EspSoftwareSerial release 6.11.7, for deprecated ICACHE_RAM_ATTR in upcoming ESP8266 Arduino core 3.0.0. (#7922)
-0b015182 Replaced ROM_uart_div_modify and associated logic, with the current method of handling direct ROM calls.
-4e31c91a Merge branch 'master' into pr-erase-config
 49a09279 Merge pull request #6280 from aerlon/wifi_mesh_update_2.2
 7fbf620a Merge branch 'master' into wifi_mesh_update_2.2
 44400218 OOM debug: warn about String reallocation (#7908)
+77882335 Merge branch 'master' into nosizeconf
+83f04ff3 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+c9464211 missing change in httpupdateserver library
 e07542d7 Fix link to ESP8266 NonOS SDK (#7914)
+665a0d9d Merge branch 'master' into nosizeconf
 e99df4fe Add I2S class support (#7874)
+f40f8f67 remove superfluous linker line
+ea319e2f merge with master
+843a0968 Merge branch 'master' into nosizeconf
 9fc5afd5 OOM: avoid warn when calling *alloc(0) (#7909)
 d3d49d5d Update mklittlefs executable (#7906)
 c90c329a Track creation time of LittleFS FS (#7873)
 22442f08 Added ESP32 compatible methods for setting/getting hostname (#7900)
 807ed51d AP & dhcp-server: fix uninitialized variables (#7905)
+5898eeb2 Merge branch 'master' into nosizeconf
 e3fe7a57 EspSoftwareSerial, bump up Arduino library manager related files 6.11.6 (#7891)
 f42ab617 Update to EspSoftwareSerial 6.11.5 (#7889)
-24a117cd Merge branch 'master' into pr-erase-config
 a5308d6e String: add missing long long operator implementations (#7888)
 d41b4037 board manager: + Agrumino lemon v4 (#7883)
 83f5f29c Support to reboot into UART download mode (#7854)
@@ -96,9 +104,13 @@ da138456 Fix header FSM in webserver, fix Windows uploads (#7805)
 a25895a7 Minor EspSoftwareSerial release 6.11.1 (#7804)
 229903a2 Minor EspSoftwareSerial release 6.11.0 (#7802)
 84260dcb Write loop could lead to wdt with low bitrates or large buffers. Fixes #7746 (#7799)
-edade1cb Merge branch 'master' into pr-erase-config
+49a4d088 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+8adc14aa Merge branch 'master' into nosizeconf
 a3a7a23a Typo error in ESP8266WiFiGeneric.h (#7797)
+d55bf93c Merge branch 'master' into nosizeconf
 5c29517d lwip2: use pvPortXalloc/vPortFree and "-free -fipa-pta" (#7793)
+c01299bf Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+279db40b Merge branch 'master' into nosizeconf
 5356c87b Use smarter cache key, cache Arduino IDE (#7791)
 c487ca52 Update to SdFat 2.0.2, speed SD access (#7779)
 9de8373f BREAKING - Upgrade to upstream newlib 4.0.0 release (#7708)
@@ -122,7 +134,6 @@ e76a98d3 Removed obsolete debug code (#7757)
 45664001 makecorever.py: Hide GIT error messages. Fixes #7744 (#7745)
 eaaa1dbc Normalize platform.txt pattern numbers (#7752)
 d4254e03 Fixes https://github.com/esp8266/Arduino/issues/7749#issue-760585820 (#7750)
-025bb2f2 Merge branch 'master' into pr-erase-config
 7178c2e4 Merge branch 'master' into pr-dns-forwarder
 8b662ed3 PoC cache configuration control (#7060)
 47e7b2db emulation on host: various minor fixes (#7741)
@@ -156,11 +167,9 @@ eec4dc49 install a new waveform-flavouring Arduino IDE menu and a new PIO #defin
 9b437d7c Change servo defaults to safer defaults (#7023)
 c5c9f845 Provide String::indexOf for a char* needle (#7706)
 8375faa5 Fix newlib to support <+-nn> timezone names (#7702)
-5234f3fd Updated wifi_health_t and WiFiDisconnectLog_t to take advange of C++ element initialization options.
-94365e19 Fixed merge errors and code rot.
-f50b3a6b Merge branch 'master' into pr-erase-config
 4de681b5 Help newlib TZ parser (#7699)
 c919f611 update documentation example (#7697)
+1a66a892 Merge branch 'master' into nosizeconf
 5d2563ee Fixed bug in parsing POST file uploads (#7543)
 1bb0815f Hook up custom timestamp proc for SD/SDFS (#7686)
 996211f1 Compile failure fix with FS_NO_GLOBALS flag (#7685)
@@ -169,7 +178,11 @@ cfdcff10 Catch and display SSL errors for fatal alerts (#7681)
 eb7e082a Revive a dead link (#7679)
 7f38e141 BREAKING: Add Print::availableForWrite method (#7658)
 95de525a Refactor WiFi scan example (#7655)
+98e07d70 Merge branch 'master' into nosizeconf
+3c807b01 emulation on host: fix 64 bits mode
 c6562662 Fix long password validation in WebServer (#7676)
+8bcc1346 fix emulation on host
+e4534eda Merge branch 'master' into nosizeconf
 8d2f53d9 Remove Travis-CI configuration (#7674)
 64def3cd boards.txt: sort by displayed name (#7670)
 95fb1045 settimeofday_cb: distinguish from user or sntp (#7637)
@@ -203,7 +216,6 @@ fcb5414e Merge branch 'master' into redesign-wifi-multi
 1e54cb25 Merge branch 'master' into redesign-wifi-multi
 fceb390a Redesign ESP8266WiFiMulti.[cpp|h]
 5dbc572b Update README.md (#7623)
-502d8bcd Merge branch 'master' into pr-erase-config
 ab0472e6 Merge branch 'master' into pr-dns-forwarder
 96243d7c Merge pull request #7040 from dok-net/print64bit
 6f57c222 Eliminate code duplication by template for printNumber(...)/printFloat(...).
@@ -219,7 +231,6 @@ faf59f51 Update to GCC 10.2 (#7607)
 c24109fd WString: mark move ctor as noexcept (#7610)
 4a24d3cc FIX MIME-Type for txt-suffix (#7608)
 3cbf3039 FIX StaticRequestHandler crashes when cache_header is null and DEBUG_ESP_CORE is enabled (#7609)
-e5539fe8 Merge branch 'master' into pr-erase-config
 e09e6e8e Merge branch 'master' into pr-dns-forwarder
 32470fbf Avoid #includes with a surrounding namespace (#7560)
 e5c84c95 Update path of gdb (#7603)
@@ -230,14 +241,14 @@ a460cb79 Add clear method to IPAddress (#7586)
 08f17051 Check also if IP is not IPADDR_NONE (#7585)
 8258db53 Fix error message typo (#7581)
 88be34e2 Update certs-from-mozilla.py (#7578)
+7f3c65b4 Merge branch 'master' into nosizeconf
+dd2d526d Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
 bfecdb0e Update DigestAuthorization.ino (Simple example update) (#7579)
 2171a2e8 Fix gzip+signed OTA error (#7577)
 22a197ee Properly replace toolchain in PlatformIO CI script (#7580)
 e636a658 Update certs-from-mozilla.py (#7573)
 d02bc02f Merge pull request #7547 from earlephilhower/noboom
 f1c8982a Merge branch 'master' into noboom
-ab9b6b20 Corrected manual merge error, with init order of class.
-b2117271 Merge branch 'master' into pr-erase-config
 ff5d79a8 Merge branch 'master' into pr-dns-forwarder
 8b7126d9 Fixup weird combination of oneline/multi line comments (#7566)
 df01d19d Reduce codesize of setOutputPower (#7572)
@@ -252,6 +263,7 @@ ef92ab28 Merge branch 'master' into stdnothrow
 be812d2a Netump Initial commit (#7527)
 247d5f12 Merge branch 'master' into stdnothrow
 b9db9440 Delete owner field (#7563)
+6d73c20d Merge branch 'master' into nosizeconf
 953dfd94 Avoid float-double-conversion (#7559)
 59873908 Use direct member initialization instead of ctr initialisation (#7556)
 c366f845 Add CI test for eboot build (#7546)
@@ -266,6 +278,7 @@ c1117132 overwrite weak `new (std::nothrow)` calls
 cf1b8e06 Don't overwrite boot sector unless OTA changes it
 a16e1e5b fixes
 f23caa2d Merge branch 'master' into stdnothrow
+b2890d84 Merge branch 'master' into nosizeconf
 1ff927d0 Fix spelling typo under doc/faq (#7538)
 c33a6a26 Updater MD5 cleanup on begin (#7534)
 385bfd76 deleted:    arduino_new/arduino_new.ino
@@ -285,6 +298,11 @@ fc2426a5 sys/pgmspace.h: Refactor inline asm (#7510)
 a8e35a57 Add valgrind mocked test to CI (#7501)
 fc1aa554 Remove warnings when buinding NoAssert (#7499)
 3be0cbb3 Typo (#7502)
+38942f4c rst blackhole
+955a1452 doc format
+3f30bec1 doc format
+c75e812b documentation, auto-256KBFS for 2MB chips
+7c9a8320 Merge branch 'master' into nosizeconf
 d92e1eda Basic authentication with ESP8266httpUpdate (#7190)
 85ea47e9 Fixed PUYA flash write buffer alignment (#7491)
 1041a9d7 webhook/http1.1: prevent from losing a new client while waiting (#7492)
@@ -298,7 +316,6 @@ e815b921 Correct stack string buffer length. (#7488)
 83fc47f6 Small update to ease manual release generation (#7467)
 555c9ebd Update FP for tls.mbed.org (#7479)
 f42cf7a5 Fix uninitted class variables from #7464 (#7478)
-48ed5e9b Merge branch 'master' into pr-erase-config
 22769c5d Merge branch 'master' into pr-dns-forwarder
 c94d36d8 Comment out verify step in eboot.c (#7468)
 696c8653 Merge branch 'master' into pr-dns-forwarder
@@ -313,7 +330,6 @@ f8091311 Update to BearSSL version lost in GCC10 update (#7453)
 e58bb60f webserver: do not count "plain" in argument list (#6768)
 628298cd - Polish README.md.
 1ef128c9 typo
-2b2def22 Corrected new errors after upgrade to GCC 10.1 toolchain. Method 3 was failing with an unaligned access due to 32-bit word access being optomized to an 8-bit when accessing ICACHE memory. Added noinline with IRAM_CACHE attribute in module erase_config.cpp. Also, revised print macros to be more globally unique.
 0613216a Fixed errors.
 33aed64a Merge branch 'master' into pr-dns-forwarder
 f9371b35 Corrected case statement in getPhyModeChar(). Plus 1 for new complier catch!
@@ -329,13 +345,11 @@ af1bc71a remove lwip-v1.4 specific code (#7436)
 1ead1575 Fix spelling typos in files under packages dir (#7439)
 252cb1d9 Remove wget dump during CI (#7438)
 c663c559 Free space of overwritten files in LittleFS (#7434)
-c40a8735 Merge branch 'master' into pr-erase-config
 88d1abfd Merge branch 'master' into pr-dns-forwarder
 d979b57d Upgrade to GCC 10.1 toolchain (#6294)
 7b48b9de boards: 4dsystems (gen4iod) updates (#7433)
 d59b1486 done with release 2.7.2 (#7430)
 06622748 Merge branch 'master' into wifi_mesh_update_2.2
-fcb8b21f Merge branch 'master' into pr-erase-config
 eb1f508a Merge branch 'master' into pr-dns-forwarder
 48281fb1 - Correct terminology in README.md.
 66138a67 - Add protected getters for _forwardingBacklog and _macIgnoreList in FloodingMesh.
@@ -343,25 +357,20 @@ eb1f508a Merge branch 'master' into pr-dns-forwarder
 40b39f32 - Polish README.md.
 5661ec07 Merge branch 'master' into wifi_mesh_update_2.2
 fba4ac15 - Make most type definitions public instead of protected, to facilitate use in composition.
-6b1cdb85 Merge branch 'master' into pr-erase-config
 1b67f969 Merge branch 'pr-dns-forwarder' of github.com:mhightower83/Arduino into pr-dns-forwarder
 96eacc39 Merge branch 'master' into pr-dns-forwarder
-6f91be09 Merge branch 'master' into pr-erase-config
 0516b306 - Fix Readme links.
 f059e573 - Use the new Crypto, TypeConversion and random() functionality added to the Arduino core, instead of the versions local to the mesh library.
 595fb231 Merge branch 'master' into wifi_mesh_update_2.2
-cfd54dfe Merge branch 'master' into pr-erase-config
 40e1f02f - Split most of the EspnowMeshBackend code into utility files and the new ConditionalPrinter, EspnowDatabase, EspnowConnectionManager, EspnowTransmitter and EspnowEncryptionBroker classes.
 3f5495bb Merge branch 'master' into wifi_mesh_update_2.2
 d01e6391 - Fix build error.
 2ec2679d - Move all serialization code to separate Serializer namespace and files.
 10f63119 Added logic to handle dividing large PROGMEM strings into smaller chunks to avoid large allocations to buffer the send.
-be5fe6d3 Merge branch 'master' into pr-erase-config
 e64125a5 - Move globals to anonymous namespaces.
 74535449 Merge branch 'master' into pr-dns-forwarder
 effcc3a2 - Make everything const by default.
 6755a5b0 Reserved space in String page. Re-adjusted size of chuncks. Added print statements for monitoring size of chunks etc. Novice improvents to HTML and variable names.
-14fede01 Merge branch 'master' into pr-erase-config
 16d02f69 Merge branch 'master' into pr-dns-forwarder
 ee977779 Updated HTML to limit/remove screen flash when using show password.
 ad62a7f3 Added missing include for unsupported build environment
@@ -372,45 +381,15 @@ aa430d02 Fixed insert error
 0e33d6e8 Added example to use DNS forwarder
 407e4812 Added DNS forwarder support.
 a24b8d23 Merge branch 'master' into wifi_mesh_update_2.2
-74129c51 Merge branch 'master' into pr-erase-config
-b2d35ea2 Merge branch 'master' into pr-erase-config
-828a47dd Merge branch 'master' into pr-erase-config
-4954dcd2 Merge branch 'master' into pr-erase-config
-39b9508a CI issues
-372998cd Merge branch 'master' into pr-erase-config
-4553009e Made function name longer to avoid possible name conflicts in the future. Using static caused the compiler to inline with functions with different IRAM attributes. Updated some comments. Maybe fixed CI host issue with Update.cpp.
 548d7029 Merge branch 'master' into wifi_mesh_update_2.2
 1dcd4c4a - Fix even more merge conflicts.
 16801f3d - Rework ExpiringTimeTracker to be based on PolledTimeout.
-604b40ab Merge branch 'master' into pr-erase-config
-f1acb40e Access bin image header through ICACHE reduces IRAM usage by 16. Latest merge broke my TZ logic. Updated to the new configTime method.
-c0394fbc Merge branch 'master' into pr-erase-config
-39160c8f one more :(
-4e2493ad Resolve merge conflict. Changed method for reading image header, freeing 16 bytes of iRAM"
-049d91bc Added a Third method.
-560ddc5c Set default Method to 2, to side step travis issue of using preinit(). This is just a PoC an alternate for preinit() can be created later.
-546f0cb0 Merge branch 'master' into pr-erase-config
-9c4e44bc Added print messages to show progress. And code to ensure the UART speed stayed at 74880 for a more complete viewing of messages. Well at least, it stays at 74880 for a longer time than it was. Added pinMode filter to prevent UART TX pin from being disabled during user_init().
-73f16dcc Merge branch 'master' into pr-erase-config
-71308773 Merge branch 'master' into pr-erase-config
-1ce4c601 Merge branch 'master' into pr-erase-config
-4554a7c8 style fix
-660d19ca Merge branch 'master' into pr-erase-config
-815f1dc9 Merge branch 'master' into pr-erase-config
-95eefede Update example. Removed some debug crud. Added a Flash Info hotkey option.
-9d6e0599 Merge branch 'master' into pr-erase-config
-3258d63a Merge branch 'master' into pr-erase-config
-a284b0a6 Take two
-e51ab08a Addressed Tavis CI style issues.
-bfb21b15 A proof of concept for handling Erase WiFi Setting after OTA
-afd603b7 Merge branch 'master' into pr-erase-config
-500b7cc6 Removed cleaned up debug crud and added test example.
-6d882e4c Added two_shots init to noextra4k
-c66ae2e1 Merge branch 'master' into pr-erase-config
-93fb3d3d Added a 2nd method
-6fde10f0 Proof of concept for post OTA 1st boot erase config.
+9b0164af Merge branch 'master' into nosizeconf
 a49f0470 - Move all Strings to flash and optimize String usage, saving 4-5 kB of RAM.
 962a23d2 - Make it possible to transfer Strings containing null values via ESP-NOW and FloodingMesh.
+855dd342 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+b8e48154 merge https://github.com/esp8266/Arduino/pull/6813
+94bb1560 Merge branch 'master' into nosizeconf
 2fef67dc - Generalize CryptoInterface.
 3132325b - Replace Crypto files with CryptoInterface which uses BearSSL as a cryptographic backend.
 afc88f26 - Improve HelloMesh.ino.
@@ -420,7 +399,19 @@ afc88f26 - Improve HelloMesh.ino.
 8194197e Even better fix of conflict with master branch.
 7ca5a7e5 Fix conflict with master branch.
 f8ec4f1c - Make connectionQueue(), latestTransmissionOutcomes() and latestTransmissionSuccessful() methods static in order to match the underlying data storage.
+70634251 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
+4e05cc84 fix emulation on host when 32bit compiler is not available
+c2747a49 Merge branch 'master' into nosizeconf
+dfb6a005 fix emulation on host
+719f65a0 fix
+da308ad4 fixes
 b0ef9195 Merge branch 'master' into wifi_mesh_update_2.2
+6104b9de fixes
+28e7d089 16MB no fs was missing
+08e3b519 ESP.getFlashChipSize() returns ESP.getFlashChipRealSize()
+0decdf4e fixes
+41bc6bc2 Merge branch 'master' into nosizeconf
+8834211a flash: mapping definition by sketch at runtime depending on flash chip size and user configuration
 86025c78 - Make each mesh backend use a unique NetworkInfo class and separate connectionQueue and latestTransmissionOutcomes vectors.
 2576a091 Merge branch 'master' into wifi_mesh_update_2.2
 5834c547 - Add broadcast functionality.
