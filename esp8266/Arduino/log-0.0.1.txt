@@ -1,3 +1,4 @@
+209e4671 doc: analogRead must not be called to frequently with WiFi is on (#7981)
 1cc6960a [BREAKING] Disable WiFi at boot by default (#7902)
 da6ec83b Hardware WDT Stack Dump Tool (#7010)
 0049090e comments in `ClientContext::connect()` (#7961)
