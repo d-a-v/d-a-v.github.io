@@ -1,3 +1,7 @@
+cfbbd6f2 enableWiFiAtBootTime() should be declared in ESP8266WiFi.h (#7993)
+b933e3d2 WiFi off a boot: document a linker error when user wants to use wifi without including ESP8266WiFi.h (#7990)
+ae359cc5 EspSoftwareSerial 6.12.2: Inlining push() functions that must be in IRAM for calling from ISRs (#7986)
+41de4115 Resolve "PWM-locked" / "phase-locked" waveform merge leftover in Servo lib (#7978)
 209e4671 doc: analogRead must not be called to frequently with WiFi is on (#7981)
 1cc6960a [BREAKING] Disable WiFi at boot by default (#7902)
 da6ec83b Hardware WDT Stack Dump Tool (#7010)
