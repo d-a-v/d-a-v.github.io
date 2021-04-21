@@ -1,6 +1,15 @@
-2193eaff Merge branch 'PR-6690'
-c7113acf Merge branch 'PR-7237'
-aec0ff18 Merge branch 'PR-7987'
+6d857401 Merge branch 'PR-6690'
+50dad2b2 Merge branch 'PR-7237'
+f340e1b9 Merge branch 'PR-7987'
+022583f8 Merge branch 'PR-7989'
+6899a2e8 ditto
+e1083c70 remove stream dependance in CLientContext
+c51ed076 Merge branch 'master' into streamsendfix3
+cfbbd6f2 enableWiFiAtBootTime() should be declared in ESP8266WiFi.h (#7993)
+34484fdd Merge branch 'master' into wemosclone
+b933e3d2 WiFi off a boot: document a linker error when user wants to use wifi without including ESP8266WiFi.h (#7990)
+ae359cc5 EspSoftwareSerial 6.12.2: Inlining push() functions that must be in IRAM for calling from ISRs (#7986)
+41de4115 Resolve "PWM-locked" / "phase-locked" waveform merge leftover in Servo lib (#7978)
 28c3d32b boards: wemos d1 clones: new entry with menus for flash mode and flash freq
 ae879789 fixes for WiFiClient::write(Stream) - remove deprecated WiFiClient::write(Stream,size) - fix and deprecate WiFiClient::write(Stream) to use Stream::sendAll instead of ::sendAvailable - update ESP8266WebServer::streamFile to use file.sendAll(client) instead of client.write(file)
 209e4671 doc: analogRead must not be called to frequently with WiFi is on (#7981)
