@@ -1,7 +1,11 @@
-6d857401 Merge branch 'PR-6690'
-50dad2b2 Merge branch 'PR-7237'
-f340e1b9 Merge branch 'PR-7987'
-022583f8 Merge branch 'PR-7989'
+5f06e141 Merge branch 'PR-6690'
+872101e7 Merge branch 'PR-7237'
+e0d57595 Merge branch 'PR-7987'
+b2040f13 Merge branch 'PR-7989'
+45769210 Move prototype for enablePhaseLockedWaveform linker magic into header that's included by default instead of particular internal core header. (#7996)
+44476d41 example WiFiEcho: show sendAll and sendAvailable
+40316a8e honor timeout in all case, avoid short transfer when output is temporarilly full
+c065a3b2 sync API on host emulation
 6899a2e8 ditto
 e1083c70 remove stream dependance in CLientContext
 c51ed076 Merge branch 'master' into streamsendfix3
