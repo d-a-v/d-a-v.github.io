@@ -1,3 +1,4 @@
+f4178e58 fixes for WiFiClient::write(Stream) (#7987)
 45769210 Move prototype for enablePhaseLockedWaveform linker magic into header that's included by default instead of particular internal core header. (#7996)
 cfbbd6f2 enableWiFiAtBootTime() should be declared in ESP8266WiFi.h (#7993)
 b933e3d2 WiFi off a boot: document a linker error when user wants to use wifi without including ESP8266WiFi.h (#7990)
