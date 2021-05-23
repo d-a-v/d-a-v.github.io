@@ -1,0 +1,8 @@
+8dc80b5e Re-add mklittlefs to package.json (#8060)
+d7d03f9a Merge pull request #6869 from dok-net/refactooptimisticyield
+7571c729 Revert change after review comments.
+95b06cee Explain function of special PolledTimeout to the code reader
+f382fc9d Refactoring to PolledTimeout or optimistic_yield on the grounds that these are not wait loops on slow input.
+117f1630 Move _stopPWM in phase PWM to IRAM (#8048)
+25e1b3b6 Added IRAM_ATTR to _stopPWM() so that digitalWrite() would work inside ISR. Fixes #8043 (#8044)
+90f611f9 back to dev (3.0.1) (#8039)
