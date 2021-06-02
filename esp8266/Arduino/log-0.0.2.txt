@@ -1,5 +1,12 @@
-8b6b99e3 Merge branch 'PR-6690'
-a1b0532d Merge branch 'PR-7237'
+a992301b Merge branch 'PR-6690'
+b47942bb Merge branch 'PR-7237'
+2f12c18c Add support for http proxy to esp8266 http client
+e5489cfd Synchronize PlatformIO build script (#8092)
+e21ae066 Use optimal bundled library names (#8088)
+bf6f3e7c Merge pull request #8080 from dok-net/swserial
+fa7a3307 Update EspSoftwareSerial to bug fix release 6.12.6
+60fe7b4c Add code-spell spelling checks to CI (#8067)
+78a2ed6b release script: protect bash variables and add logs (#8074)
 8dc80b5e Re-add mklittlefs to package.json (#8060)
 d7d03f9a Merge pull request #6869 from dok-net/refactooptimisticyield
 7571c729 Revert change after review comments.
