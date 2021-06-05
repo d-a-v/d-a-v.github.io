@@ -1,3 +1,6 @@
+114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
+a183e3fc more of Use optimal bundled library name (#8098)
+325619a4 makeword: sync header and implementation (#8097)
 e5489cfd Synchronize PlatformIO build script (#8092)
 e21ae066 Use optimal bundled library names (#8088)
 bf6f3e7c Merge pull request #8080 from dok-net/swserial
