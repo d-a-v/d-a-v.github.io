@@ -1,21 +1,13 @@
-7e3c0b1f Merge branch 'PR-6690'
-a5322f1f Merge branch 'PR-7237'
-04b2b376 Merge branch 'PR-8094'
-8869fbdb Merge branch 'PR-8095'
+11e1175c Merge branch 'PR-6690'
+6c63bc25 Merge branch 'PR-7237'
+e9e48450 Merge branch 'PR-8094'
 80c54ddb Update to GCC 10.3 and toolchain rebuild
 114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
-4aa76d3f fix collection of creation time only after creating build options file
-34f85e76 mentioning no automatic rebuild of core.s files on changes of build options file in faq docs
-b49484de set build option file modification time as sketch modification time or users build options file
 334b3037 use pointer
 891d8ac1 reserve string memory
 a183e3fc more of Use optimal bundled library name (#8098)
-1489c984 Merge branch 'master' into feature/allow-custom-build-options-file
-286cc4c3 add documentation for build_opt.h file to the faq readme
 17849572 extract uri parsing
 325619a4 makeword: sync header and implementation (#8097)
-5c0f07fe replace bash with python script
-c2784a8e Add prebuild script to use additional build options
 2f12c18c Add support for http proxy to esp8266 http client
 e5489cfd Synchronize PlatformIO build script (#8092)
 e21ae066 Use optimal bundled library names (#8088)
