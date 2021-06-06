@@ -1,7 +1,9 @@
-11e1175c Merge branch 'PR-6690'
-6c63bc25 Merge branch 'PR-7237'
-e9e48450 Merge branch 'PR-8094'
-80c54ddb Update to GCC 10.3 and toolchain rebuild
+37dbe3ba Merge branch 'PR-6690'
+3c4e71f5 Merge branch 'PR-7237'
+0ca9794f Merge branch 'PR-8094'
+d516361a Bump GIT version to clear GH CI cache
+dc394ca4 Update toolchain to gcc 10.3 w/patches
+74d675cf Update to GCC 10.3 and toolchain rebuild (#8103)
 114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
 334b3037 use pointer
 891d8ac1 reserve string memory
