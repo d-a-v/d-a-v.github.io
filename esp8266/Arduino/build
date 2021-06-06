@@ -141,9 +141,10 @@ for v in 0.0.?; do
         done
         echo "${v}:-git-version--${ver},-list-of-included-PRs-:${SPR:-"-none"}" >> $dir/message.txt
 
-        echo "<br><li>version ${v}: git:'${ver}' ($(date -u)) (${PR} )<br>" >> index.html.temp
+        echo "<br><ul><li>version ${v}: git:'${ver}' ($(date -u)) (${PR} )<br>" >> index.html.temp
         echo "<a href=\"log-${v}.txt\">List of all commits</a> since latest official release<br>" >> index.html.temp
         [ -f prdetails.html ] && (echo "Additional PRs:<br>"; cat ${dir}/prdetails.html; ) >> index.html.temp
+        echo "</ul>" >> index.html.temp
         cp index.html.temp index.html
 
         mv newlog.txt log-${v}.txt
