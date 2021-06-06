@@ -1,3 +1,4 @@
+74d675cf Update to GCC 10.3 and toolchain rebuild (#8103)
 114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
 a183e3fc more of Use optimal bundled library name (#8098)
 325619a4 makeword: sync header and implementation (#8097)
