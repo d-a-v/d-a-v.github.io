@@ -1,3 +1,4 @@
+2185f9bd BREAKING - "i2s.h" removed, I2S library added (#8108)
 e8b411fa Update toolchain to gcc 10.3 w/patches (#8104)
 74d675cf Update to GCC 10.3 and toolchain rebuild (#8103)
 114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
