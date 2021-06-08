@@ -1,6 +1,7 @@
-4f00f3c9 Merge branch 'PR-6690'
-ee4fb2c1 Merge branch 'PR-7237'
-5507bfd6 Merge branch 'PR-8094'
+0d30aa03 Merge branch 'PR-6690'
+a34b0745 Merge branch 'PR-7237'
+4d25e12a Merge branch 'PR-8094'
+2185f9bd BREAKING - "i2s.h" removed, I2S library added (#8108)
 e8b411fa Update toolchain to gcc 10.3 w/patches (#8104)
 74d675cf Update to GCC 10.3 and toolchain rebuild (#8103)
 114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
