@@ -1,28 +1,30 @@
-bd3d911b Merge branch 'PR-6690'
-d2ef4827 Merge branch 'PR-7237'
-3728cc7a Merge branch 'PR-8094'
-6f51d96f Merge branch 'PR-8095'
+4b9bdbc9 Merge branch 'PR-6690'
+40f5828b Merge branch 'PR-7237'
+a730fb9c Merge branch 'PR-8094'
+9c0c0eea Merge branch 'PR-8106'
+2c756512 change form of version given to makecorever
+7f679e10 +missing `.py`
+2562defc add missing double-quotes, hide RELEASE* macros when generating dev version
+212470f5 ...continuation
+5973e133 Merge branch 'master' into releaseprocessfix
+ff041942 Remove include and lib folders removed since 3.0.0 core (#8125)
+95bc21b6 (WIP) package builder: factorize version generation using makecorever
+878c02c3 use default values for new version defines
+3a4dbe0e generate ARDUINO_ESP8266_{MAJOR,MINOR,REVISION} in core_version.h
+d877cff2 update release process to the new CI
 1934ef4a Initialize base64authorization with empty string
 b4774edb httpclient: remove old example (#8111)
 40116feb Normalize core header's include guard. (#8110)
 2185f9bd BREAKING - "i2s.h" removed, I2S library added (#8108)
-d3aa9f94 Merge branch 'master' into feature/allow-custom-build-options-file
-97c3d8df fix correct creation of full sketch path
+fe04afbb [WString] Reduce build size by implementing flash string calls in .cpp
 e8b411fa Update toolchain to gcc 10.3 w/patches (#8104)
 74d675cf Update to GCC 10.3 and toolchain rebuild (#8103)
 114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
-4aa76d3f fix collection of creation time only after creating build options file
-34f85e76 mentioning no automatic rebuild of core.s files on changes of build options file in faq docs
-b49484de set build option file modification time as sketch modification time or users build options file
 334b3037 use pointer
 891d8ac1 reserve string memory
 a183e3fc more of Use optimal bundled library name (#8098)
-1489c984 Merge branch 'master' into feature/allow-custom-build-options-file
-286cc4c3 add documentation for build_opt.h file to the faq readme
 17849572 extract uri parsing
 325619a4 makeword: sync header and implementation (#8097)
-5c0f07fe replace bash with python script
-c2784a8e Add prebuild script to use additional build options
 2f12c18c Add support for http proxy to esp8266 http client
 e5489cfd Synchronize PlatformIO build script (#8092)
 e21ae066 Use optimal bundled library names (#8088)
