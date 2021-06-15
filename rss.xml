@@ -3,10 +3,16 @@
   <channel>
     <title>esp8266/Aduino unofficial snapshots</title>
     <description>unofficial boards manager</description>
-    <pubDate>Sat Jun 12 20:55:15 UTC 2021</pubDate>
+    <pubDate>Tue Jun 15 20:51:30 UTC 2021</pubDate>
     <generator>https://d-a-v.github.io</generator>
     <link>https://d-a-v.github.io</link>
     <atom:link rel="self" type="application/rss+xml" href="https://d-a-v.github.io/updates.rss"/>
+<item>
+    <title>esp8266/Arduino core snapshot: 0.0.1 (PR: ) Tue Jun 15 20:51:30 UTC 2021</title>
+    <description>snapshot esp8266/Arduino board installer</description>
+    <pubDate>Tue Jun 15 22:51:30 CEST 2021</pubDate>
+    <link>https://d-a-v.github.io</link>
+</item>
 <item>
     <title>esp8266/Arduino core snapshot: 0.0.2 (PR: alpha) Sat Jun 12 20:55:15 UTC 2021</title>
     <description>snapshot esp8266/Arduino board installer</description>

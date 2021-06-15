@@ -1,3 +1,4 @@
+ff041942 Remove include and lib folders removed since 3.0.0 core (#8125)
 b4774edb httpclient: remove old example (#8111)
 40116feb Normalize core header's include guard. (#8110)
 2185f9bd BREAKING - "i2s.h" removed, I2S library added (#8108)
