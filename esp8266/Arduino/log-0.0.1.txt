@@ -1,3 +1,5 @@
+52be27df Release process fix #2 (#8127)
+28976790 Release process fix & major/minor/rev macro addition (#8126)
 ff041942 Remove include and lib folders removed since 3.0.0 core (#8125)
 b4774edb httpclient: remove old example (#8111)
 40116feb Normalize core header's include guard. (#8110)
