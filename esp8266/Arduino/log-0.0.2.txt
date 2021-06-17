@@ -1,7 +1,12 @@
-a905f856 Merge branch 'PR-6690'
-dac3ceca Merge branch 'PR-7237'
-59e8024b Merge branch 'PR-8094'
-da7484fa Merge branch 'PR-8106'
+7abee372 Merge branch 'PR-6690'
+d966ee5b Merge branch 'PR-7237'
+015f62be Merge branch 'PR-8094'
+107391cf Merge branch 'PR-8106'
+a79739d9 Merge branch 'master' into ctx1
+7f782789 makecorever.py: restore ARDUINO_ESP8266_GIT_VER even without .git/ (#8138)
+415e888e Reverse logic, use lowest-level Ctx for match
+d2b01781 WiFiClientSecure owns context, fix stopAllExcept
+f1310c04 Make String reallocation warning more descriptive (#8131)
 52be27df Release process fix #2 (#8127)
 28976790 Release process fix & major/minor/rev macro addition (#8126)
 ff041942 Remove include and lib folders removed since 3.0.0 core (#8125)
