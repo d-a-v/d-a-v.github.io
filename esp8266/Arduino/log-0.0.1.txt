@@ -1,3 +1,5 @@
+7f782789 makecorever.py: restore ARDUINO_ESP8266_GIT_VER even without .git/ (#8138)
+f1310c04 Make String reallocation warning more descriptive (#8131)
 52be27df Release process fix #2 (#8127)
 28976790 Release process fix & major/minor/rev macro addition (#8126)
 ff041942 Remove include and lib folders removed since 3.0.0 core (#8125)
