@@ -1,29 +1,43 @@
-7abee372 Merge branch 'PR-6690'
-d966ee5b Merge branch 'PR-7237'
-015f62be Merge branch 'PR-8094'
-107391cf Merge branch 'PR-8106'
-a79739d9 Merge branch 'master' into ctx1
+69254cad Merge branch 'PR-7237'
+21d2982e Merge branch 'PR-8095'
+f273a3ab Merge branch 'PR-8106'
+487fca27 SDFS: fix AvailableForWrite: do not always return 0 when space is available
+d3136738 fix readthedoc python dependencies (#8166)
+32fad07a ESP266httpUpdate: remove dead API and fix doc (#8063)
+d2835413 documentation: Arduino IDE options: fix hyperlinks and format (#8158)
+e55dfc3a Documentation: Arduino IDE specific options for esp82xx (#8154)
+78e63280 Add missing menu.UploadTool name definition (#8153)
+360a4450 Merge branch 'feature/allow-custom-build-options-file' of github.com:brainelectronics/arduino-esp8266 into feature/allow-custom-build-options-file
+d03a2ecd modify build opt time only if required and file available
+45e7976c Fix stopAllExcept with WiFiClientSecure (#8136)
+2f37c967 gnu source: honoring libc requirements (#8147)
+15da1635 LwipIntfDev.h - apply static DNS config (#8076)
+dec7ab88 Minor cleanup FAQ section under-tildes
+1a5ef712 Change protocol detection so uppercase or lowercase works (#8137)
 7f782789 makecorever.py: restore ARDUINO_ESP8266_GIT_VER even without .git/ (#8138)
-415e888e Reverse logic, use lowest-level Ctx for match
-d2b01781 WiFiClientSecure owns context, fix stopAllExcept
 f1310c04 Make String reallocation warning more descriptive (#8131)
 52be27df Release process fix #2 (#8127)
 28976790 Release process fix & major/minor/rev macro addition (#8126)
 ff041942 Remove include and lib folders removed since 3.0.0 core (#8125)
-1934ef4a Initialize base64authorization with empty string
+64336259 Merge branch 'master' into feature/allow-custom-build-options-file
 b4774edb httpclient: remove old example (#8111)
 40116feb Normalize core header's include guard. (#8110)
 2185f9bd BREAKING - "i2s.h" removed, I2S library added (#8108)
 fe04afbb [WString] Reduce build size by implementing flash string calls in .cpp
+d3aa9f94 Merge branch 'master' into feature/allow-custom-build-options-file
+97c3d8df fix correct creation of full sketch path
 e8b411fa Update toolchain to gcc 10.3 w/patches (#8104)
 74d675cf Update to GCC 10.3 and toolchain rebuild (#8103)
 114a7267 Update toolchain to fix pgm_read_float_unaligned (#8091)
-334b3037 use pointer
-891d8ac1 reserve string memory
+4aa76d3f fix collection of creation time only after creating build options file
+34f85e76 mentioning no automatic rebuild of core.s files on changes of build options file in faq docs
+b49484de set build option file modification time as sketch modification time or users build options file
 a183e3fc more of Use optimal bundled library name (#8098)
-17849572 extract uri parsing
+1489c984 Merge branch 'master' into feature/allow-custom-build-options-file
+286cc4c3 add documentation for build_opt.h file to the faq readme
 325619a4 makeword: sync header and implementation (#8097)
-2f12c18c Add support for http proxy to esp8266 http client
+5c0f07fe replace bash with python script
+c2784a8e Add prebuild script to use additional build options
 e5489cfd Synchronize PlatformIO build script (#8092)
 e21ae066 Use optimal bundled library names (#8088)
 bf6f3e7c Merge pull request #8080 from dok-net/swserial
@@ -38,39 +52,11 @@ f382fc9d Refactoring to PolledTimeout or optimistic_yield on the grounds that th
 117f1630 Move _stopPWM in phase PWM to IRAM (#8048)
 25e1b3b6 Added IRAM_ATTR to _stopPWM() so that digitalWrite() would work inside ISR. Fixes #8043 (#8044)
 90f611f9 back to dev (3.0.1) (#8039)
-33478596 Merge branch 'master' into nosizeconf
-77882335 Merge branch 'master' into nosizeconf
-83f04ff3 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-c9464211 missing change in httpupdateserver library
-665a0d9d Merge branch 'master' into nosizeconf
-f40f8f67 remove superfluous linker line
-ea319e2f merge with master
-843a0968 Merge branch 'master' into nosizeconf
-5898eeb2 Merge branch 'master' into nosizeconf
-49a4d088 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-8adc14aa Merge branch 'master' into nosizeconf
-d55bf93c Merge branch 'master' into nosizeconf
-c01299bf Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-279db40b Merge branch 'master' into nosizeconf
 7178c2e4 Merge branch 'master' into pr-dns-forwarder
 64a81914 Merge branch 'master' into pr-dns-forwarder
-1a66a892 Merge branch 'master' into nosizeconf
-98e07d70 Merge branch 'master' into nosizeconf
-3c807b01 emulation on host: fix 64 bits mode
-8bcc1346 fix emulation on host
-e4534eda Merge branch 'master' into nosizeconf
 ab0472e6 Merge branch 'master' into pr-dns-forwarder
 e09e6e8e Merge branch 'master' into pr-dns-forwarder
-7f3c65b4 Merge branch 'master' into nosizeconf
-dd2d526d Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
 ff5d79a8 Merge branch 'master' into pr-dns-forwarder
-6d73c20d Merge branch 'master' into nosizeconf
-b2890d84 Merge branch 'master' into nosizeconf
-38942f4c rst blackhole
-955a1452 doc format
-3f30bec1 doc format
-c75e812b documentation, auto-256KBFS for 2MB chips
-7c9a8320 Merge branch 'master' into nosizeconf
 22769c5d Merge branch 'master' into pr-dns-forwarder
 696c8653 Merge branch 'master' into pr-dns-forwarder
 1ef128c9 typo
@@ -94,19 +80,3 @@ aa430d02 Fixed insert error
 63f89587 Cleanup for CI
 0e33d6e8 Added example to use DNS forwarder
 407e4812 Added DNS forwarder support.
-9b0164af Merge branch 'master' into nosizeconf
-855dd342 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-b8e48154 merge https://github.com/esp8266/Arduino/pull/6813
-94bb1560 Merge branch 'master' into nosizeconf
-70634251 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-4e05cc84 fix emulation on host when 32bit compiler is not available
-c2747a49 Merge branch 'master' into nosizeconf
-dfb6a005 fix emulation on host
-719f65a0 fix
-da308ad4 fixes
-6104b9de fixes
-28e7d089 16MB no fs was missing
-08e3b519 ESP.getFlashChipSize() returns ESP.getFlashChipRealSize()
-0decdf4e fixes
-41bc6bc2 Merge branch 'master' into nosizeconf
-8834211a flash: mapping definition by sketch at runtime depending on flash chip size and user configuration
