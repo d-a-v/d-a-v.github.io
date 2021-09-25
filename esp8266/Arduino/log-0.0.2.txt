@@ -1,11 +1,16 @@
-d56679c7 Merge branch 'PR-6690'
-c8b2767d Merge branch 'PR-7237'
-c2450f62 Merge branch 'PR-8227'
-4d3a54ab Merge branch 'PR-8237'
-5d95235b Merge branch 'PR-8290'
-02626979 Merge branch 'PR-8311'
-1e158e34 Merge branch 'PR-8317'
-ab25e1de Merge branch 'PR-8319'
+b72bbfbf Merge branch 'PR-6690'
+7764c2bc Merge branch 'PR-7237'
+e005ca0e Merge branch 'PR-8227'
+8a07efe8 Merge branch 'PR-8237'
+93851276 Merge branch 'PR-8290'
+9ea5a341 Merge branch 'PR-8311'
+569a59e7 Merge branch 'PR-8317'
+61f6728a Merge branch 'PR-8319'
+c7f6c223 addition for https://github.com/esp8266/Arduino/issues/8247
+18dc9231 default interface set from userland
+9814f70e Added CORE_MOCK #if. Updated related examples.
+ebbac7bf Simplified use of aligas Corrected start of DRAM constant in mmu_is_dram(). Replaced #define(s) with const to properly limit scope. Compiler appears to optomize it down to the same size. In some places used ld variables and core-isa.h defines to set range checking values.
+45bcfa97 Merge branch 'master' into pr-mmu-inline-strict-aliasing
 639ec45a fix example
 4ba8b318 Merge branch 'master' into ethdelay
 1fac9139 fix comments and add debug messages
