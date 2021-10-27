@@ -1,69 +1,39 @@
-b72bbfbf Merge branch 'PR-6690'
-7764c2bc Merge branch 'PR-7237'
-e005ca0e Merge branch 'PR-8227'
-8a07efe8 Merge branch 'PR-8237'
-93851276 Merge branch 'PR-8290'
-9ea5a341 Merge branch 'PR-8311'
-569a59e7 Merge branch 'PR-8317'
-61f6728a Merge branch 'PR-8319'
+49c4f8f0 Merge branch 'PR-6690'
+57b08d10 Merge branch 'PR-7237'
+9e94e99d Merge branch 'PR-8311'
+c79b1f2e Merge branch 'PR-8319'
+cd7e3c4b Merge branch 'PR-8338'
+f8de3fb4 ESP8266WebServer - Drop inactive connection when another is waiting to improve page load time (#8216)
+ac4af38c Correctly access WIFI_EVENT_MODE_CHANGE event info (#8343)
+c7c7d051 Remove the HAVE_ESP_SUSPEND define. (#8342)
+aabfd73c Clean up SpeedTest output, avoid div-by-0 (#8340)
+c312a2ea Implement esp_yield() as a replacement for delay(0)
+96606838 Inserted PR-Number inside docu
+201fb752 Restart for PR "Integrated handling for filesystem and gzipped Binaries"
+40b26b76 Movable HTTPClient and fixing WiFiClient copy (#8237)
+b7a2f44b Update mmu_get... and mmu_set...  (#8290)
+9d024d17 comments on Arduino flush() method (#8318)
+93b7325c Update secrets.h to network and credentials (#8325)
+3f4bcbe4 Improvements to the existing ETag implementation (#8227)
+193043d1 Update ESP8266WiFiSTA.cpp (#8229)
 c7f6c223 addition for https://github.com/esp8266/Arduino/issues/8247
-18dc9231 default interface set from userland
-9814f70e Added CORE_MOCK #if. Updated related examples.
-ebbac7bf Simplified use of aligas Corrected start of DRAM constant in mmu_is_dram(). Replaced #define(s) with const to properly limit scope. Compiler appears to optomize it down to the same size. In some places used ld variables and core-isa.h defines to set range checking values.
-45bcfa97 Merge branch 'master' into pr-mmu-inline-strict-aliasing
-639ec45a fix example
-4ba8b318 Merge branch 'master' into ethdelay
-1fac9139 fix comments and add debug messages
-8a07ca8a per review
-a69d4d60 further simplification
 64e87f11 WiFi library ArduinoWiFiServer update (#8238)
-7ae8d0b3 use scalar for gpio
-98aac7d1 style
-6b8eeffe Ethernet: add examples (dhcp, static, mdns, ssl) (the internal API is fixed for the static case)
 75b6fbf1 lwIP: v2.1.3rc1 +dhcp client compliance by courtesy of @1e1
-fad4d175 simplification
-7acc8139 Merge branch 'master' into ethdelay
-632260db introduce `yieldUntil(untilFonction, timeoutMs)` which is a delay interruptible under a provided condition useful for ethernet drivers using recurrent scheduled functions
-9e503d3d Merge remote-tracking branch 'origin/master' into lib/http-movable-class
-5cded435 proofreading
 612e7ffd Remove temporary buffer in ConfigFile.ino (#8298)
 cda273c1 basichttpsclient example: fingerprint handled by update scripts
-be173cec Merge branch 'master' into lib/http-movable-class
-f681e0b3 ...but make sure to call the actual copy ctor of the object
-bf8d804d handle wificlient lifetime through the wificlient itself
 0760210f Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
 45d52505 nosizeconf: when enabled, using FLASH_MAP_OTA_FS by default
-8c6a2321 Merge branch 'master' into master
 211606fe [WString] Reduce build size by implementing flash string calls in .cpp (#8106)
 140d0ffd Add writeToPrint to ESP8266HTTPClient (#8056)
 d3f16b31 Allow manually setting MD5 checksum for HTTP update (#8204)
 058ce7c0 Allow control over HTTPClient authorization String allocation (#8225)
-5df867f6 Removed stale comment
-cb859e45 Merge branch 'master' into pr-mmu-inline-strict-aliasing
 65db3aec Add HTTP delete method (#8214)
 fb5c4a64 Place deprecated attribute in front of function (#8258)
 f7951e68 Respect linking order of libraries for PlatformIO (#8263)
 9f30f246 EspSoftwareSerial maintenance update 6.13.2 (#8295)
-370c1c8e Merge branch 'pr-mmu-inline-strict-aliasing' of github.com:mhightower83/Arduino into pr-mmu-inline-strict-aliasing
-0cc26d62 style
-bac14f22 Update mmu_get... and mmu_set... to comply with strict-aliasing rules. Added 32-bit dependency injections as needed to guard against compiler optimizing 32-bit loads from IRAM to 8-bit or 16-bit loads.
-a8aed295 Update mmu_get... and mmu_set... to comply with strict-aliasing rules. Added 32-bit dependency injections as needed to guard against compiler optimizing 32-bit loads from IRAM to 8-bit or 16-bit loads.
 5f04fbbf EspSoftwareSerial minor release 6.13.0: Improve support for availability of GPIOS on ESP32 S2 and ESP32C3 (#8260)
 f605f12a Merge branch 'master' into pr-dns-forwarder
-78ab38b5 Merge branch 'esp8266:master' into master
 929f0fb6 back to 3.1.0-dev after 3.0.2 (#8246)
-8e267554 initialize with default user agent but never reset it back
-9e745613 HTTPClient: refactor constructors and operator=
-e2ad9397 fixing style
-4b9a0da7 fixing style
-eb04578f fixing style
-f727bb36 CRLF into LF
-b36a7c32 fixing unused parameters and cleanup
-fbd861ec WebServer example added
-5636d5fa review fixes
-b5e48de3 fixing mac build
-4f1c5d50 cleanup
-1f07cd0d WebServer eTag implementation improvements
 8ebc90f0 Merge branch 'master' into nosizeconf
 60e1bd9c Merge branch 'master' into nosizeconf
 e922fea9 sync with generated files
