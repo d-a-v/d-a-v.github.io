@@ -1,8 +1,24 @@
-49c4f8f0 Merge branch 'PR-6690'
-57b08d10 Merge branch 'PR-7237'
-9e94e99d Merge branch 'PR-8311'
-c79b1f2e Merge branch 'PR-8319'
-cd7e3c4b Merge branch 'PR-8338'
+c3152c41 Merge branch 'PR-6690'
+fdbba01f Merge branch 'PR-7237'
+84808772 Merge branch 'PR-8311'
+331d81f6 Merge branch 'PR-8330'
+501502c6 Merge branch 'PR-8338'
+37f18b14 Merge branch 'PR-8393'
+bfc05e05 mDNS timeout: use real type
+2492057b LittleFS: add overrides for Stream::send (#8386)
+f99cee49 Merge branch 'master' into gcc103bf1
+d5444c4a I2C clock phase correction in START condition (#8383)
+7a9a5018 GCC 10.3 Bugfix 1 - Constant String Literal Fix
+076a4edf EspSoftwareSerial 6.15.1: Enforce stop-bit count detection strictly. (#8373)
+3090bda0 Remove obsolete comments about legacy mDNS impl. (#8377)
+bf2882d8 Update SoftwareSerial to bug-fix release 6.14.2: 0xff at end-of-message wasn't detected until next message (#8370)
+0761f6f6 Add stream string includes (#8367)
+48786139 Aproved handling of path to FS-tool and depending error messages
+986dd420 enable nonosdk-2.2.x version 19-03-13 for Arduino IDE per #7965 (#8363)
+a00b2d70 Update to SdFat 2.1.1 with UTF-8 support (#8355)
+7d971fa4 Remove warnings, errors during host tests in CI (#8358)
+3f5a76cc MOD-WIFI-ESP8266(-DEV) update (#8297)
+0cd90ed4 EspSoftwareSerial 6.14.1: Add API for selecting Rx GPIO PULLUP at runtime (#8353)
 f8de3fb4 ESP8266WebServer - Drop inactive connection when another is waiting to improve page load time (#8216)
 ac4af38c Correctly access WIFI_EVENT_MODE_CHANGE event info (#8343)
 c7c7d051 Remove the HAVE_ESP_SUSPEND define. (#8342)
@@ -12,13 +28,13 @@ c312a2ea Implement esp_yield() as a replacement for delay(0)
 201fb752 Restart for PR "Integrated handling for filesystem and gzipped Binaries"
 40b26b76 Movable HTTPClient and fixing WiFiClient copy (#8237)
 b7a2f44b Update mmu_get... and mmu_set...  (#8290)
+8e8cbd21 notice about _updateRecvBuffer aka external available
+724f1ca8 Don't return `true` with WiFiClientSecureBearSSL::connected() when disconnected
 9d024d17 comments on Arduino flush() method (#8318)
 93b7325c Update secrets.h to network and credentials (#8325)
 3f4bcbe4 Improvements to the existing ETag implementation (#8227)
 193043d1 Update ESP8266WiFiSTA.cpp (#8229)
-c7f6c223 addition for https://github.com/esp8266/Arduino/issues/8247
 64e87f11 WiFi library ArduinoWiFiServer update (#8238)
-75b6fbf1 lwIP: v2.1.3rc1 +dhcp client compliance by courtesy of @1e1
 612e7ffd Remove temporary buffer in ConfigFile.ino (#8298)
 cda273c1 basichttpsclient example: fingerprint handled by update scripts
 0760210f Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
