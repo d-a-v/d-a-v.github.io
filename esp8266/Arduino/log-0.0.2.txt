@@ -1,15 +1,18 @@
-d71d544c Merge branch 'PR-6690'
-41b6ebb3 Merge branch 'PR-7237'
-9f14541f Merge branch 'PR-8311'
-be779625 Merge branch 'PR-8319'
-cd70a06d Merge branch 'PR-8330'
-8f54fc27 Merge branch 'PR-8338'
-80b56310 ditto
-49c4b222 lwIP: unregister default interface
-60d9be3c interface set as default when gw is valid
-c503fd40 typo
-259cb4d5 Merge branch 'master' into lwIP213rc1
-e04c0ee4 use interface as default when using global address
+e67a8a10 Merge branch 'PR-6690'
+8163b7e9 Merge branch 'PR-7237'
+d5e126a0 Merge branch 'PR-8311'
+1da033a7 Merge branch 'PR-8330'
+65bbd55a Merge branch 'PR-8338'
+4c07113f lwIP: v2.1.3 + dhcp fixes (#8319)
+fcf35084 Merge branch 'master' into nosizeconf
+a05a71fa import getLocalTime() from esp32/Arduino (#8413)
+f26201e6 Sync umm_malloc style with upstream (#8426)
+f401f08a WiFiServer - 'rename' available() to accept() (#8419)
+2f58f679 Emulation on host: updates (#8409)
+d0cc3a80 WiFiServer - don't inherit from Server class (#8418)
+dde2c769 StreamConstPtr: disallow passing a String temporary (#8410)
+e3c79de7 httpClient: prevent empty user-agent in header (#8411)
+e5a214e6 Fix umm_blocks() (#8429)
 b5f3d1d6 Remove Python installation from OTA doc (#8417)
 42aa0e6d Wire buffer length improvments. (#8398)
 55ef3e73 GCC 10.3 Bugfix 1 (#8393)
@@ -24,9 +27,6 @@ d18cbfb0 mDNS timeout: use real type (#8394)
 069e54dc platform.txt: remove superfluous defines boards.txt.py: comment some useless entry generation
 0f231b1c Adding custom buffer_length using I2C_BUFFER_LENGTH (#8390)
 6be7adfa Merge branch 'master' into nosizeconf
-ebaca6b8 ... and install generated libraries
-1dc4bc55 Merge branch 'master' into lwIP213rc1
-7254e650 bump to upstream lwIP release 2.1.3
 2492057b LittleFS: add overrides for Stream::send (#8386)
 d5444c4a I2C clock phase correction in START condition (#8383)
 076a4edf EspSoftwareSerial 6.15.1: Enforce stop-bit count detection strictly. (#8373)
@@ -54,9 +54,7 @@ b7a2f44b Update mmu_get... and mmu_set...  (#8290)
 93b7325c Update secrets.h to network and credentials (#8325)
 3f4bcbe4 Improvements to the existing ETag implementation (#8227)
 193043d1 Update ESP8266WiFiSTA.cpp (#8229)
-c7f6c223 addition for https://github.com/esp8266/Arduino/issues/8247
 64e87f11 WiFi library ArduinoWiFiServer update (#8238)
-75b6fbf1 lwIP: v2.1.3rc1 +dhcp client compliance by courtesy of @1e1
 612e7ffd Remove temporary buffer in ConfigFile.ino (#8298)
 cda273c1 basichttpsclient example: fingerprint handled by update scripts
 0760210f Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
