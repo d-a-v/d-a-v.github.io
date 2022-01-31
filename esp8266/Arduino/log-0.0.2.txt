@@ -1,8 +1,28 @@
-e67a8a10 Merge branch 'PR-6690'
-8163b7e9 Merge branch 'PR-7237'
-d5e126a0 Merge branch 'PR-8311'
-1da033a7 Merge branch 'PR-8330'
-65bbd55a Merge branch 'PR-8338'
+bbb4406c Merge branch 'PR-6690'
+a753c964 Merge branch 'PR-7237'
+423b5acc Merge branch 'PR-8311'
+88fa1225 Merge branch 'PR-8330'
+69d7a00a Merge branch 'PR-8338'
+942937a4 Merge branch 'PR-8454'
+e858173a Merge branch 'PR-8458'
+ec659e62 Merge branch 'PR-8466'
+160de541 Fix reuse for different URIs in HTTPClient::begin
+535b5334 Changed default to use IROM for umm_init() and option to revert back to UMM_INIT_USE_IRAM.
+e819e7d9 remove extern variable, use weak function
+59414515 Merge branch 'master' into mockminors
+9f536e68 WString: avoid writing to const storage (#8463)
+91657c2d Merge branch 'master' into pr-umm_init_heap
+30b0450d Move ESP8266SDFat library to master, not branch (#8460)
+c7f4d368 Heap init code improvements and updates
+f4ef6fd7 fix Stream.read into buffer ignoring every second byte (#8452) (#8453)
+22e7fe0b mock: add missing recently overridden method
+f1547dbf Merge branch 'master' into mockminors
+6cabc329 emulation: share mockverbose between CI-on-host and emulation
+0cda4b37 emulation on host: minor fixes merge MockDigital.cpp and HostWiring.cpp
+aa138b55 Merge branch 'master' into pr-dns-forwarder
+9fcf14f8 Fix VM Address mask (#8440)
+378fcfcd Remove obsolete PWMRANGE in keywords.txt (#8447)
+2c5885e2 Fix info.usedBytes calculation giving weird result (#8445)
 4c07113f lwIP: v2.1.3 + dhcp fixes (#8319)
 fcf35084 Merge branch 'master' into nosizeconf
 a05a71fa import getLocalTime() from esp32/Arduino (#8413)
