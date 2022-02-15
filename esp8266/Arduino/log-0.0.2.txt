@@ -1,11 +1,15 @@
-bbb4406c Merge branch 'PR-6690'
-a753c964 Merge branch 'PR-7237'
-423b5acc Merge branch 'PR-8311'
-88fa1225 Merge branch 'PR-8330'
-69d7a00a Merge branch 'PR-8338'
-942937a4 Merge branch 'PR-8454'
-e858173a Merge branch 'PR-8458'
-ec659e62 Merge branch 'PR-8466'
+cc99fe74 Merge branch 'PR-7237'
+28fb4fd6 Merge branch 'PR-8311'
+42c78442 Merge branch 'PR-8330'
+73bbaa23 Merge branch 'PR-8338'
+839556bc Merge branch 'PR-8454'
+d743d054 Merge branch 'PR-8458'
+6b2d79cb Merge branch 'PR-8466'
+e6fc76ab Fix, calloc now fails on extra-large request. (#8482)
+f60defc3 flash-size agnostic builds (#6690)
+682d08d1 Merge branch 'master' into pr-dns-forwarder
+a78726e4 Merge branch 'master' into pr-umm_init_heap
+3027acaf Fix compilation of ArduinoOTA when no global MDNS is available (#8478)
 160de541 Fix reuse for different URIs in HTTPClient::begin
 535b5334 Changed default to use IROM for umm_init() and option to revert back to UMM_INIT_USE_IRAM.
 e819e7d9 remove extern variable, use weak function
@@ -24,7 +28,6 @@ aa138b55 Merge branch 'master' into pr-dns-forwarder
 378fcfcd Remove obsolete PWMRANGE in keywords.txt (#8447)
 2c5885e2 Fix info.usedBytes calculation giving weird result (#8445)
 4c07113f lwIP: v2.1.3 + dhcp fixes (#8319)
-fcf35084 Merge branch 'master' into nosizeconf
 a05a71fa import getLocalTime() from esp32/Arduino (#8413)
 f26201e6 Sync umm_malloc style with upstream (#8426)
 f401f08a WiFiServer - 'rename' available() to accept() (#8419)
@@ -36,17 +39,11 @@ e5a214e6 Fix umm_blocks() (#8429)
 b5f3d1d6 Remove Python installation from OTA doc (#8417)
 42aa0e6d Wire buffer length improvments. (#8398)
 55ef3e73 GCC 10.3 Bugfix 1 (#8393)
-585a062e Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-0b88291e restore data for fs uploader
 d18cbfb0 mDNS timeout: use real type (#8394)
 26103a58 Update EspSoftwareSerial to bug-fix release 6.15.2 (#8389)
 0af18ab3 Add ArduinoOTAClass::end() (#8379)
 7fc43b6d Correctly link with precompiled libraries (#8392)
-96d9bd65 Merge branch 'master' into nosizeconf
-0b606da2 improvements per mcspr's review
-069e54dc platform.txt: remove superfluous defines boards.txt.py: comment some useless entry generation
 0f231b1c Adding custom buffer_length using I2C_BUFFER_LENGTH (#8390)
-6be7adfa Merge branch 'master' into nosizeconf
 2492057b LittleFS: add overrides for Stream::send (#8386)
 d5444c4a I2C clock phase correction in START condition (#8383)
 076a4edf EspSoftwareSerial 6.15.1: Enforce stop-bit count detection strictly. (#8373)
@@ -77,8 +74,6 @@ b7a2f44b Update mmu_get... and mmu_set...  (#8290)
 64e87f11 WiFi library ArduinoWiFiServer update (#8238)
 612e7ffd Remove temporary buffer in ConfigFile.ino (#8298)
 cda273c1 basichttpsclient example: fingerprint handled by update scripts
-0760210f Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-45d52505 nosizeconf: when enabled, using FLASH_MAP_OTA_FS by default
 211606fe [WString] Reduce build size by implementing flash string calls in .cpp (#8106)
 140d0ffd Add writeToPrint to ESP8266HTTPClient (#8056)
 d3f16b31 Allow manually setting MD5 checksum for HTTP update (#8204)
@@ -90,48 +85,11 @@ f7951e68 Respect linking order of libraries for PlatformIO (#8263)
 5f04fbbf EspSoftwareSerial minor release 6.13.0: Improve support for availability of GPIOS on ESP32 S2 and ESP32C3 (#8260)
 f605f12a Merge branch 'master' into pr-dns-forwarder
 929f0fb6 back to 3.1.0-dev after 3.0.2 (#8246)
-8ebc90f0 Merge branch 'master' into nosizeconf
-60e1bd9c Merge branch 'master' into nosizeconf
-e922fea9 sync with generated files
-19d1f20c Merge branch 'master' into nosizeconf
-25b74b13 regen boards.txt
-aa45adc7 mode -DESP8266 from build.extra_flags to preprocessor flags
-7907ad5d Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-04195618 regen boards.txt
-87914011 Merge branch 'master' into nosizeconf
-33478596 Merge branch 'master' into nosizeconf
-77882335 Merge branch 'master' into nosizeconf
-83f04ff3 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-c9464211 missing change in httpupdateserver library
-665a0d9d Merge branch 'master' into nosizeconf
-f40f8f67 remove superfluous linker line
-ea319e2f merge with master
-843a0968 Merge branch 'master' into nosizeconf
-5898eeb2 Merge branch 'master' into nosizeconf
-49a4d088 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-8adc14aa Merge branch 'master' into nosizeconf
-d55bf93c Merge branch 'master' into nosizeconf
-c01299bf Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-279db40b Merge branch 'master' into nosizeconf
 7178c2e4 Merge branch 'master' into pr-dns-forwarder
 64a81914 Merge branch 'master' into pr-dns-forwarder
-1a66a892 Merge branch 'master' into nosizeconf
-98e07d70 Merge branch 'master' into nosizeconf
-3c807b01 emulation on host: fix 64 bits mode
-8bcc1346 fix emulation on host
-e4534eda Merge branch 'master' into nosizeconf
 ab0472e6 Merge branch 'master' into pr-dns-forwarder
 e09e6e8e Merge branch 'master' into pr-dns-forwarder
-7f3c65b4 Merge branch 'master' into nosizeconf
-dd2d526d Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
 ff5d79a8 Merge branch 'master' into pr-dns-forwarder
-6d73c20d Merge branch 'master' into nosizeconf
-b2890d84 Merge branch 'master' into nosizeconf
-38942f4c rst blackhole
-955a1452 doc format
-3f30bec1 doc format
-c75e812b documentation, auto-256KBFS for 2MB chips
-7c9a8320 Merge branch 'master' into nosizeconf
 22769c5d Merge branch 'master' into pr-dns-forwarder
 696c8653 Merge branch 'master' into pr-dns-forwarder
 1ef128c9 typo
@@ -155,19 +113,3 @@ aa430d02 Fixed insert error
 63f89587 Cleanup for CI
 0e33d6e8 Added example to use DNS forwarder
 407e4812 Added DNS forwarder support.
-9b0164af Merge branch 'master' into nosizeconf
-855dd342 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-b8e48154 merge https://github.com/esp8266/Arduino/pull/6813
-94bb1560 Merge branch 'master' into nosizeconf
-70634251 Merge branch 'nosizeconf' of github.com:d-a-v/Arduino into nosizeconf
-4e05cc84 fix emulation on host when 32bit compiler is not available
-c2747a49 Merge branch 'master' into nosizeconf
-dfb6a005 fix emulation on host
-719f65a0 fix
-da308ad4 fixes
-6104b9de fixes
-28e7d089 16MB no fs was missing
-08e3b519 ESP.getFlashChipSize() returns ESP.getFlashChipRealSize()
-0decdf4e fixes
-41bc6bc2 Merge branch 'master' into nosizeconf
-8834211a flash: mapping definition by sketch at runtime depending on flash chip size and user configuration
