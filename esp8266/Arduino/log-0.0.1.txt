@@ -1,3 +1,6 @@
+e6fc76ab Fix, calloc now fails on extra-large request. (#8482)
+f60defc3 flash-size agnostic builds (#6690)
+3027acaf Fix compilation of ArduinoOTA when no global MDNS is available (#8478)
 9f536e68 WString: avoid writing to const storage (#8463)
 30b0450d Move ESP8266SDFat library to master, not branch (#8460)
 f4ef6fd7 fix Stream.read into buffer ignoring every second byte (#8452) (#8453)
