@@ -1,28 +1,27 @@
-cc99fe74 Merge branch 'PR-7237'
-28fb4fd6 Merge branch 'PR-8311'
-42c78442 Merge branch 'PR-8330'
-73bbaa23 Merge branch 'PR-8338'
-839556bc Merge branch 'PR-8454'
-d743d054 Merge branch 'PR-8458'
-6b2d79cb Merge branch 'PR-8466'
+4312cda0 Merge branch 'PR-7237'
+4aeae765 Merge branch 'PR-8338'
+0a6dc499 Merge branch 'PR-8465'
+0cef14a3 Merge branch 'PR-8466'
+a736a956 Fix minor typo in generated comment (#8503)
+24c41524 Add .git-blame-ignore-revs (#8464)
+19b7a297 Migrate from astyle to clang-format (#8464)
+46190b61 Error even w/warnings disabled for no-return fcns (#8495)
+ead5f94d Correctly using fs:: namespace in SD & SDFS (#8493)
+fd53a080 Add documentation entry about compiler warnings (#8492)
+15e7d35d emulation on host: minor updates (#8454)
+e6c8bebb Merge branch 'master' into pr-umm_malloc-panic-cleanup
+7356cd1e Heap init code improvements and updates (#8458)
+d7c3d7b7 Minor git install documentation fix (#8488)
 e6fc76ab Fix, calloc now fails on extra-large request. (#8482)
 f60defc3 flash-size agnostic builds (#6690)
 682d08d1 Merge branch 'master' into pr-dns-forwarder
-a78726e4 Merge branch 'master' into pr-umm_init_heap
+43bed072 Merge branch 'master' into pr-umm_malloc-panic-cleanup
 3027acaf Fix compilation of ArduinoOTA when no global MDNS is available (#8478)
 160de541 Fix reuse for different URIs in HTTPClient::begin
-535b5334 Changed default to use IROM for umm_init() and option to revert back to UMM_INIT_USE_IRAM.
-e819e7d9 remove extern variable, use weak function
-59414515 Merge branch 'master' into mockminors
 9f536e68 WString: avoid writing to const storage (#8463)
-91657c2d Merge branch 'master' into pr-umm_init_heap
+5796b4cf Heap panic / abort cleanup
 30b0450d Move ESP8266SDFat library to master, not branch (#8460)
-c7f4d368 Heap init code improvements and updates
 f4ef6fd7 fix Stream.read into buffer ignoring every second byte (#8452) (#8453)
-22e7fe0b mock: add missing recently overridden method
-f1547dbf Merge branch 'master' into mockminors
-6cabc329 emulation: share mockverbose between CI-on-host and emulation
-0cda4b37 emulation on host: minor fixes merge MockDigital.cpp and HostWiring.cpp
 aa138b55 Merge branch 'master' into pr-dns-forwarder
 9fcf14f8 Fix VM Address mask (#8440)
 378fcfcd Remove obsolete PWMRANGE in keywords.txt (#8447)
@@ -65,15 +64,12 @@ c312a2ea Implement esp_yield() as a replacement for delay(0)
 201fb752 Restart for PR "Integrated handling for filesystem and gzipped Binaries"
 40b26b76 Movable HTTPClient and fixing WiFiClient copy (#8237)
 b7a2f44b Update mmu_get... and mmu_set...  (#8290)
-8e8cbd21 notice about _updateRecvBuffer aka external available
-724f1ca8 Don't return `true` with WiFiClientSecureBearSSL::connected() when disconnected
 9d024d17 comments on Arduino flush() method (#8318)
 93b7325c Update secrets.h to network and credentials (#8325)
 3f4bcbe4 Improvements to the existing ETag implementation (#8227)
 193043d1 Update ESP8266WiFiSTA.cpp (#8229)
 64e87f11 WiFi library ArduinoWiFiServer update (#8238)
 612e7ffd Remove temporary buffer in ConfigFile.ino (#8298)
-cda273c1 basichttpsclient example: fingerprint handled by update scripts
 211606fe [WString] Reduce build size by implementing flash string calls in .cpp (#8106)
 140d0ffd Add writeToPrint to ESP8266HTTPClient (#8056)
 d3f16b31 Allow manually setting MD5 checksum for HTTP update (#8204)
