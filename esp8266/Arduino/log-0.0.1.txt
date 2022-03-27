@@ -1,3 +1,4 @@
+732db594 Catch a possible null-dereference (#8508)
 a736a956 Fix minor typo in generated comment (#8503)
 24c41524 Add .git-blame-ignore-revs (#8464)
 19b7a297 Migrate from astyle to clang-format (#8464)
