@@ -1,7 +1,28 @@
-4312cda0 Merge branch 'PR-7237'
-4aeae765 Merge branch 'PR-8338'
-0a6dc499 Merge branch 'PR-8465'
-0cef14a3 Merge branch 'PR-8466'
+96994b9b Merge branch 'PR-7237'
+f6d4c7d1 Merge branch 'PR-8338'
+f6e15bcb Merge branch 'PR-8465'
+5eaf41b3 Merge branch 'PR-8466'
+78d12fe9 Merge branch 'PR-8504'
+b75904ee Fix script failure under windows
+84dc987b Added command-line parser
+6b01393a Correct timestamp on CommonHFile.h More improvements to printing Updated docs.
+9d6c1cb3 Improve handling stderr/stdout with "no verbose output" Grouped helpful info to print at the end. Added missing return value.
+2c45e713 Expanded comment and made print help consistent
+7932a242 oops
+e74857f5 Updated text
+fc524428 build.opt heads up to user
+02add35b Create mkbuildoptglobals.py
+732db594 Catch a possible null-dereference (#8508)
+b8e591be text corrections
+1c1236b3 Add cleanup logic and identify 1st run after IDE restart
+1e0bf97d Improved portable path and various Windows paths to preferences.txt
+8a96eeb6 Correct Windows path for preferences.txt Added portable path for preferences.txt Expanded file timestamp granularity Improved error message printing for Arduino IDE 2.0 RC4
+dc3d37cf inital pass at searching for and reading preferences.txt
+f119fead expunged sketchbook global added workaround for aggressive caching
+4fdfd3bb Added context help for build option support
+dc74e031 doubleup '\'
+ec9bdd8d Applied os.path.normpath() liberally to input arguments. Fixes windows file path issue. Improved helpful message for adding embedded build options.
+923c6868 Add support to specify global build defines and options
 a736a956 Fix minor typo in generated comment (#8503)
 24c41524 Add .git-blame-ignore-revs (#8464)
 19b7a297 Migrate from astyle to clang-format (#8464)
