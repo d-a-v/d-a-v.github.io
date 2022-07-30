@@ -1,49 +1,97 @@
-96994b9b Merge branch 'PR-7237'
-f6d4c7d1 Merge branch 'PR-8338'
-f6e15bcb Merge branch 'PR-8465'
-5eaf41b3 Merge branch 'PR-8466'
-78d12fe9 Merge branch 'PR-8504'
-b75904ee Fix script failure under windows
-84dc987b Added command-line parser
-6b01393a Correct timestamp on CommonHFile.h More improvements to printing Updated docs.
-9d6c1cb3 Improve handling stderr/stdout with "no verbose output" Grouped helpful info to print at the end. Added missing return value.
-2c45e713 Expanded comment and made print help consistent
-7932a242 oops
-e74857f5 Updated text
-fc524428 build.opt heads up to user
-02add35b Create mkbuildoptglobals.py
+73cd4ace Merge branch 'PR-8330'
+ee7ac2f7 make WiFi/Ethernet interface compatible with Arduino Ethernet API (#8645)
+646bdfc0 SSL examples: updates (#8643)
+e2a36ed6 MDNS : Also increase # of sends when a send fails (#8641)
+d44c3f42 SPI: writePattern() should not call setDataBits(0) (#8636)
+06f34ed5 Board ID as build flag (#8634)
+e1498298 update example certs (#8642)
+a2982f96 Add missing license headers (#8630)
+00f5f2ac emulation on host: fix incorrect lwIP DNS implementation (#8627)
+a8e3786d Fix hostname management (#8626)
+65d30437 Correctly handle unaligned address in EspClass::flashWrite u8 overload (#8605)
+f65b157a restore available() for real
+0be8943e Merge remote-tracking branch 'origin/master' into secure-connected-means-read-and-write
+c12a6b48 Github Actions updates and setup dependabot (#8624)
+601da8e9 Fix python warnings and update device tests runner (#8623)
+a2c8a633 Use current netif address in NetBIOS response (#8622)
+678a4775 HTTPUpdateServer Allow external POSTS (CORS) (#6824)
+9668f770 Update documentation (#8619)
+7e5520c2 Fix DHCP server pbuf handling and allow to change netif address (#8602)
+0bff52fe Without autoreconnect, forcibly stop station connection manager (#8607)
+f0d8f33d Add FSTools with examples of how to convert between SPIFFS and LITTLEFS. (#7696)
+5656035b document side-effects for wifi-off-at-boot (#8614)
+5d4ae865 Check ESP8285 at runtime (#8604)
+8decdc38 Allow to use temporary strings in configTime (#8606)
+7935bed1 Provide wl_tcp_state as tcp_state alias (#8609)
+8048ea52 Rebuilt HAL w/latest toolchain and fixed configure (#8615)
+7d9abbb6 do not call tcp/udp ::stopAll() when it is not required to do so (#8598)
+d5d6a3b0 Correct "list" formatting (#8610)
+dc6b15e3 Update to toolchain 3.1.0-gcc10.3 (#8613)
+047f14b9 upload.py should not always fail (#8608)
+07789808 Do not show python traceback when esptool fails (#8603)
+8bfc2e9e Fix lwip2 ping (#8596)
+760a6bc6 Update to latest BearSSL (#8600)
+0e0ad1f6 Allow UART1 to be inverted (#8601)
+bdc71e58 Avoid reading past end of non-zero terminated char arrays (#8597)
+9ace4ed8 stop incorrectingly increase number of arguments when setting up arg("plain") (#8599)
+b7c1cfbc DHCP custom option (#8582)
+9e2103f2 Patch eap.o memory leak (#8566)
+5f2af194 lwIP on ethernet: examples (#8395)
+f5ef02d6 Fix double-free when connecting to WPA2-Enterprise networks (#8529)
+502d9469 Initialize SoftAP DhcpServer object on demand (#8546)
+61e76055 Update broken links (#8589)
+8dee8000 Fix DTR offset value (#8586)
+c1144c57 Move _GNU_SOURCE from CCFLAGS to CPPDEFINES (#8579)
+35c2ae1c Improve support for hand-written asm source files (#8583)
+b080c507 emulation on host: avoid closing STDIN (#8577)
+8f71d2c0 emulation on host: allow parallel compilation units (#8574)
+48b60f46 tools/sizes.py: Restore to the prior behavior regarding output destination (#8572)
+fd9af97e tools/sizes.py: Change Unicode box-drawing chars to that of double version (#8573)
+fbba25cf WString: remove operator==(const __FlashStringHelper*) (#8569)
+1bb041bb platform.txt: Override python3 anon pipe encoding to utf-8 for 'tools/sizes.py' (#8570)
+5311c0d2 Fix utf-8 encoding (#8565)
+33afdc27 emulation on host: fix internal udp management (#8561)
+80c05706 Define lwIP's s32/u32 to int (#8560)
+2de142b8 Update RFC 5246 URL (#8564)
+d1d4212e Add support for global build defines and options (#8504)
+2904021c CI: update arduino IDE url (#8563)
+da4a19fd Table output for segment size script (#8551)
+8d5dda02 emulation on host: fix for latest changes in DNSServer (#8559)
+bcb54641 Add DNS forwarder to DNSServer  (#7237)
+1a49a044 WebServer: use String when working with Basic authentication (#8548)
+f149d7b7 Correction to run_CI_locall.sh (#8552)
+02c1a502 ci: make sure to kill gpg related processes (#8549)
+6c8c8cb2 Update to LittleFS 2.5 release (#8543)
+315bc77a EspSoftwareSerial release 6.16.1 (#8541)
+f78c6332 Permit using the Updater _hash function, even if we don't have a signature appended to the image (#8507)
+520233f7 Test: fixing itoa implementation and clean-up of tests and test Makefile (#8531)
+27827c8c Delete operator=(Self&) when copy constructor is deleted (#8535)
+684156d2 ESP8266 Web Server: Fix missing implementation of send stream by reference (#8533)
+584d2f23 WString: unify numeric conversion and fix assignments (#8526)
+d205a633 Update sessions example to show speed difference (#8528)
+04fe1b96 Fix OOM print handling of NULL file pointer (#8527)
+fbedcc1b Heap panic / abort cleanup (#8465)
+a29eaffc Fix commit hash for the clang-format changes (#8525)
+32939c43 Fix reuse for different URIs in HTTPClient::begin (#8466)
+06e3c562 Properly quote paths for GCC warnings files (#8523)
 732db594 Catch a possible null-dereference (#8508)
-b8e591be text corrections
-1c1236b3 Add cleanup logic and identify 1st run after IDE restart
-1e0bf97d Improved portable path and various Windows paths to preferences.txt
-8a96eeb6 Correct Windows path for preferences.txt Added portable path for preferences.txt Expanded file timestamp granularity Improved error message printing for Arduino IDE 2.0 RC4
-dc3d37cf inital pass at searching for and reading preferences.txt
-f119fead expunged sketchbook global added workaround for aggressive caching
-4fdfd3bb Added context help for build option support
-dc74e031 doubleup '\'
-ec9bdd8d Applied os.path.normpath() liberally to input arguments. Fixes windows file path issue. Improved helpful message for adding embedded build options.
-923c6868 Add support to specify global build defines and options
 a736a956 Fix minor typo in generated comment (#8503)
 24c41524 Add .git-blame-ignore-revs (#8464)
 19b7a297 Migrate from astyle to clang-format (#8464)
 46190b61 Error even w/warnings disabled for no-return fcns (#8495)
+3eb7ab13 wip
 ead5f94d Correctly using fs:: namespace in SD & SDFS (#8493)
 fd53a080 Add documentation entry about compiler warnings (#8492)
+934ab807 Merge remote-tracking branch 'origin/master' into secure-connected-means-read-and-write
 15e7d35d emulation on host: minor updates (#8454)
-e6c8bebb Merge branch 'master' into pr-umm_malloc-panic-cleanup
 7356cd1e Heap init code improvements and updates (#8458)
 d7c3d7b7 Minor git install documentation fix (#8488)
 e6fc76ab Fix, calloc now fails on extra-large request. (#8482)
 f60defc3 flash-size agnostic builds (#6690)
-682d08d1 Merge branch 'master' into pr-dns-forwarder
-43bed072 Merge branch 'master' into pr-umm_malloc-panic-cleanup
 3027acaf Fix compilation of ArduinoOTA when no global MDNS is available (#8478)
-160de541 Fix reuse for different URIs in HTTPClient::begin
 9f536e68 WString: avoid writing to const storage (#8463)
-5796b4cf Heap panic / abort cleanup
 30b0450d Move ESP8266SDFat library to master, not branch (#8460)
 f4ef6fd7 fix Stream.read into buffer ignoring every second byte (#8452) (#8453)
-aa138b55 Merge branch 'master' into pr-dns-forwarder
 9fcf14f8 Fix VM Address mask (#8440)
 378fcfcd Remove obsolete PWMRANGE in keywords.txt (#8447)
 2c5885e2 Fix info.usedBytes calculation giving weird result (#8445)
@@ -70,7 +118,6 @@ d5444c4a I2C clock phase correction in START condition (#8383)
 3090bda0 Remove obsolete comments about legacy mDNS impl. (#8377)
 bf2882d8 Update SoftwareSerial to bug-fix release 6.14.2: 0xff at end-of-message wasn't detected until next message (#8370)
 0761f6f6 Add stream string includes (#8367)
-48786139 Aproved handling of path to FS-tool and depending error messages
 986dd420 enable nonosdk-2.2.x version 19-03-13 for Arduino IDE per #7965 (#8363)
 a00b2d70 Update to SdFat 2.1.1 with UTF-8 support (#8355)
 7d971fa4 Remove warnings, errors during host tests in CI (#8358)
@@ -81,10 +128,10 @@ ac4af38c Correctly access WIFI_EVENT_MODE_CHANGE event info (#8343)
 c7c7d051 Remove the HAVE_ESP_SUSPEND define. (#8342)
 aabfd73c Clean up SpeedTest output, avoid div-by-0 (#8340)
 c312a2ea Implement esp_yield() as a replacement for delay(0)
-96606838 Inserted PR-Number inside docu
-201fb752 Restart for PR "Integrated handling for filesystem and gzipped Binaries"
 40b26b76 Movable HTTPClient and fixing WiFiClient copy (#8237)
 b7a2f44b Update mmu_get... and mmu_set...  (#8290)
+8e8cbd21 notice about _updateRecvBuffer aka external available
+724f1ca8 Don't return `true` with WiFiClientSecureBearSSL::connected() when disconnected
 9d024d17 comments on Arduino flush() method (#8318)
 93b7325c Update secrets.h to network and credentials (#8325)
 3f4bcbe4 Improvements to the existing ETag implementation (#8227)
@@ -100,33 +147,4 @@ fb5c4a64 Place deprecated attribute in front of function (#8258)
 f7951e68 Respect linking order of libraries for PlatformIO (#8263)
 9f30f246 EspSoftwareSerial maintenance update 6.13.2 (#8295)
 5f04fbbf EspSoftwareSerial minor release 6.13.0: Improve support for availability of GPIOS on ESP32 S2 and ESP32C3 (#8260)
-f605f12a Merge branch 'master' into pr-dns-forwarder
 929f0fb6 back to 3.1.0-dev after 3.0.2 (#8246)
-7178c2e4 Merge branch 'master' into pr-dns-forwarder
-64a81914 Merge branch 'master' into pr-dns-forwarder
-ab0472e6 Merge branch 'master' into pr-dns-forwarder
-e09e6e8e Merge branch 'master' into pr-dns-forwarder
-ff5d79a8 Merge branch 'master' into pr-dns-forwarder
-22769c5d Merge branch 'master' into pr-dns-forwarder
-696c8653 Merge branch 'master' into pr-dns-forwarder
-1ef128c9 typo
-0613216a Fixed errors.
-33aed64a Merge branch 'master' into pr-dns-forwarder
-f9371b35 Corrected case statement in getPhyModeChar(). Plus 1 for new complier catch!
-5370ba34 Merge branch 'pr-dns-forwarder' of github.com:mhightower83/Arduino into pr-dns-forwarder
-88d1abfd Merge branch 'master' into pr-dns-forwarder
-eb1f508a Merge branch 'master' into pr-dns-forwarder
-1b67f969 Merge branch 'pr-dns-forwarder' of github.com:mhightower83/Arduino into pr-dns-forwarder
-96eacc39 Merge branch 'master' into pr-dns-forwarder
-10f63119 Added logic to handle dividing large PROGMEM strings into smaller chunks to avoid large allocations to buffer the send.
-74535449 Merge branch 'master' into pr-dns-forwarder
-6755a5b0 Reserved space in String page. Re-adjusted size of chuncks. Added print statements for monitoring size of chunks etc. Novice improvents to HTML and variable names.
-16d02f69 Merge branch 'master' into pr-dns-forwarder
-ee977779 Updated HTML to limit/remove screen flash when using show password.
-ad62a7f3 Added missing include for unsupported build environment
-3fc1be26 Merge branch 'master' into pr-dns-forwarder
-a1018090 Add/updated comments. Remove commented code. Reduced size of a chunk of HTML string. Added maxlength to HTML input fields for credentials.
-aa430d02 Fixed insert error
-63f89587 Cleanup for CI
-0e33d6e8 Added example to use DNS forwarder
-407e4812 Added DNS forwarder support.
