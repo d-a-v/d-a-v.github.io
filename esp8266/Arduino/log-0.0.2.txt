@@ -1,4 +1,27 @@
-73cd4ace Merge branch 'PR-8330'
+b3bad4b4 Merge branch 'PR-8330'
+280e7619 Merge branch 'PR-8625'
+b1f1d201 Merge branch 'PR-8653'
+a12abb8a Merge branch 'PR-8658'
+1c1e904e Merge branch 'PR-8661'
+c33c5189 Merge branch 'PR-8670'
+a0c7a856 Fix Updater non-zero _verify->length() once again (#8545)
+ca79ab23 Nice stack smashing postmortem message
+ac0a72a0 Finalize fix for PUYA flash and preSDK use of Cache_Read_Enable.
+1cf6e480 typo
+a66db44f Change umm_init to default to IRAM
+79eea276 non-hyphenated arg for elf, toolchain path to bin/
+894c80f7 ...and dont ignore sp
+b61155ad print ctx line
+305f910d capture
+c47d7dc4 last alloc explain, line breaks
+701b0606 cut here
+1c7ab253 +x
+79c3adc4 stack decoder
+4161803f Cleanup comment
+14648845 Enable SPI_CS_SETUP for early ICACHE use
+313b3c07 Add debug support for build.opt (#8637)
+ad271fec stringify error
+0420f455 Updater lifetime callbacks
 ee7ac2f7 make WiFi/Ethernet interface compatible with Arduino Ethernet API (#8645)
 646bdfc0 SSL examples: updates (#8643)
 e2a36ed6 MDNS : Also increase # of sends when a send fails (#8641)
@@ -9,9 +32,17 @@ a2982f96 Add missing license headers (#8630)
 00f5f2ac emulation on host: fix incorrect lwIP DNS implementation (#8627)
 a8e3786d Fix hostname management (#8626)
 65d30437 Correctly handle unaligned address in EspClass::flashWrite u8 overload (#8605)
+151c63d9 syntax
+e7f8699a persist
+30acb52f no min check
 f65b157a restore available() for real
 0be8943e Merge remote-tracking branch 'origin/master' into secure-connected-means-read-and-write
+d06e4fca cleanup, types
 c12a6b48 Github Actions updates and setup dependabot (#8624)
+89fc3e84 restore static_assert
+0a203d9e rotate
+80e9503b detach when not repeating
+9100bac5 Long delays in Ticker
 601da8e9 Fix python warnings and update device tests runner (#8623)
 a2c8a633 Use current netif address in NetBIOS response (#8622)
 678a4775 HTTPUpdateServer Allow external POSTS (CORS) (#6824)
