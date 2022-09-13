@@ -1,3 +1,5 @@
+a0c7a856 Fix Updater non-zero _verify->length() once again (#8545)
+313b3c07 Add debug support for build.opt (#8637)
 ee7ac2f7 make WiFi/Ethernet interface compatible with Arduino Ethernet API (#8645)
 646bdfc0 SSL examples: updates (#8643)
 e2a36ed6 MDNS : Also increase # of sends when a send fails (#8641)
