@@ -1,19 +1,31 @@
-29ef3e6c Merge branch 'PR-8330'
-e8c5265d Merge branch 'PR-8625'
-8e8955ae Merge branch 'PR-8653'
-1719dfc4 Merge branch 'PR-8658'
-509b0d9c Merge branch 'PR-8661'
-9c4d5805 Merge branch 'PR-8670'
-da654689 fix style
-28e582fe Merge branch 'master' into lwIPStateChangeFix
-430a602d merge lwip2 fix for interface state change and adapt mDNS
-9f2cd7bc Finalize fix for PUYA flash and preSDK use of Cache_Read_Enable.
-445b899a typo
-f04dedf4 Change umm_init to default to IRAM
-f19c3db7 Cleanup comment
-8874ea8a Enable SPI_CS_SETUP for early ICACHE use
+57465b1f Merge branch 'PR-8330'
+55acd043 Merge branch 'PR-8661'
+da48a52d Fix File::readString to work with binary data (#8742)
+3c625310 Fix CPPDEFINES loop (#8744)
+93537f94 Added NONOS SDK 3.0.0 ~ 3.0.5 (again) (#8736)
+ed6b9571 Skip .git{,hub} files when packaging (#8743)
+9701d3af Add setClientTimeout() to ESP8266HTTPUpdate (#8740)
+3c6db4ed WiFiClient::abort() (#8738)
+821ccde9 EspSoftwareSerial 6.17.0 (#8739)
+fe451a81 Fix typo in section list (#8726)
+80bf7166 Only check the actual used lenght of the hash. (#8709)
+3a2fe9ff Correction on Heap API available from ISR (#8708)
+3d9aeeff Fix pre-SDK Cache_Read_Enable for PUYA flash (#8658)
+e1081e30 Update README.md (#8706)
+fff12e30 Updater lifetime callbacks (#8653)
+27c05917 Longer delays for Ticker and some internal updates (#8625)
+04494f07 Generic netif status callback and mDNS (#8705)
+78444a50 Add Wemos ESP-WROOM-02 board (#8664)
+d36b21db Remove paths / paths-ignore condition from CI (#8704)
+0aab6ece Rework CI workflows (#8688)
+2360d1cf Consistent netif->status_callback (#8676)
+bde8ef7a Nice stack smashing postmortem message (#8670)
+5f94a60d Changed / added virtual functions for returning connection information (#8693)
+d3eddeb5 Ensure xPortGetFreeHeapSize reports DRAM (#8680)
+7b2c627e Update WiFi scan docs (#8685)
+5c22dbc1 Fix Sphinx build warnings (#8686)
+3df56936 Expand access to SDK's struct bss_info (#8683)
 a0c7a856 Fix Updater non-zero _verify->length() once again (#8545)
-ca79ab23 Nice stack smashing postmortem message
 79eea276 non-hyphenated arg for elf, toolchain path to bin/
 894c80f7 ...and dont ignore sp
 b61155ad print ctx line
@@ -23,8 +35,6 @@ c47d7dc4 last alloc explain, line breaks
 1c7ab253 +x
 79c3adc4 stack decoder
 313b3c07 Add debug support for build.opt (#8637)
-ad271fec stringify error
-0420f455 Updater lifetime callbacks
 ee7ac2f7 make WiFi/Ethernet interface compatible with Arduino Ethernet API (#8645)
 646bdfc0 SSL examples: updates (#8643)
 e2a36ed6 MDNS : Also increase # of sends when a send fails (#8641)
@@ -35,17 +45,9 @@ a2982f96 Add missing license headers (#8630)
 00f5f2ac emulation on host: fix incorrect lwIP DNS implementation (#8627)
 a8e3786d Fix hostname management (#8626)
 65d30437 Correctly handle unaligned address in EspClass::flashWrite u8 overload (#8605)
-151c63d9 syntax
-e7f8699a persist
-30acb52f no min check
 f65b157a restore available() for real
 0be8943e Merge remote-tracking branch 'origin/master' into secure-connected-means-read-and-write
-d06e4fca cleanup, types
 c12a6b48 Github Actions updates and setup dependabot (#8624)
-89fc3e84 restore static_assert
-0a203d9e rotate
-80e9503b detach when not repeating
-9100bac5 Long delays in Ticker
 601da8e9 Fix python warnings and update device tests runner (#8623)
 a2c8a633 Use current netif address in NetBIOS response (#8622)
 678a4775 HTTPUpdateServer Allow external POSTS (CORS) (#6824)
