@@ -1,13 +1,44 @@
-57465b1f Merge branch 'PR-8330'
-55acd043 Merge branch 'PR-8661'
+d98c1b54 Merge branch 'PR-6977'
+2611b396 Merge branch 'PR-8720'
+6f3bf493 Merge branch 'PR-8737'
+19da6751 Merge branch 'master' into pr-heap-refactor3
+4a639ab0 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and (#8765)
+c2590a7f Merge branch 'master' into pr-heap-refactor3
+59b5bbab Resolve flash address issues with SDK v3.0.0 (#8755)
+45f1c3b9 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and pvPortMalloc(,,,true) case. Improved comments.
+3dd08bee requested changes
+ea9befa6 Finish merge cleanuo
+8b3bb1f7 Merge branch 'master' into pr-heap-refactor3
+b565b868 Optimize disconnect method in WiFiSTA class (#8760)
+eda64f69 Stack decoder script (#8661)
+9dce0764 Don't return `true` with `WiFiClientSecureBearSSL::connected()` when really disconnected (#8330)
+d3908b0a Merge branch 'master' into master
+4a0b66b0 Heap addendum to handle changes in NON-OS SDK 3.0.x (#8746)
+d3c8d272 Add eraseap option to WiFi disconnect method. (#8758)
+b124b17c Remove FREE_MORE_DRAM
+64077df9 Keep Servo in the same position after re-attaching (#8753)
+9cd560b4 Add httpupdate lib import in ota example (#8667)
+8e79833d add DEBUG payload output (#8745)
+a4a8782c Correct class name in readme.rst (#8751)
+6aa22aca EspSoftwareSerial bug fix 6.17.1 (#8754)
+334ce2ed Added feat and lwip6
 da48a52d Fix File::readString to work with binary data (#8742)
 3c625310 Fix CPPDEFINES loop (#8744)
 93537f94 Added NONOS SDK 3.0.0 ~ 3.0.5 (again) (#8736)
 ed6b9571 Skip .git{,hub} files when packaging (#8743)
 9701d3af Add setClientTimeout() to ESP8266HTTPUpdate (#8740)
 3c6db4ed WiFiClient::abort() (#8738)
+6dfd46a5 Merge branch 'master' into pr-heap-refactor3
+11022562 improve comments
 821ccde9 EspSoftwareSerial 6.17.0 (#8739)
+b7ec1ecf Revert "Move FREE_MORE_DRAM"
+4a3856f8 Move FREE_MORE_DRAM
+e8df5a09 Fixed
+66eeea48 Move C++ constructor and destructor tables and .bss to .irom0 (flash)
 fe451a81 Fix typo in section list (#8726)
+a716193b missed items
+60881470 Improve caller address reporting to indicate address in sketch or library.
+4ec3c81f Lite refactoring and expanded comments
 80bf7166 Only check the actual used lenght of the hash. (#8709)
 3a2fe9ff Correction on Heap API available from ISR (#8708)
 3d9aeeff Fix pre-SDK Cache_Read_Enable for PUYA flash (#8658)
@@ -26,14 +57,6 @@ d3eddeb5 Ensure xPortGetFreeHeapSize reports DRAM (#8680)
 5c22dbc1 Fix Sphinx build warnings (#8686)
 3df56936 Expand access to SDK's struct bss_info (#8683)
 a0c7a856 Fix Updater non-zero _verify->length() once again (#8545)
-79eea276 non-hyphenated arg for elf, toolchain path to bin/
-894c80f7 ...and dont ignore sp
-b61155ad print ctx line
-305f910d capture
-c47d7dc4 last alloc explain, line breaks
-701b0606 cut here
-1c7ab253 +x
-79c3adc4 stack decoder
 313b3c07 Add debug support for build.opt (#8637)
 ee7ac2f7 make WiFi/Ethernet interface compatible with Arduino Ethernet API (#8645)
 646bdfc0 SSL examples: updates (#8643)
@@ -45,8 +68,6 @@ a2982f96 Add missing license headers (#8630)
 00f5f2ac emulation on host: fix incorrect lwIP DNS implementation (#8627)
 a8e3786d Fix hostname management (#8626)
 65d30437 Correctly handle unaligned address in EspClass::flashWrite u8 overload (#8605)
-f65b157a restore available() for real
-0be8943e Merge remote-tracking branch 'origin/master' into secure-connected-means-read-and-write
 c12a6b48 Github Actions updates and setup dependabot (#8624)
 601da8e9 Fix python warnings and update device tests runner (#8623)
 a2c8a633 Use current netif address in NetBIOS response (#8622)
@@ -68,8 +89,12 @@ dc6b15e3 Update to toolchain 3.1.0-gcc10.3 (#8613)
 8bfc2e9e Fix lwip2 ping (#8596)
 760a6bc6 Update to latest BearSSL (#8600)
 0e0ad1f6 Allow UART1 to be inverted (#8601)
+136b9423 Merge branch 'master' into master
 bdc71e58 Avoid reading past end of non-zero terminated char arrays (#8597)
+53669c09 fix merge by hand #2
 9ace4ed8 stop incorrectingly increase number of arguments when setting up arg("plain") (#8599)
+89a5f5e7 fix merge by hand
+19bf46f8 Merge branch 'master' into master
 b7c1cfbc DHCP custom option (#8582)
 9e2103f2 Patch eap.o memory leak (#8566)
 5f2af194 lwIP on ethernet: examples (#8395)
@@ -115,10 +140,8 @@ a736a956 Fix minor typo in generated comment (#8503)
 24c41524 Add .git-blame-ignore-revs (#8464)
 19b7a297 Migrate from astyle to clang-format (#8464)
 46190b61 Error even w/warnings disabled for no-return fcns (#8495)
-3eb7ab13 wip
 ead5f94d Correctly using fs:: namespace in SD & SDFS (#8493)
 fd53a080 Add documentation entry about compiler warnings (#8492)
-934ab807 Merge remote-tracking branch 'origin/master' into secure-connected-means-read-and-write
 15e7d35d emulation on host: minor updates (#8454)
 7356cd1e Heap init code improvements and updates (#8458)
 d7c3d7b7 Minor git install documentation fix (#8488)
@@ -166,8 +189,6 @@ aabfd73c Clean up SpeedTest output, avoid div-by-0 (#8340)
 c312a2ea Implement esp_yield() as a replacement for delay(0)
 40b26b76 Movable HTTPClient and fixing WiFiClient copy (#8237)
 b7a2f44b Update mmu_get... and mmu_set...  (#8290)
-8e8cbd21 notice about _updateRecvBuffer aka external available
-724f1ca8 Don't return `true` with WiFiClientSecureBearSSL::connected() when disconnected
 9d024d17 comments on Arduino flush() method (#8318)
 93b7325c Update secrets.h to network and credentials (#8325)
 3f4bcbe4 Improvements to the existing ETag implementation (#8227)
@@ -184,3 +205,6 @@ f7951e68 Respect linking order of libraries for PlatformIO (#8263)
 9f30f246 EspSoftwareSerial maintenance update 6.13.2 (#8295)
 5f04fbbf EspSoftwareSerial minor release 6.13.0: Improve support for availability of GPIOS on ESP32 S2 and ESP32C3 (#8260)
 929f0fb6 back to 3.1.0-dev after 3.0.2 (#8246)
+a2d13566 Merge branch 'master' into master
+eec286db HTTPClient: implement Stream class
+69a869c8 HTTPClient: add readChunkHeader() and readChunkTrailer() methods
