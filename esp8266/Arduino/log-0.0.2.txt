@@ -1,6 +1,7 @@
-d98c1b54 Merge branch 'PR-6977'
-2611b396 Merge branch 'PR-8720'
-6f3bf493 Merge branch 'PR-8737'
+34e7fa92 Merge branch 'PR-6977'
+61579bf5 Merge branch 'PR-8720'
+1830b96c Merge branch 'PR-8737'
+edfde6ba lwip2: cleanup logging and use newlib printf (#8769)
 19da6751 Merge branch 'master' into pr-heap-refactor3
 4a639ab0 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and (#8765)
 c2590a7f Merge branch 'master' into pr-heap-refactor3
