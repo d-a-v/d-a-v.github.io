@@ -1,3 +1,4 @@
+edfde6ba lwip2: cleanup logging and use newlib printf (#8769)
 4a639ab0 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and (#8765)
 59b5bbab Resolve flash address issues with SDK v3.0.0 (#8755)
 b565b868 Optimize disconnect method in WiFiSTA class (#8760)
