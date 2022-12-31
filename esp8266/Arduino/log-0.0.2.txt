@@ -1,6 +1,19 @@
-34e7fa92 Merge branch 'PR-6977'
-61579bf5 Merge branch 'PR-8720'
-1830b96c Merge branch 'PR-8737'
+b81c72ee Merge branch 'PR-6977'
+b3501c24 Merge branch 'PR-8720'
+4806d5cb Merge branch 'PR-8737'
+87079f65 Merge branch 'PR-8770'
+3f1d608a EspSoftwareSerial release 7.0.0 with fix for compiler error (constexpr instance member function) and Rx IRQ callback (#8781)
+9423c8e1 Merge branch 'master' into pr-heap-refactor3
+55bae9b0 espressif
+c5bef080 Merge remote-tracking branch 'origin/master' into 3v0-remove
+137d421f Fix flashinit panic not printing (#8762)
+a4fda21e dont silently break stuff
+74f416b7 fixup lists
+df34aa43 fix pio
+c6dccd00 list versions in sphinx
+aa08f5ff note about v3 wifi methods
+b7d12d58 also remove files
+2f426fd1 remove 3v0...3.0.4 nonos selection
 edfde6ba lwip2: cleanup logging and use newlib printf (#8769)
 19da6751 Merge branch 'master' into pr-heap-refactor3
 4a639ab0 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and (#8765)
