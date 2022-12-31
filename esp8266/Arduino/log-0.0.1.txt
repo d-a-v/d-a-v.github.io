@@ -1,3 +1,5 @@
+3f1d608a EspSoftwareSerial release 7.0.0 with fix for compiler error (constexpr instance member function) and Rx IRQ callback (#8781)
+137d421f Fix flashinit panic not printing (#8762)
 edfde6ba lwip2: cleanup logging and use newlib printf (#8769)
 4a639ab0 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and (#8765)
 59b5bbab Resolve flash address issues with SDK v3.0.0 (#8755)
