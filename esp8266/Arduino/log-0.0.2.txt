@@ -1,17 +1,12 @@
-1dba5880 Merge branch 'PR-6977'
-e14380e9 Merge branch 'PR-8720'
-38bdd21d Merge branch 'PR-8737'
+90d93b3f Merge branch 'PR-6977'
+0307e344 Merge branch 'PR-8720'
+66ecc339 Move C++ constructor and destructor tables from .bss to .irom0 (flash) (#8737)
 f06710eb hostByName timeout fixes (#8787)
 3e357f32 Allow passing beacon interval to SoftAP config  (#8695)
 3f394616 Passing custom HTTPClient to HTTPUpdate (#8773)
 7cfb551f PHY status API for ethernet drivers (#8784)
 c9f90a3e Update to LittleFS 2.5.1 (very minor update) (#8786)
-8f6936c0 Merge remote-tracking branch 'origin/master' into pr8737
-68ee1a18 Revert "unused"
-0bf30801 maybe later
-65306ee6 unused
 5a3da9a7 Fix Stream::parseFloat() (#8785)
-b588f33d Merge branch 'master' into ld-script
 204d2c93 NONOS SDK clean-up (#8770)
 3f1d608a EspSoftwareSerial release 7.0.0 with fix for compiler error (constexpr instance member function) and Rx IRQ callback (#8781)
 9423c8e1 Merge branch 'master' into pr-heap-refactor3
@@ -31,13 +26,11 @@ eda64f69 Stack decoder script (#8661)
 d3908b0a Merge branch 'master' into master
 4a0b66b0 Heap addendum to handle changes in NON-OS SDK 3.0.x (#8746)
 d3c8d272 Add eraseap option to WiFi disconnect method. (#8758)
-b124b17c Remove FREE_MORE_DRAM
 64077df9 Keep Servo in the same position after re-attaching (#8753)
 9cd560b4 Add httpupdate lib import in ota example (#8667)
 8e79833d add DEBUG payload output (#8745)
 a4a8782c Correct class name in readme.rst (#8751)
 6aa22aca EspSoftwareSerial bug fix 6.17.1 (#8754)
-334ce2ed Added feat and lwip6
 da48a52d Fix File::readString to work with binary data (#8742)
 3c625310 Fix CPPDEFINES loop (#8744)
 93537f94 Added NONOS SDK 3.0.0 ~ 3.0.5 (again) (#8736)
@@ -47,10 +40,6 @@ ed6b9571 Skip .git{,hub} files when packaging (#8743)
 6dfd46a5 Merge branch 'master' into pr-heap-refactor3
 11022562 improve comments
 821ccde9 EspSoftwareSerial 6.17.0 (#8739)
-b7ec1ecf Revert "Move FREE_MORE_DRAM"
-4a3856f8 Move FREE_MORE_DRAM
-e8df5a09 Fixed
-66eeea48 Move C++ constructor and destructor tables and .bss to .irom0 (flash)
 fe451a81 Fix typo in section list (#8726)
 a716193b missed items
 60881470 Improve caller address reporting to indicate address in sketch or library.
