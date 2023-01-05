@@ -1,19 +1,21 @@
-b81c72ee Merge branch 'PR-6977'
-b3501c24 Merge branch 'PR-8720'
-4806d5cb Merge branch 'PR-8737'
-87079f65 Merge branch 'PR-8770'
+1dba5880 Merge branch 'PR-6977'
+e14380e9 Merge branch 'PR-8720'
+38bdd21d Merge branch 'PR-8737'
+f06710eb hostByName timeout fixes (#8787)
+3e357f32 Allow passing beacon interval to SoftAP config  (#8695)
+3f394616 Passing custom HTTPClient to HTTPUpdate (#8773)
+7cfb551f PHY status API for ethernet drivers (#8784)
+c9f90a3e Update to LittleFS 2.5.1 (very minor update) (#8786)
+8f6936c0 Merge remote-tracking branch 'origin/master' into pr8737
+68ee1a18 Revert "unused"
+0bf30801 maybe later
+65306ee6 unused
+5a3da9a7 Fix Stream::parseFloat() (#8785)
+b588f33d Merge branch 'master' into ld-script
+204d2c93 NONOS SDK clean-up (#8770)
 3f1d608a EspSoftwareSerial release 7.0.0 with fix for compiler error (constexpr instance member function) and Rx IRQ callback (#8781)
 9423c8e1 Merge branch 'master' into pr-heap-refactor3
-55bae9b0 espressif
-c5bef080 Merge remote-tracking branch 'origin/master' into 3v0-remove
 137d421f Fix flashinit panic not printing (#8762)
-a4fda21e dont silently break stuff
-74f416b7 fixup lists
-df34aa43 fix pio
-c6dccd00 list versions in sphinx
-aa08f5ff note about v3 wifi methods
-b7d12d58 also remove files
-2f426fd1 remove 3v0...3.0.4 nonos selection
 edfde6ba lwip2: cleanup logging and use newlib printf (#8769)
 19da6751 Merge branch 'master' into pr-heap-refactor3
 4a639ab0 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and (#8765)
