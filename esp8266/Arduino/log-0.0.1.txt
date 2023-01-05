@@ -1,3 +1,4 @@
+66ecc339 Move C++ constructor and destructor tables from .bss to .irom0 (flash) (#8737)
 f06710eb hostByName timeout fixes (#8787)
 3e357f32 Allow passing beacon interval to SoftAP config  (#8695)
 3f394616 Passing custom HTTPClient to HTTPUpdate (#8773)
