@@ -1,19 +1,17 @@
-98de0907 Merge branch 'PR-6977'
-2a35af49 Merge branch 'PR-8720'
-341c3d1e Merge remote-tracking branch 'origin/master' into autosplitdelay
-a1e43b81 fix comments
-0c8f7055 simplify api
-508214ac debug
-0effb78c wip
-840ef782 Fix C builds (#8795)
-bde2c4c5 wip
-7e2da8b2 Typo in EAP patch (#8797)
-df59774e Pointer<->Int casts are not constexpr (#8796)
-c8dcdede Remove 400b stack allocation from AdvWeb example (#8793)
-a76852a9 Fixup and hedgedoc (#8792)
-a79b8f21 fix printf format in updater debug messages (#8791)
-a2761957 Document updating the GitHub deployment keys (#8790)
-3212f15c back to dev (#8789)
+14e785f4 Merge branch 'PR-6977'
+49578907 Merge branch 'PR-8720'
+f3d31441 Merge branch 'PR-8814'
+8ed28808 fixup! Turns out this is Arduino API
+853dcb41 Turns out this is Arduino API
+fdee4fd1 Merge branch 'master' into fix-mkbuildoptglobals-safemode
+3134535d IPAddress u8 vs u32 fixes
+41c2be20 Fix mkbuildoptglobals script not finding preferences.txt (#8812)
+998c071f Using a file descriptor argument with os.utime on Windows OS is unsupported. Updated usage.
+39b41379 Log all exceptions in upload.py (#8813)
+956dd59f New handling of missing perferences.txt
+c7fb78a3 Correct the correction
+3a8ea868 Fix for Windows 11 preferences.txt not found - maybe
+6af463ba Back to 3.2.0-dev (#8807)
 9423c8e1 Merge branch 'master' into pr-heap-refactor3
 19da6751 Merge branch 'master' into pr-heap-refactor3
 c2590a7f Merge branch 'master' into pr-heap-refactor3
