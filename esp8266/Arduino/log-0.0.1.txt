@@ -1,3 +1,7 @@
+a9675ca8 emulation on host: fix UDP seek&peek (#8827)
+cf240242 New handling of missing perferences.txt in mkbuildoptglobals (#8814)
+bed2fa33 HTTPClient example: Fix typo (#8819)
+56107fb1 Properly handle u8 pointers when assigning and comparing (#8818)
 41c2be20 Fix mkbuildoptglobals script not finding preferences.txt (#8812)
 39b41379 Log all exceptions in upload.py (#8813)
 6af463ba Back to 3.2.0-dev (#8807)
