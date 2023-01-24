@@ -1,16 +1,19 @@
-14e785f4 Merge branch 'PR-6977'
-49578907 Merge branch 'PR-8720'
-f3d31441 Merge branch 'PR-8814'
-8ed28808 fixup! Turns out this is Arduino API
-853dcb41 Turns out this is Arduino API
-fdee4fd1 Merge branch 'master' into fix-mkbuildoptglobals-safemode
-3134535d IPAddress u8 vs u32 fixes
+dc82f24c Merge branch 'PR-6977'
+4fbcb124 Merge branch 'PR-8720'
+11cd6460 Merge branch 'PR-8820'
+0c10abd2 Merge branch 'PR-8821'
+a9675ca8 emulation on host: fix UDP seek&peek (#8827)
+d1393a13 Merge branch 'master' into verboseString
+cf240242 New handling of missing perferences.txt in mkbuildoptglobals (#8814)
+1261b28c words
+d8295407 Merge branch 'master' into pr-heap-refactor3
+bed2fa33 HTTPClient example: Fix typo (#8819)
+dc7cb5ce remove comment
+349729e3 String: informative messages on issues
+56107fb1 Properly handle u8 pointers when assigning and comparing (#8818)
+1623b6a7 Ticker callback should be allowed to be destroyed
 41c2be20 Fix mkbuildoptglobals script not finding preferences.txt (#8812)
-998c071f Using a file descriptor argument with os.utime on Windows OS is unsupported. Updated usage.
 39b41379 Log all exceptions in upload.py (#8813)
-956dd59f New handling of missing perferences.txt
-c7fb78a3 Correct the correction
-3a8ea868 Fix for Windows 11 preferences.txt not found - maybe
 6af463ba Back to 3.2.0-dev (#8807)
 9423c8e1 Merge branch 'master' into pr-heap-refactor3
 19da6751 Merge branch 'master' into pr-heap-refactor3
