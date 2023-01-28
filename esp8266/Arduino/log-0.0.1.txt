@@ -1,3 +1,6 @@
+e25f9e95 Safeguard for Ticker internal storage that may be changed during callback execution (#8820)
+9c4a1239 String: informative messages on issues (#8821)
+79dde219 Don't use -g++ or -gcc suffixes in command line arguments (#8829)
 a9675ca8 emulation on host: fix UDP seek&peek (#8827)
 cf240242 New handling of missing perferences.txt in mkbuildoptglobals (#8814)
 bed2fa33 HTTPClient example: Fix typo (#8819)
