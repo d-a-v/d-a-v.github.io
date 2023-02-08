@@ -1,11 +1,43 @@
-2223718e Merge branch 'PR-6977'
-4cc30eb9 Merge branch 'PR-8720'
-52be2c39 Merge branch 'PR-8833'
-4d5c2d84 Force IRAM cache for important SoftwareSerial bits
-b253771d SdFat <-> FS HAL mode fixes & test
+9d88f52a Merge branch 'PR-6977'
+9085c248 Merge branch 'PR-8311'
+94f6e2b0 Merge branch 'PR-8720'
+dabb8117 Merge branch 'PR-8828'
+e85bf8a4 Merge branch 'PR-8837'
+8787e65b Merge branch 'PR-8845'
+bc00e113 update to new cert name
+05042363 update cert
+82518a20 Merge branch 'master' into cert4basichttpsclient
+0443797b Add reporting address interrupted by Soft WDT
+ab7a02a6 Added ':orphan:' mark to a06-global-build-options.rst
+e51f1347 Merge branch 'master' into pr-doc-debug
+d7cd4bef make http-server less verbose in debug mode (#8850)
+9a3d55c7 Fix String build warning with DEBUG_ESP_PORT but without DEBUG_ESP_CORE (#8849)
+94e165d7 tweak text
+aab4d56f update text and undo changes to platformio-build.py
+badb407b Update SdFat fork (#8844)
+1a4cebad wrappers allowing to compile and run esp32-arduino basic examples (AdvancedWebServer  FSBrowser  HelloServer  SimpleAuthentification)
+8e49b333 Add fallback value for build.debug_optim to platform.txt
+9a6ea125 Improve organization of optimization content. Use "Debug Optimization" for menu name. The menu item defines the initial optimization. platform.txt - optimization parameter can be overridden by build.opt.
+2ee9eb5f Merge branch 'master' into pr-doc-debug
+9157394f Update boards.txt.py and docs - WIP
+326be35c Postmortem improvements (#8839)
+1beca6f4 Fix LowPowerDemo.ino (#8841)
+1a92df10 Proposed "Debug port" menu change Preserves a pathway for `build.opt` override.
+6dfebec8 SdFat -> FS HAL mode fixes & test (#8833)
+2e062aee Fixed example
+c4533827 Merge branch 'pr-doc-debug' of github.com:mhightower83/Arduino into pr-doc-debug
+d135c647 Merge branch 'master' into pr-doc-debug
+33bbf8bb Fixed code formatting
+679038d9 Update doc
+d7da591e Revert ESPSoftwareSerial from v7 to v6
+f91d547a Added d-a-v's code. And updated description and debug macro.
+e67c95c9 Update documentation
 e25f9e95 Safeguard for Ticker internal storage that may be changed during callback execution (#8820)
 9c4a1239 String: informative messages on issues (#8821)
 79dde219 Don't use -g++ or -gcc suffixes in command line arguments (#8829)
+d061a3c0 improve wording
+1a03a412 style fixed confused example
+f5d7d4a5 A new approach for erasing WiFi Settings
 a9675ca8 emulation on host: fix UDP seek&peek (#8827)
 cf240242 New handling of missing perferences.txt in mkbuildoptglobals (#8814)
 d8295407 Merge branch 'master' into pr-heap-refactor3
@@ -31,6 +63,7 @@ a716193b missed items
 53669c09 fix merge by hand #2
 89a5f5e7 fix merge by hand
 19bf46f8 Merge branch 'master' into master
+cda273c1 basichttpsclient example: fingerprint handled by update scripts
 a2d13566 Merge branch 'master' into master
 eec286db HTTPClient: implement Stream class
 69a869c8 HTTPClient: add readChunkHeader() and readChunkTrailer() methods
