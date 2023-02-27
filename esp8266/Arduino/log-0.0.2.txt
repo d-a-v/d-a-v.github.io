@@ -1,9 +1,14 @@
-97cebabb Merge branch 'PR-6977'
-6cd98908 Merge branch 'PR-8311'
-86ec7c47 Merge branch 'PR-8720'
-57bfbc31 Merge branch 'PR-8828'
-acd38cb2 Merge branch 'PR-8837'
-37a84362 Merge branch 'PR-8845'
+8f514aa8 Merge branch 'PR-6977'
+1ef2173a Merge branch 'PR-8311'
+455ab18c Merge branch 'PR-8720'
+e93dcad0 Merge branch 'PR-8837'
+1f307cdb Merge branch 'PR-8845'
+e8fa6ce6 Merge branch 'PR-8851'
+073ff6e9 Merge branch 'master' into pr-doc-debug
+a2787346 Update compiler toolchain to 3.2.0
+be02af05 Remove stale patch for SDK v1.1 and earlier (#8858)
+71a51b11 Resolve Windows path problems (#8860)
+58ad3847 Update doc. Added link in page index to 'Improving Exception Decoder Results'
 97376389 style
 bc00e113 update to new cert name
 05042363 update cert
@@ -36,9 +41,6 @@ e67c95c9 Update documentation
 e25f9e95 Safeguard for Ticker internal storage that may be changed during callback execution (#8820)
 9c4a1239 String: informative messages on issues (#8821)
 79dde219 Don't use -g++ or -gcc suffixes in command line arguments (#8829)
-d061a3c0 improve wording
-1a03a412 style fixed confused example
-f5d7d4a5 A new approach for erasing WiFi Settings
 a9675ca8 emulation on host: fix UDP seek&peek (#8827)
 cf240242 New handling of missing perferences.txt in mkbuildoptglobals (#8814)
 d8295407 Merge branch 'master' into pr-heap-refactor3
