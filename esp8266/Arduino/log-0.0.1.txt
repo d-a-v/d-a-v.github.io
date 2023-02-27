@@ -1,3 +1,5 @@
+be02af05 Remove stale patch for SDK v1.1 and earlier (#8858)
+71a51b11 Resolve Windows path problems (#8860)
 d7cd4bef make http-server less verbose in debug mode (#8850)
 9a3d55c7 Fix String build warning with DEBUG_ESP_PORT but without DEBUG_ESP_CORE (#8849)
 badb407b Update SdFat fork (#8844)
