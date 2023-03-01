@@ -1,9 +1,18 @@
-8f514aa8 Merge branch 'PR-6977'
-1ef2173a Merge branch 'PR-8311'
-455ab18c Merge branch 'PR-8720'
-e93dcad0 Merge branch 'PR-8837'
-1f307cdb Merge branch 'PR-8845'
-e8fa6ce6 Merge branch 'PR-8851'
+1b8cea5f Merge branch 'PR-8311'
+136b2828 Merge branch 'PR-8720'
+ef64b892 Merge branch 'PR-8837'
+eb4eda90 Merge branch 'PR-8845'
+7c5dc809 Merge branch 'PR-8851'
+c57c92e7 Merge branch 'PR-8868'
+19579ded Merge branch 'PR-8869'
+d624de24 Merge branch 'PR-8873'
+42db2979 Merge branch 'PR-8874'
+c8c30c7e move template function into header file
+53947040 deprecate and update Stream::send(Print -> Stream) in order to benefit from and use output's timeout value
+16bb9de8 make sendHeader generic
+755021da avoid large reallocations in webserver header response
+6c7c15c1 EspSoftwareSerial example: higher bitrates due to forcing half-duplex
+f9fa7213 Upcoming EspSoftwareSerial 7.0.1
 073ff6e9 Merge branch 'master' into pr-doc-debug
 a2787346 Update compiler toolchain to 3.2.0
 be02af05 Remove stale patch for SDK v1.1 and earlier (#8858)
@@ -56,17 +65,9 @@ c2590a7f Merge branch 'master' into pr-heap-refactor3
 3dd08bee requested changes
 ea9befa6 Finish merge cleanuo
 8b3bb1f7 Merge branch 'master' into pr-heap-refactor3
-d3908b0a Merge branch 'master' into master
 6dfd46a5 Merge branch 'master' into pr-heap-refactor3
 11022562 improve comments
 a716193b missed items
 60881470 Improve caller address reporting to indicate address in sketch or library.
 4ec3c81f Lite refactoring and expanded comments
-136b9423 Merge branch 'master' into master
-53669c09 fix merge by hand #2
-89a5f5e7 fix merge by hand
-19bf46f8 Merge branch 'master' into master
 cda273c1 basichttpsclient example: fingerprint handled by update scripts
-a2d13566 Merge branch 'master' into master
-eec286db HTTPClient: implement Stream class
-69a869c8 HTTPClient: add readChunkHeader() and readChunkTrailer() methods
