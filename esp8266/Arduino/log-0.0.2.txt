@@ -1,27 +1,44 @@
-1b8cea5f Merge branch 'PR-8311'
-136b2828 Merge branch 'PR-8720'
-ef64b892 Merge branch 'PR-8837'
-eb4eda90 Merge branch 'PR-8845'
-7c5dc809 Merge branch 'PR-8851'
-c57c92e7 Merge branch 'PR-8868'
-19579ded Merge branch 'PR-8869'
-d624de24 Merge branch 'PR-8873'
-42db2979 Merge branch 'PR-8874'
+bc31d471 Merge branch 'PR-8720'
+3a00fa1b Merge branch 'PR-8837'
+58fcaef0 Merge branch 'PR-8845'
+d02014e8 Merge branch 'PR-8851'
+3aa0f393 Merge branch 'PR-8868'
+a3484d48 Merge branch 'PR-8869'
+1ac00b57 Merge branch 'PR-8873'
+9b64da3e Merge branch 'PR-8874'
+ddfcd7b7 Merge branch 'PR-8885'
+6ad9bf3b Expand the esp8266 hardware debugging limitations section (#8879)
+e9934b74 Merge branch 'master' into swserial
+503502f1 Weak assignment in flash_hal (#8884)
+7b46ae96 factorize template declaration
+b1874fdb web-hello-servers: make chunks bigger
+3848c3d6 move SSL server certs from examples into a single place with appropriate warnings
+fbb7351c style
+ad5454e5 emulation on host: SSL server has never been and is now working
+86a57f77 debug log: read() returning -1 is usual and means "nothing to read"
+685ea7ad basic https client: update cert
+1069b587 httpclient: use refs - httpserver: add chunks in examples
+5320d684 Pushed EspSoftwareSerial 8.0.1: Platformio picks up versions that aren't published in Github
+ee257dde Delegate operator() is now nullptr-safe, good for use in ISRs.
+4ef9a450 Stick to non-namespace EspSoftwareSerial class name for the moment.
+e83a919d CI caught some warning.
+25661ba1 EspSoftwareSerial's use of a template class in order to permit users their own GPIO capabilities definitions.
+4d9ac2f6 In EspSoftwareSerial, some renaming after review feedback.
+959f3b59 Adapt to SoftwareSerial's latest use of namespace.
+325b6fcf EspSoftwareSerial example: higher bitrates due to forcing half-duplex
+2665cd3a Upcoming EspSoftwareSerial 7.0.1
+32323e55 fix library name in library.properties (#8880)
+74e02d1a basichttpsclient example: fingerprint handled by update scripts (#8311)
+5bc850eb automatic factorization of declarations with std::forward
 c8c30c7e move template function into header file
 53947040 deprecate and update Stream::send(Print -> Stream) in order to benefit from and use output's timeout value
 16bb9de8 make sendHeader generic
 755021da avoid large reallocations in webserver header response
-6c7c15c1 EspSoftwareSerial example: higher bitrates due to forcing half-duplex
-f9fa7213 Upcoming EspSoftwareSerial 7.0.1
 073ff6e9 Merge branch 'master' into pr-doc-debug
 a2787346 Update compiler toolchain to 3.2.0
 be02af05 Remove stale patch for SDK v1.1 and earlier (#8858)
 71a51b11 Resolve Windows path problems (#8860)
 58ad3847 Update doc. Added link in page index to 'Improving Exception Decoder Results'
-97376389 style
-bc00e113 update to new cert name
-05042363 update cert
-82518a20 Merge branch 'master' into cert4basichttpsclient
 0443797b Add reporting address interrupted by Soft WDT
 ab7a02a6 Added ':orphan:' mark to a06-global-build-options.rst
 e51f1347 Merge branch 'master' into pr-doc-debug
@@ -70,4 +87,3 @@ ea9befa6 Finish merge cleanuo
 a716193b missed items
 60881470 Improve caller address reporting to indicate address in sketch or library.
 4ec3c81f Lite refactoring and expanded comments
-cda273c1 basichttpsclient example: fingerprint handled by update scripts
