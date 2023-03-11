@@ -1,3 +1,7 @@
+6ad9bf3b Expand the esp8266 hardware debugging limitations section (#8879)
+503502f1 Weak assignment in flash_hal (#8884)
+32323e55 fix library name in library.properties (#8880)
+74e02d1a basichttpsclient example: fingerprint handled by update scripts (#8311)
 be02af05 Remove stale patch for SDK v1.1 and earlier (#8858)
 71a51b11 Resolve Windows path problems (#8860)
 d7cd4bef make http-server less verbose in debug mode (#8850)
