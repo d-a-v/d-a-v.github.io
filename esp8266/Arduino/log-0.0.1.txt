@@ -1,3 +1,5 @@
+84a59aa9 Add reporting address interrupted by Soft WDT (#8851)
+23036328 EspSoftwareSerial 8.0.1: onReceive bug fix and new namespace (#8869)
 6ad9bf3b Expand the esp8266 hardware debugging limitations section (#8879)
 503502f1 Weak assignment in flash_hal (#8884)
 32323e55 fix library name in library.properties (#8880)
