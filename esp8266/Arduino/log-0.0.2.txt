@@ -1,26 +1,15 @@
-278ecf53 Merge branch 'PR-8720'
-7251f165 Merge branch 'PR-8837'
-a4641da8 Merge branch 'PR-8845'
-02ebb6c9 Merge branch 'PR-8868'
-2bcccf96 Merge branch 'PR-8873'
-99545593 Merge branch 'PR-8874'
-a2b200af Merge branch 'PR-8885'
+a002dc33 Merge branch 'PR-8720'
+5a0daa6e Merge branch 'PR-8837'
+01a2c230 Merge branch 'PR-8845'
+db81ad8c Merge branch 'PR-8868'
+be569189 Merge branch 'PR-8873'
+0ed487b5 Merge branch 'PR-8874'
+68e36928 Merge branch 'PR-8888'
+01d1c8e4 3.1.2 is released (#8894)
 90de6d59 Manually update python3-via-env tools
+7a9c23ca Update comment
+dc919a05 For SDK v3.0+, early system calls that were called from user_rf_pre_init (SDK v2.2) need to now be called from user_pre_init.
 f2a6150b Merge branch 'master' into pr-doc-debug
-84a59aa9 Add reporting address interrupted by Soft WDT (#8851)
-23036328 EspSoftwareSerial 8.0.1: onReceive bug fix and new namespace (#8869)
-6ad9bf3b Expand the esp8266 hardware debugging limitations section (#8879)
-503502f1 Weak assignment in flash_hal (#8884)
-7b46ae96 factorize template declaration
-b1874fdb web-hello-servers: make chunks bigger
-3848c3d6 move SSL server certs from examples into a single place with appropriate warnings
-fbb7351c style
-ad5454e5 emulation on host: SSL server has never been and is now working
-86a57f77 debug log: read() returning -1 is usual and means "nothing to read"
-685ea7ad basic https client: update cert
-1069b587 httpclient: use refs - httpserver: add chunks in examples
-32323e55 fix library name in library.properties (#8880)
-74e02d1a basichttpsclient example: fingerprint handled by update scripts (#8311)
 5bc850eb automatic factorization of declarations with std::forward
 c8c30c7e move template function into header file
 53947040 deprecate and update Stream::send(Print -> Stream) in order to benefit from and use output's timeout value
@@ -28,44 +17,25 @@ c8c30c7e move template function into header file
 755021da avoid large reallocations in webserver header response
 073ff6e9 Merge branch 'master' into pr-doc-debug
 a2787346 Update compiler toolchain to 3.2.0
-be02af05 Remove stale patch for SDK v1.1 and earlier (#8858)
-71a51b11 Resolve Windows path problems (#8860)
 58ad3847 Update doc. Added link in page index to 'Improving Exception Decoder Results'
 ab7a02a6 Added ':orphan:' mark to a06-global-build-options.rst
 e51f1347 Merge branch 'master' into pr-doc-debug
-d7cd4bef make http-server less verbose in debug mode (#8850)
-9a3d55c7 Fix String build warning with DEBUG_ESP_PORT but without DEBUG_ESP_CORE (#8849)
 94e165d7 tweak text
 aab4d56f update text and undo changes to platformio-build.py
-badb407b Update SdFat fork (#8844)
 1a4cebad wrappers allowing to compile and run esp32-arduino basic examples (AdvancedWebServer  FSBrowser  HelloServer  SimpleAuthentification)
 8e49b333 Add fallback value for build.debug_optim to platform.txt
 9a6ea125 Improve organization of optimization content. Use "Debug Optimization" for menu name. The menu item defines the initial optimization. platform.txt - optimization parameter can be overridden by build.opt.
 2ee9eb5f Merge branch 'master' into pr-doc-debug
 9157394f Update boards.txt.py and docs - WIP
-326be35c Postmortem improvements (#8839)
-1beca6f4 Fix LowPowerDemo.ino (#8841)
 1a92df10 Proposed "Debug port" menu change Preserves a pathway for `build.opt` override.
-6dfebec8 SdFat -> FS HAL mode fixes & test (#8833)
 2e062aee Fixed example
 c4533827 Merge branch 'pr-doc-debug' of github.com:mhightower83/Arduino into pr-doc-debug
 d135c647 Merge branch 'master' into pr-doc-debug
 33bbf8bb Fixed code formatting
 679038d9 Update doc
-d7da591e Revert ESPSoftwareSerial from v7 to v6
 f91d547a Added d-a-v's code. And updated description and debug macro.
 e67c95c9 Update documentation
-e25f9e95 Safeguard for Ticker internal storage that may be changed during callback execution (#8820)
-9c4a1239 String: informative messages on issues (#8821)
-79dde219 Don't use -g++ or -gcc suffixes in command line arguments (#8829)
-a9675ca8 emulation on host: fix UDP seek&peek (#8827)
-cf240242 New handling of missing perferences.txt in mkbuildoptglobals (#8814)
 d8295407 Merge branch 'master' into pr-heap-refactor3
-bed2fa33 HTTPClient example: Fix typo (#8819)
-56107fb1 Properly handle u8 pointers when assigning and comparing (#8818)
-41c2be20 Fix mkbuildoptglobals script not finding preferences.txt (#8812)
-39b41379 Log all exceptions in upload.py (#8813)
-6af463ba Back to 3.2.0-dev (#8807)
 9423c8e1 Merge branch 'master' into pr-heap-refactor3
 19da6751 Merge branch 'master' into pr-heap-refactor3
 c2590a7f Merge branch 'master' into pr-heap-refactor3
