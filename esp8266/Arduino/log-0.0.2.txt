@@ -1,18 +1,35 @@
-a002dc33 Merge branch 'PR-8720'
-5a0daa6e Merge branch 'PR-8837'
-01a2c230 Merge branch 'PR-8845'
-db81ad8c Merge branch 'PR-8868'
-be569189 Merge branch 'PR-8873'
-0ed487b5 Merge branch 'PR-8874'
-68e36928 Merge branch 'PR-8888'
+5570ca74 Merge branch 'PR-8720'
+f1d3a436 Merge branch 'PR-8837'
+22ca1484 Merge branch 'PR-8845'
+c900d872 Merge branch 'PR-8868'
+ec8bf56f Merge branch 'PR-8873'
+3d25d61e Merge branch 'PR-8885'
+68809273 Merge branch 'PR-8888'
+cab3b836 style
+d62ac3a2 style
+c6b23119 fix timeout propagation
+fadfc9de honour stream timeout with ssl
+e3bee767 Merge branch 'master' into webfixes
+a5d31a71 deprecate and update `Stream::send*(Print -> Stream)` (#8874)
+9e232621 mock: add umm_info()
+62e6a026 http-client: add getString(pre-reservation)
+633550f5 Merge branch 'master' into pr-doc-debug
+9cb0e9be Improve "spoof_init_data" enable/disable logic. Out of an overabundance of caution, limit logic change to the experimental SDK v3.0.5.
+eba42d87 Update comment
+b13e7681 For SDK v3.0+, early system calls that were called from user_rf_pre_init (SDK v2.2) need to now be called from user_pre_init.
+0008ac8e Merge branch 'master' into webfixes
 01d1c8e4 3.1.2 is released (#8894)
 90de6d59 Manually update python3-via-env tools
-7a9c23ca Update comment
-dc919a05 For SDK v3.0+, early system calls that were called from user_rf_pre_init (SDK v2.2) need to now be called from user_pre_init.
 f2a6150b Merge branch 'master' into pr-doc-debug
+7b46ae96 factorize template declaration
+b1874fdb web-hello-servers: make chunks bigger
+3848c3d6 move SSL server certs from examples into a single place with appropriate warnings
+fbb7351c style
+ad5454e5 emulation on host: SSL server has never been and is now working
+86a57f77 debug log: read() returning -1 is usual and means "nothing to read"
+685ea7ad basic https client: update cert
+1069b587 httpclient: use refs - httpserver: add chunks in examples
 5bc850eb automatic factorization of declarations with std::forward
-c8c30c7e move template function into header file
-53947040 deprecate and update Stream::send(Print -> Stream) in order to benefit from and use output's timeout value
 16bb9de8 make sendHeader generic
 755021da avoid large reallocations in webserver header response
 073ff6e9 Merge branch 'master' into pr-doc-debug
