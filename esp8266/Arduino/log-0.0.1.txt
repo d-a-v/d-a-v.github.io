@@ -1,2 +1,6 @@
+a76ef290 Support user_rf_pre_init() for SDK v3.0 (#8888)
+97018a5b various minor web fixes (#8885)
+d3c102e7 Update documentation and arduino debug options (#8837)
+ce9e7201 Update compiler toolchain to 3.2.0 (#8868)
 a5d31a71 deprecate and update `Stream::send*(Print -> Stream)` (#8874)
 01d1c8e4 3.1.2 is released (#8894)
