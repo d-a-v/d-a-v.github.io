@@ -1,7 +1,18 @@
-824e3caa Merge branch 'PR-8720'
-be6ee76e Merge branch 'PR-8828'
-5c8f77ac Merge branch 'PR-8845'
-b51c4e26 Merge branch 'PR-8873'
+fa63d355 Merge branch 'PR-8720'
+d12fc467 Merge branch 'PR-8828'
+9040e259 Merge branch 'PR-8845'
+d34b6bdc Merge branch 'PR-8873'
+1e0cfff7 typo
+e5ea7b30 introduce wall time
+ae64f5b7 add an https client example comment for MFLN
+7735f373 add a runtime warning when compiled at 80MHz
+b0c75acf run_until global timeout needs reset on r/w
+3d796a12 tcp context needs updated timeout for write function
+d3240777 WiFiClient updated too
+a199c8db ditto
+d9118bb9 normalTimeout -> runtimeTimeout
+e3aa6fe2 make setTimeout virtual -> reduce footprint
+4702c936 typos
 cc1951af get rid of pointer, reverting to first proposal
 d97e0fbc Merge branch 'master' into ssltimeout
 892e6a26 Rebuilt eboot.elf with current tools from ./get.py
