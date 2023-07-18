@@ -1,7 +1,34 @@
-fa63d355 Merge branch 'PR-8720'
-d12fc467 Merge branch 'PR-8828'
-9040e259 Merge branch 'PR-8845'
-d34b6bdc Merge branch 'PR-8873'
+90727415 Merge branch 'PR-8720'
+df08151e Merge branch 'PR-8828'
+0c8f25e8 Merge branch 'PR-8845'
+420e6713 Merge branch 'PR-8873'
+c541186b Merge branch 'PR-8899'
+798d2084 +doc
+6fa35d02 Merge branch 'master' into ssltimeout
+b43a2d5d Merge branch 'master' into webserverwithoutholes
+e7ad1dbf optionally move float emulation code into iram allows doing float operation in iram suitable for libraries like AccelStepper when called from ISR
+a0044d67 Merge branch 'master' into pr-heap-refactor3
+40fba0af Merge branch 'master' into pr-eraseconfig-reset
+521ae60a Fix for `dangerous relocation: j: cannot encode` (#8925)
+8b33e2e2 Fix for occasional WebServer timeout issues (#8944)
+e05656bd Add support WiFiClientSecure TCP KeepAlive (#8940)
+d64e0c16 Merge branch 'master' of https://github.com/esp8266/Arduino into ssltimeout
+ecc1b14f Merge branch 'master' into pr-heap-refactor3
+b083043e refactored print_loc() removed experimental debug extension as requested added forgotten OOM count to the postmortem report
+57fa6cdc Soft WDT: detect deliberate infinite loop at Postmortem (#8918)
+4717dcfa Use the same format for printing caller, file, line details in postmortem and printing OOM from Heap wrappers.
+0ce295ee Merge branch 'master' into pr-heap-refactor3 Updated umm_poison move from umm_malloc_cfg.h to umm_malloc_cfgport.h
+c517bfd9 umm_poison false positive from ISR (#8914)
+95c7e2cf Merge branch 'master' into pr-heap-refactor3
+ad9aaef8 Fix removing first certificate in certs-from-mozilla.py (#8907)
+c3f36316 EspSoftwareSerial 8.0.2: possibly uninitialized inverted mode flag fix (#8911)
+840e55a1 Merge branch 'master' into pr-heap-refactor3
+f8a82513 Requested changes.
+c952ffc3 Merge branch 'master' into pr-eraseconfig-reset
+65579d29 Make precache() cleaner and more efficient (#8903)
+ac9d9617 fixing
+61823000 Merge branch 'ssltimeout' of github.com:d-a-v/Arduino into ssltimeout
+19420e05 fix CI
 1e0cfff7 typo
 e5ea7b30 introduce wall time
 ae64f5b7 add an https client example comment for MFLN
@@ -45,10 +72,15 @@ b1e772cd Merge branch 'master' into pr-eraseconfig-reset
 d061a3c0 improve wording
 1a03a412 style fixed confused example
 f5d7d4a5 A new approach for erasing WiFi Settings
+4c963656 Merge branch 'pr-heap-refactor3' of github.com:mhightower83/Arduino into pr-heap-refactor3
 d8295407 Merge branch 'master' into pr-heap-refactor3
+471f8382 Merge branch 'pr-heap-refactor3' of github.com:mhightower83/Arduino into pr-heap-refactor3
 9423c8e1 Merge branch 'master' into pr-heap-refactor3
+af7b9621 Merge branch 'pr-heap-refactor3' of github.com:mhightower83/Arduino into pr-heap-refactor3
 19da6751 Merge branch 'master' into pr-heap-refactor3
+06190346 Merge branch 'pr-heap-refactor3' of github.com:mhightower83/Arduino into pr-heap-refactor3
 c2590a7f Merge branch 'master' into pr-heap-refactor3
+57eb2b3b Add nothrow to aliases
 45f1c3b9 Added missing DRAM fallback to pvPortCallocIram, pvPortZallocIram, and pvPortMalloc(,,,true) case. Improved comments.
 3dd08bee requested changes
 ea9befa6 Finish merge cleanuo
